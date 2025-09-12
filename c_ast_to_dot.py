@@ -60,6 +60,7 @@ class ASTToDot:
                 node_type = "token"
             
             # Handle special characters in labels
+            '''
             if node_type in ['"', "'", '\\']:
                 # For quote characters, escape the backslash in the output
                 if node_type == '"':
@@ -70,11 +71,13 @@ class ASTToDot:
                     label = f'literal:{node_type}'
                 color = "lightblue"
             else:
+            '''
+            if True:
                 # For normal leaf nodes, use type and escaped text
                 # Replace actual newlines with \n in the text content
-                text_content = text_content.replace('\n', '\\n')
+                escaped_type = self.escape_label(node_type)
                 escaped_text = self.escape_label(text_content)
-                label = f'{node_type}\\n{escaped_text}'
+                label = f'{escaped_type}\\n{escaped_text}'
                 color = "lightblue"
             
             self.logger.debug(f"Leaf node {current_id}: type='{node_type}'")
