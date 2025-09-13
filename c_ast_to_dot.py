@@ -7,7 +7,7 @@ Processes C source files and generates DOT format for visualization
 import tree_sitter_c as tsc
 from tree_sitter import Language, Parser
 import argparse
-import sys, logging
+import sys, logging, re
 import os
 
 class ASTToDot:
@@ -47,8 +47,8 @@ class ASTToDot:
         if node.child_count == 0 and node.text:
             # Leaf node - show both type and text content
             text_content = node.text.decode('utf-8')
-            if len(text_content) > 20:
-                text_content = text_content[:17] + "..."
+            if len(text_content) > 35:
+                text_content = text_content[:15] + " ... " + text_content[-15:]
             
             # Handle empty node types (like quote characters)
             node_type = node.type
@@ -59,26 +59,10 @@ class ASTToDot:
                 self.logger.debug(f"Null/whitespace node type detected for node {current_id}, using 'token'")
                 node_type = "token"
             
-            # Handle special characters in labels
-            '''
-            if node_type in ['"', "'", '\\']:
-                # For quote characters, escape the backslash in the output
-                if node_type == '"':
-                    label = 'literal:\\"'  # Will appear as literal:\" in DOT
-                elif node_type == '\\':
-                    label = 'literal:\\\\'  # Will appear as literal:\\ in DOT
-                else:
-                    label = f'literal:{node_type}'
-                color = "lightblue"
-            else:
-            '''
-            if True:
-                # For normal leaf nodes, use type and escaped text
-                # Replace actual newlines with \n in the text content
-                escaped_type = self.escape_label(node_type)
-                escaped_text = self.escape_label(text_content)
-                label = f'{escaped_type}\\n{escaped_text}'
-                color = "lightblue"
+            escaped_type = self.escape_label(node_type)
+            escaped_text = self.escape_label(text_content)
+            label = f'{escaped_type}\\n{escaped_text}'
+            color = "lightblue"
             
             self.logger.debug(f"Leaf node {current_id}: type='{node_type}'")
         else:
@@ -173,6 +157,31 @@ def generate_image(dot_file, output_format="png"):
         print(f"Error generating image: {e}")
         return False
 
+def write_ast(node, f, indent):
+    node_text = node.text.decode('utf-8') if node.text else ''
+    node_text = node_text.replace('\n', " ")
+    node_text = re.sub(r'\s+', ' ', node_text)
+    if len(node_text) > 35:
+        node_text = node_text[:15] + " ... " + node_text[-15:]
+
+    f.write(f"{'  ' * indent}Type: {node.type}, Text: {node_text}\n")
+    for child in node.children:
+        write_ast(child, f, indent + 1)
+
+def save_ast_file(node, output_path, logger, indent=0):
+    """Save AST node content to file"""
+    try:
+        with open(output_path, 'w', encoding='utf-8') as f:
+            write_ast(node, f, indent)
+            
+        logger.debug(f"AST node file saved successfully: {output_path}")
+        print(f"AST node file saved: {output_path}")
+        return True
+    except Exception as e:
+        logger.error(f"Error saving AST node file: {e}")
+        print(f"Error saving AST node file: {e}")
+        return False
+
 def main():
     parser = argparse.ArgumentParser(description="Convert C source to DOT AST visualization")
     parser.add_argument("input_file", help="Input C source file")
@@ -206,9 +215,14 @@ def main():
     
     if root_node is None:
         return 1
+
+    print("Generating AST node...")
+    node_file = f"{os.path.splitext(args.input_file)[0]}.ast"
+    if not save_ast_file(root_node, node_file, logger):
+        return 1
     
     # Generate DOT content
-    print("Generating AST...")
+    print("Generating Dot...")
     ast_converter = ASTToDot()
     base_name = os.path.splitext(os.path.basename(args.input_file))[0]
     dot_content = ast_converter.generate_dot(root_node, base_name)
