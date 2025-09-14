@@ -9,6 +9,7 @@ from tree_sitter import Language, Parser
 import argparse
 import sys, logging, re
 import os
+from pathlib import Path
 
 class ASTToDot:
     def __init__(self):
@@ -209,6 +210,13 @@ def main():
         print(f"Error: Input file '{args.input_file}' does not exist.")
         return 1
     
+    from check_if_c_header import check_if_c_header
+    file_path = Path(args.input_file)
+    if file_path.suffix.lower() == '.h' and not check_if_c_header(file_path):
+        print(f"Error: Input file '{args.input_file}' is not a C header.")
+        return 1
+    
+
     # Parse the C file
     print(f"Parsing C file: {args.input_file}")
     root_node, source_code = parse_c_file(args.input_file)
@@ -217,7 +225,8 @@ def main():
         return 1
 
     print("Generating AST node...")
-    node_file = f"{os.path.splitext(args.input_file)[0]}.ast"
+    #node_file = f"{os.path.splitext(args.input_file)[0]}.ast"
+    node_file = f"{args.input_file}.ast"
     if not save_ast_file(root_node, node_file, logger):
         return 1
     
@@ -231,7 +240,8 @@ def main():
     if args.output:
         dot_file = args.output
     else:
-        dot_file = f"{os.path.splitext(args.input_file)[0]}.dot"
+        #dot_file = f"{os.path.splitext(args.input_file)[0]}.dot"
+        dot_file = f"{args.input_file}.dot"
     
     # Save DOT file
     if not save_dot_file(dot_content, dot_file, logger):
