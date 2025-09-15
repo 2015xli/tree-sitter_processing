@@ -1,0 +1,79 @@
+Type: translation_unit, Text: #include <stdio ... ); return 0; } 
+  Type: preproc_include, Text: #include <stdio.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <stdio.h>
+  Type: preproc_include, Text: #include "hello.h" 
+    Type: #include, Text: #include
+    Type: string_literal, Text: "hello.h"
+      Type: ", Text: "
+      Type: string_content, Text: hello.h
+      Type: ", Text: "
+  Type: function_definition, Text: int main() { pr ... e); return 0; }
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: main()
+      Type: identifier, Text: main
+      Type: parameter_list, Text: ()
+        Type: (, Text: (
+        Type: ), Text: )
+    Type: compound_statement, Text: { printf("%s %s ... e); return 0; }
+      Type: {, Text: {
+      Type: expression_statement, Text: printf("%s %s\n", HELLO, "world");
+        Type: call_expression, Text: printf("%s %s\n", HELLO, "world")
+          Type: identifier, Text: printf
+          Type: argument_list, Text: ("%s %s\n", HELLO, "world")
+            Type: (, Text: (
+            Type: string_literal, Text: "%s %s\n"
+              Type: ", Text: "
+              Type: string_content, Text: %s %s
+              Type: escape_sequence, Text: \n
+              Type: ", Text: "
+            Type: ,, Text: ,
+            Type: identifier, Text: HELLO
+            Type: ,, Text: ,
+            Type: string_literal, Text: "world"
+              Type: ", Text: "
+              Type: string_content, Text: world
+              Type: ", Text: "
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: declaration, Text: Helper helper = ... ld", .id = 1 };
+        Type: type_identifier, Text: Helper
+        Type: init_declarator, Text: helper = { .nam ... rld", .id = 1 }
+          Type: identifier, Text: helper
+          Type: =, Text: =
+          Type: initializer_list, Text: { .name = "world", .id = 1 }
+            Type: {, Text: {
+            Type: initializer_pair, Text: .name = "world"
+              Type: field_designator, Text: .name
+                Type: ., Text: .
+                Type: field_identifier, Text: name
+              Type: =, Text: =
+              Type: string_literal, Text: "world"
+                Type: ", Text: "
+                Type: string_content, Text: world
+                Type: ", Text: "
+            Type: ,, Text: ,
+            Type: initializer_pair, Text: .id = 1
+              Type: field_designator, Text: .id
+                Type: ., Text: .
+                Type: field_identifier, Text: id
+              Type: =, Text: =
+              Type: number_literal, Text: 1
+            Type: }, Text: }
+        Type: ;, Text: ;
+      Type: expression_statement, Text: hello(helper.name);
+        Type: call_expression, Text: hello(helper.name)
+          Type: identifier, Text: hello
+          Type: argument_list, Text: (helper.name)
+            Type: (, Text: (
+            Type: field_expression, Text: helper.name
+              Type: identifier, Text: helper
+              Type: ., Text: .
+              Type: field_identifier, Text: name
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: return_statement, Text: return 0;
+        Type: return, Text: return
+        Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: }, Text: }
