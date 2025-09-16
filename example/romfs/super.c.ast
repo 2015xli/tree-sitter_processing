@@ -1,0 +1,3854 @@
+Type: translation_unit, Text: /* Block- or MT ...  matter for */ 
+  Type: comment, Text: /* Block- or MT ... ter version. */
+  Type: preproc_function_def, Text: #define pr_fmt( ... DNAME ": " fmt 
+    Type: #define, Text: #define
+    Type: identifier, Text: pr_fmt
+    Type: preproc_params, Text: (fmt)
+      Type: (, Text: (
+      Type: identifier, Text: fmt
+      Type: ), Text: )
+    Type: preproc_arg, Text: KBUILD_MODNAME ": " fmt
+  Type: preproc_include, Text: #include <linux/module.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/module.h>
+  Type: preproc_include, Text: #include <linux/string.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/string.h>
+  Type: preproc_include, Text: #include <linux/fs.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/fs.h>
+  Type: preproc_include, Text: #include <linux/time.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/time.h>
+  Type: preproc_include, Text: #include <linux/slab.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/slab.h>
+  Type: preproc_include, Text: #include <linux/init.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/init.h>
+  Type: preproc_include, Text: #include <linux/blkdev.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/blkdev.h>
+  Type: preproc_include, Text: #include <linux/fs_context.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/fs_context.h>
+  Type: preproc_include, Text: #include <linux/mount.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/mount.h>
+  Type: preproc_include, Text: #include <linux/namei.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/namei.h>
+  Type: preproc_include, Text: #include <linux/statfs.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/statfs.h>
+  Type: preproc_include, Text: #include <linux/mtd/super.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/mtd/super.h>
+  Type: preproc_include, Text: #include <linux/ctype.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/ctype.h>
+  Type: preproc_include, Text: #include <linux/highmem.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/highmem.h>
+  Type: preproc_include, Text: #include <linux/pagemap.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/pagemap.h>
+  Type: preproc_include, Text: #include <linux/uaccess.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/uaccess.h>
+  Type: preproc_include, Text: #include <linux/major.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/major.h>
+  Type: preproc_include, Text: #include "internal.h" 
+    Type: #include, Text: #include
+    Type: string_literal, Text: "internal.h"
+      Type: ", Text: "
+      Type: string_content, Text: internal.h
+      Type: ", Text: "
+  Type: declaration, Text: static struct k ... s_inode_cachep;
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: struct_specifier, Text: struct kmem_cache
+      Type: struct, Text: struct
+      Type: type_identifier, Text: kmem_cache
+    Type: pointer_declarator, Text: *romfs_inode_cachep
+      Type: *, Text: *
+      Type: identifier, Text: romfs_inode_cachep
+    Type: ;, Text: ;
+  Type: declaration, Text: static const um ... 4 /* FIFO */ };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: type_identifier, Text: umode_t
+    Type: init_declarator, Text: romfs_modemap[8 ... 44 /* FIFO */ }
+      Type: array_declarator, Text: romfs_modemap[8]
+        Type: identifier, Text: romfs_modemap
+        Type: [, Text: [
+        Type: number_literal, Text: 8
+        Type: ], Text: ]
+      Type: =, Text: =
+      Type: initializer_list, Text: { 0, /* hard li ... 44 /* FIFO */ }
+        Type: {, Text: {
+        Type: number_literal, Text: 0
+        Type: ,, Text: ,
+        Type: comment, Text: /* hard link */
+        Type: binary_expression, Text: S_IFDIR | 0644
+          Type: identifier, Text: S_IFDIR
+          Type: |, Text: |
+          Type: number_literal, Text: 0644
+        Type: ,, Text: ,
+        Type: comment, Text: /* directory */
+        Type: binary_expression, Text: S_IFREG | 0644
+          Type: identifier, Text: S_IFREG
+          Type: |, Text: |
+          Type: number_literal, Text: 0644
+        Type: ,, Text: ,
+        Type: comment, Text: /* regular file */
+        Type: binary_expression, Text: S_IFLNK | 0777
+          Type: identifier, Text: S_IFLNK
+          Type: |, Text: |
+          Type: number_literal, Text: 0777
+        Type: ,, Text: ,
+        Type: comment, Text: /* symlink */
+        Type: binary_expression, Text: S_IFBLK | 0600
+          Type: identifier, Text: S_IFBLK
+          Type: |, Text: |
+          Type: number_literal, Text: 0600
+        Type: ,, Text: ,
+        Type: comment, Text: /* blockdev */
+        Type: binary_expression, Text: S_IFCHR | 0600
+          Type: identifier, Text: S_IFCHR
+          Type: |, Text: |
+          Type: number_literal, Text: 0600
+        Type: ,, Text: ,
+        Type: comment, Text: /* chardev */
+        Type: binary_expression, Text: S_IFSOCK | 0644
+          Type: identifier, Text: S_IFSOCK
+          Type: |, Text: |
+          Type: number_literal, Text: 0644
+        Type: ,, Text: ,
+        Type: comment, Text: /* socket */
+        Type: binary_expression, Text: S_IFIFO | 0644
+          Type: identifier, Text: S_IFIFO
+          Type: |, Text: |
+          Type: number_literal, Text: 0644
+        Type: comment, Text: /* FIFO */
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: declaration, Text: static const un ... OCK, DT_FIFO };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: sized_type_specifier, Text: unsigned char
+      Type: unsigned, Text: unsigned
+      Type: primitive_type, Text: char
+    Type: init_declarator, Text: romfs_dtype_tab ... SOCK, DT_FIFO }
+      Type: array_declarator, Text: romfs_dtype_table[]
+        Type: identifier, Text: romfs_dtype_table
+        Type: [, Text: [
+        Type: ], Text: ]
+      Type: =, Text: =
+      Type: initializer_list, Text: { DT_UNKNOWN, D ... SOCK, DT_FIFO }
+        Type: {, Text: {
+        Type: identifier, Text: DT_UNKNOWN
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_DIR
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_REG
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_LNK
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_BLK
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_CHR
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_SOCK
+        Type: ,, Text: ,
+        Type: identifier, Text: DT_FIFO
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: declaration, Text: static struct i ... gned long pos);
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: struct_specifier, Text: struct inode
+      Type: struct, Text: struct
+      Type: type_identifier, Text: inode
+    Type: pointer_declarator, Text: *romfs_iget(str ... igned long pos)
+      Type: *, Text: *
+      Type: function_declarator, Text: romfs_iget(stru ... igned long pos)
+        Type: identifier, Text: romfs_iget
+        Type: parameter_list, Text: (struct super_b ... igned long pos)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned long pos
+            Type: sized_type_specifier, Text: unsigned long
+              Type: unsigned, Text: unsigned
+              Type: long, Text: long
+            Type: identifier, Text: pos
+          Type: ), Text: )
+    Type: ;, Text: ;
+  Type: comment, Text: /* * read a pag ... om the image */
+  Type: function_definition, Text: static int romf ... ; return ret; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_read_foli ... t folio *folio)
+      Type: identifier, Text: romfs_read_folio
+      Type: parameter_list, Text: (struct file *f ... t folio *folio)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct file *file
+          Type: struct_specifier, Text: struct file
+            Type: struct, Text: struct
+            Type: type_identifier, Text: file
+          Type: pointer_declarator, Text: *file
+            Type: *, Text: *
+            Type: identifier, Text: file
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: struct folio *folio
+          Type: struct_specifier, Text: struct folio
+            Type: struct, Text: struct
+            Type: type_identifier, Text: folio
+          Type: pointer_declarator, Text: *folio
+            Type: *, Text: *
+            Type: identifier, Text: folio
+        Type: ), Text: )
+    Type: compound_statement, Text: { struct page * ... ; return ret; }
+      Type: {, Text: {
+      Type: declaration, Text: struct page *page = &folio->page;
+        Type: struct_specifier, Text: struct page
+          Type: struct, Text: struct
+          Type: type_identifier, Text: page
+        Type: init_declarator, Text: *page = &folio->page
+          Type: pointer_declarator, Text: *page
+            Type: *, Text: *
+            Type: identifier, Text: page
+          Type: =, Text: =
+          Type: pointer_expression, Text: &folio->page
+            Type: &, Text: &
+            Type: field_expression, Text: folio->page
+              Type: identifier, Text: folio
+              Type: ->, Text: ->
+              Type: field_identifier, Text: page
+        Type: ;, Text: ;
+      Type: declaration, Text: struct inode *i ... >mapping->host;
+        Type: struct_specifier, Text: struct inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: inode
+        Type: init_declarator, Text: *inode = page->mapping->host
+          Type: pointer_declarator, Text: *inode
+            Type: *, Text: *
+            Type: identifier, Text: inode
+          Type: =, Text: =
+          Type: field_expression, Text: page->mapping->host
+            Type: field_expression, Text: page->mapping
+              Type: identifier, Text: page
+              Type: ->, Text: ->
+              Type: field_identifier, Text: mapping
+            Type: ->, Text: ->
+            Type: field_identifier, Text: host
+        Type: ;, Text: ;
+      Type: declaration, Text: loff_t offset, size;
+        Type: type_identifier, Text: loff_t
+        Type: identifier, Text: offset
+        Type: ,, Text: ,
+        Type: identifier, Text: size
+        Type: ;, Text: ;
+      Type: declaration, Text: unsigned long fillsize, pos;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: identifier, Text: fillsize
+        Type: ,, Text: ,
+        Type: identifier, Text: pos
+        Type: ;, Text: ;
+      Type: declaration, Text: void *buf;
+        Type: primitive_type, Text: void
+        Type: pointer_declarator, Text: *buf
+          Type: *, Text: *
+          Type: identifier, Text: buf
+        Type: ;, Text: ;
+      Type: declaration, Text: int ret;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: expression_statement, Text: buf = kmap(page);
+        Type: assignment_expression, Text: buf = kmap(page)
+          Type: identifier, Text: buf
+          Type: =, Text: =
+          Type: call_expression, Text: kmap(page)
+            Type: identifier, Text: kmap
+            Type: argument_list, Text: (page)
+              Type: (, Text: (
+              Type: identifier, Text: page
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!buf) return -ENOMEM;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!buf)
+          Type: (, Text: (
+          Type: unary_expression, Text: !buf
+            Type: !, Text: !
+            Type: identifier, Text: buf
+          Type: ), Text: )
+        Type: return_statement, Text: return -ENOMEM;
+          Type: return, Text: return
+          Type: unary_expression, Text: -ENOMEM
+            Type: -, Text: -
+            Type: identifier, Text: ENOMEM
+          Type: ;, Text: ;
+      Type: comment, Text: /* 32 bit warni ... ot for us :) */
+      Type: expression_statement, Text: offset = page_offset(page);
+        Type: assignment_expression, Text: offset = page_offset(page)
+          Type: identifier, Text: offset
+          Type: =, Text: =
+          Type: call_expression, Text: page_offset(page)
+            Type: identifier, Text: page_offset
+            Type: argument_list, Text: (page)
+              Type: (, Text: (
+              Type: identifier, Text: page
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: size = i_size_read(inode);
+        Type: assignment_expression, Text: size = i_size_read(inode)
+          Type: identifier, Text: size
+          Type: =, Text: =
+          Type: call_expression, Text: i_size_read(inode)
+            Type: identifier, Text: i_size_read
+            Type: argument_list, Text: (inode)
+              Type: (, Text: (
+              Type: identifier, Text: inode
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: fillsize = 0;
+        Type: assignment_expression, Text: fillsize = 0
+          Type: identifier, Text: fillsize
+          Type: =, Text: =
+          Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: expression_statement, Text: ret = 0;
+        Type: assignment_expression, Text: ret = 0
+          Type: identifier, Text: ret
+          Type: =, Text: =
+          Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (offset < si ... ret = -EIO; } }
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (offset < size)
+          Type: (, Text: (
+          Type: binary_expression, Text: offset < size
+            Type: identifier, Text: offset
+            Type: <, Text: <
+            Type: identifier, Text: size
+          Type: ), Text: )
+        Type: compound_statement, Text: { size -= offse ... ret = -EIO; } }
+          Type: {, Text: {
+          Type: expression_statement, Text: size -= offset;
+            Type: assignment_expression, Text: size -= offset
+              Type: identifier, Text: size
+              Type: -=, Text: -=
+              Type: identifier, Text: offset
+            Type: ;, Text: ;
+          Type: expression_statement, Text: fillsize = size ... GE_SIZE : size;
+            Type: assignment_expression, Text: fillsize = size ... AGE_SIZE : size
+              Type: identifier, Text: fillsize
+              Type: =, Text: =
+              Type: conditional_expression, Text: size > PAGE_SIZE ? PAGE_SIZE : size
+                Type: binary_expression, Text: size > PAGE_SIZE
+                  Type: identifier, Text: size
+                  Type: >, Text: >
+                  Type: identifier, Text: PAGE_SIZE
+                Type: ?, Text: ?
+                Type: identifier, Text: PAGE_SIZE
+                Type: :, Text: :
+                Type: identifier, Text: size
+            Type: ;, Text: ;
+          Type: expression_statement, Text: pos = ROMFS_I(i ... ffset + offset;
+            Type: assignment_expression, Text: pos = ROMFS_I(i ... offset + offset
+              Type: identifier, Text: pos
+              Type: =, Text: =
+              Type: binary_expression, Text: ROMFS_I(inode)- ... offset + offset
+                Type: field_expression, Text: ROMFS_I(inode)->i_dataoffset
+                  Type: call_expression, Text: ROMFS_I(inode)
+                    Type: identifier, Text: ROMFS_I
+                    Type: argument_list, Text: (inode)
+                      Type: (, Text: (
+                      Type: identifier, Text: inode
+                      Type: ), Text: )
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_dataoffset
+                Type: +, Text: +
+                Type: identifier, Text: offset
+            Type: ;, Text: ;
+          Type: expression_statement, Text: ret = romfs_dev ... buf, fillsize);
+            Type: assignment_expression, Text: ret = romfs_dev ...  buf, fillsize)
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_read( ...  buf, fillsize)
+                Type: identifier, Text: romfs_dev_read
+                Type: argument_list, Text: (inode->i_sb, pos, buf, fillsize)
+                  Type: (, Text: (
+                  Type: field_expression, Text: inode->i_sb
+                    Type: identifier, Text: inode
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: identifier, Text: pos
+                  Type: ,, Text: ,
+                  Type: identifier, Text: buf
+                  Type: ,, Text: ,
+                  Type: identifier, Text: fillsize
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) {  ... ; ret = -EIO; }
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: compound_statement, Text: { SetPageError( ... ; ret = -EIO; }
+              Type: {, Text: {
+              Type: expression_statement, Text: SetPageError(page);
+                Type: call_expression, Text: SetPageError(page)
+                  Type: identifier, Text: SetPageError
+                  Type: argument_list, Text: (page)
+                    Type: (, Text: (
+                    Type: identifier, Text: page
+                    Type: ), Text: )
+                Type: ;, Text: ;
+              Type: expression_statement, Text: fillsize = 0;
+                Type: assignment_expression, Text: fillsize = 0
+                  Type: identifier, Text: fillsize
+                  Type: =, Text: =
+                  Type: number_literal, Text: 0
+                Type: ;, Text: ;
+              Type: expression_statement, Text: ret = -EIO;
+                Type: assignment_expression, Text: ret = -EIO
+                  Type: identifier, Text: ret
+                  Type: =, Text: =
+                  Type: unary_expression, Text: -EIO
+                    Type: -, Text: -
+                    Type: identifier, Text: EIO
+                Type: ;, Text: ;
+              Type: }, Text: }
+          Type: }, Text: }
+      Type: if_statement, Text: if (fillsize <  ... ZE - fillsize);
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (fillsize < PAGE_SIZE)
+          Type: (, Text: (
+          Type: binary_expression, Text: fillsize < PAGE_SIZE
+            Type: identifier, Text: fillsize
+            Type: <, Text: <
+            Type: identifier, Text: PAGE_SIZE
+          Type: ), Text: )
+        Type: expression_statement, Text: memset(buf + fi ... ZE - fillsize);
+          Type: call_expression, Text: memset(buf + fi ... IZE - fillsize)
+            Type: identifier, Text: memset
+            Type: argument_list, Text: (buf + fillsize ... IZE - fillsize)
+              Type: (, Text: (
+              Type: binary_expression, Text: buf + fillsize
+                Type: identifier, Text: buf
+                Type: +, Text: +
+                Type: identifier, Text: fillsize
+              Type: ,, Text: ,
+              Type: number_literal, Text: 0
+              Type: ,, Text: ,
+              Type: binary_expression, Text: PAGE_SIZE - fillsize
+                Type: identifier, Text: PAGE_SIZE
+                Type: -, Text: -
+                Type: identifier, Text: fillsize
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: if_statement, Text: if (ret == 0) S ... Uptodate(page);
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (ret == 0)
+          Type: (, Text: (
+          Type: binary_expression, Text: ret == 0
+            Type: identifier, Text: ret
+            Type: ==, Text: ==
+            Type: number_literal, Text: 0
+          Type: ), Text: )
+        Type: expression_statement, Text: SetPageUptodate(page);
+          Type: call_expression, Text: SetPageUptodate(page)
+            Type: identifier, Text: SetPageUptodate
+            Type: argument_list, Text: (page)
+              Type: (, Text: (
+              Type: identifier, Text: page
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: expression_statement, Text: flush_dcache_page(page);
+        Type: call_expression, Text: flush_dcache_page(page)
+          Type: identifier, Text: flush_dcache_page
+          Type: argument_list, Text: (page)
+            Type: (, Text: (
+            Type: identifier, Text: page
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: kunmap(page);
+        Type: call_expression, Text: kunmap(page)
+          Type: identifier, Text: kunmap
+          Type: argument_list, Text: (page)
+            Type: (, Text: (
+            Type: identifier, Text: page
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: unlock_page(page);
+        Type: call_expression, Text: unlock_page(page)
+          Type: identifier, Text: unlock_page
+          Type: argument_list, Text: (page)
+            Type: (, Text: (
+            Type: identifier, Text: page
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: return_statement, Text: return ret;
+        Type: return, Text: return
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: declaration, Text: static const st ... s_read_folio };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: struct_specifier, Text: struct address_space_operations
+      Type: struct, Text: struct
+      Type: type_identifier, Text: address_space_operations
+    Type: init_declarator, Text: romfs_aops = {  ... fs_read_folio }
+      Type: identifier, Text: romfs_aops
+      Type: =, Text: =
+      Type: initializer_list, Text: { .read_folio = romfs_read_folio }
+        Type: {, Text: {
+        Type: initializer_pair, Text: .read_folio = romfs_read_folio
+          Type: field_designator, Text: .read_folio
+            Type: ., Text: .
+            Type: field_identifier, Text: read_folio
+          Type: =, Text: =
+          Type: identifier, Text: romfs_read_folio
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: comment, Text: /* * read the e ...  a directory */
+  Type: function_definition, Text: static int romf ... ut: return 0; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_readdir(s ... r_context *ctx)
+      Type: identifier, Text: romfs_readdir
+      Type: parameter_list, Text: (struct file *f ... r_context *ctx)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct file *file
+          Type: struct_specifier, Text: struct file
+            Type: struct, Text: struct
+            Type: type_identifier, Text: file
+          Type: pointer_declarator, Text: *file
+            Type: *, Text: *
+            Type: identifier, Text: file
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: struct dir_context *ctx
+          Type: struct_specifier, Text: struct dir_context
+            Type: struct, Text: struct
+            Type: type_identifier, Text: dir_context
+          Type: pointer_declarator, Text: *ctx
+            Type: *, Text: *
+            Type: identifier, Text: ctx
+        Type: ), Text: )
+    Type: compound_statement, Text: { struct inode  ... ut: return 0; }
+      Type: {, Text: {
+      Type: declaration, Text: struct inode *i = file_inode(file);
+        Type: struct_specifier, Text: struct inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: inode
+        Type: init_declarator, Text: *i = file_inode(file)
+          Type: pointer_declarator, Text: *i
+            Type: *, Text: *
+            Type: identifier, Text: i
+          Type: =, Text: =
+          Type: call_expression, Text: file_inode(file)
+            Type: identifier, Text: file_inode
+            Type: argument_list, Text: (file)
+              Type: (, Text: (
+              Type: identifier, Text: file
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: declaration, Text: struct romfs_inode ri;
+        Type: struct_specifier, Text: struct romfs_inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_inode
+        Type: identifier, Text: ri
+        Type: ;, Text: ;
+      Type: declaration, Text: unsigned long offset, maxoff;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: identifier, Text: offset
+        Type: ,, Text: ,
+        Type: identifier, Text: maxoff
+        Type: ;, Text: ;
+      Type: declaration, Text: int j, ino, nextfh;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: j
+        Type: ,, Text: ,
+        Type: identifier, Text: ino
+        Type: ,, Text: ,
+        Type: identifier, Text: nextfh
+        Type: ;, Text: ;
+      Type: declaration, Text: char fsname[ROMFS_MAXFN];
+        Type: primitive_type, Text: char
+        Type: array_declarator, Text: fsname[ROMFS_MAXFN]
+          Type: identifier, Text: fsname
+          Type: [, Text: [
+          Type: identifier, Text: ROMFS_MAXFN
+          Type: ], Text: ]
+        Type: ;, Text: ;
+      Type: comment, Text: /* XXX dynamic? */
+      Type: declaration, Text: int ret;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: expression_statement, Text: maxoff = romfs_maxsize(i->i_sb);
+        Type: assignment_expression, Text: maxoff = romfs_maxsize(i->i_sb)
+          Type: identifier, Text: maxoff
+          Type: =, Text: =
+          Type: call_expression, Text: romfs_maxsize(i->i_sb)
+            Type: identifier, Text: romfs_maxsize
+            Type: argument_list, Text: (i->i_sb)
+              Type: (, Text: (
+              Type: field_expression, Text: i->i_sb
+                Type: identifier, Text: i
+                Type: ->, Text: ->
+                Type: field_identifier, Text: i_sb
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: offset = ctx->pos;
+        Type: assignment_expression, Text: offset = ctx->pos
+          Type: identifier, Text: offset
+          Type: =, Text: =
+          Type: field_expression, Text: ctx->pos
+            Type: identifier, Text: ctx
+            Type: ->, Text: ->
+            Type: field_identifier, Text: pos
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!offset) {  ... & ROMFH_MASK; }
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!offset)
+          Type: (, Text: (
+          Type: unary_expression, Text: !offset
+            Type: !, Text: !
+            Type: identifier, Text: offset
+          Type: ), Text: )
+        Type: compound_statement, Text: { offset = i->i ... & ROMFH_MASK; }
+          Type: {, Text: {
+          Type: expression_statement, Text: offset = i->i_ino & ROMFH_MASK;
+            Type: assignment_expression, Text: offset = i->i_ino & ROMFH_MASK
+              Type: identifier, Text: offset
+              Type: =, Text: =
+              Type: binary_expression, Text: i->i_ino & ROMFH_MASK
+                Type: field_expression, Text: i->i_ino
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_ino
+                Type: &, Text: &
+                Type: identifier, Text: ROMFH_MASK
+            Type: ;, Text: ;
+          Type: expression_statement, Text: ret = romfs_dev ... i, ROMFH_SIZE);
+            Type: assignment_expression, Text: ret = romfs_dev ... ri, ROMFH_SIZE)
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_read( ... ri, ROMFH_SIZE)
+                Type: identifier, Text: romfs_dev_read
+                Type: argument_list, Text: (i->i_sb, offset, &ri, ROMFH_SIZE)
+                  Type: (, Text: (
+                  Type: field_expression, Text: i->i_sb
+                    Type: identifier, Text: i
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: identifier, Text: offset
+                  Type: ,, Text: ,
+                  Type: pointer_expression, Text: &ri
+                    Type: &, Text: &
+                    Type: identifier, Text: ri
+                  Type: ,, Text: ,
+                  Type: identifier, Text: ROMFH_SIZE
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) goto out;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto out;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: out
+              Type: ;, Text: ;
+          Type: expression_statement, Text: offset = be32_t ... ) & ROMFH_MASK;
+            Type: assignment_expression, Text: offset = be32_t ... c) & ROMFH_MASK
+              Type: identifier, Text: offset
+              Type: =, Text: =
+              Type: binary_expression, Text: be32_to_cpu(ri.spec) & ROMFH_MASK
+                Type: call_expression, Text: be32_to_cpu(ri.spec)
+                  Type: identifier, Text: be32_to_cpu
+                  Type: argument_list, Text: (ri.spec)
+                    Type: (, Text: (
+                    Type: field_expression, Text: ri.spec
+                      Type: identifier, Text: ri
+                      Type: ., Text: .
+                      Type: field_identifier, Text: spec
+                    Type: ), Text: )
+                Type: &, Text: &
+                Type: identifier, Text: ROMFH_MASK
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: comment, Text: /* Not really f ... read-only... */
+      Type: for_statement, Text: for (;;) { if ( ... & ROMFH_MASK; }
+        Type: for, Text: for
+        Type: (, Text: (
+        Type: ;, Text: ;
+        Type: ;, Text: ;
+        Type: ), Text: )
+        Type: compound_statement, Text: { if (!offset | ... & ROMFH_MASK; }
+          Type: {, Text: {
+          Type: if_statement, Text: if (!offset ||  ... et; goto out; }
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (!offset || offset >= maxoff)
+              Type: (, Text: (
+              Type: binary_expression, Text: !offset || offset >= maxoff
+                Type: unary_expression, Text: !offset
+                  Type: !, Text: !
+                  Type: identifier, Text: offset
+                Type: ||, Text: ||
+                Type: binary_expression, Text: offset >= maxoff
+                  Type: identifier, Text: offset
+                  Type: >=, Text: >=
+                  Type: identifier, Text: maxoff
+              Type: ), Text: )
+            Type: compound_statement, Text: { offset = maxo ... et; goto out; }
+              Type: {, Text: {
+              Type: expression_statement, Text: offset = maxoff;
+                Type: assignment_expression, Text: offset = maxoff
+                  Type: identifier, Text: offset
+                  Type: =, Text: =
+                  Type: identifier, Text: maxoff
+                Type: ;, Text: ;
+              Type: expression_statement, Text: ctx->pos = offset;
+                Type: assignment_expression, Text: ctx->pos = offset
+                  Type: field_expression, Text: ctx->pos
+                    Type: identifier, Text: ctx
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: pos
+                  Type: =, Text: =
+                  Type: identifier, Text: offset
+                Type: ;, Text: ;
+              Type: goto_statement, Text: goto out;
+                Type: goto, Text: goto
+                Type: statement_identifier, Text: out
+                Type: ;, Text: ;
+              Type: }, Text: }
+          Type: expression_statement, Text: ctx->pos = offset;
+            Type: assignment_expression, Text: ctx->pos = offset
+              Type: field_expression, Text: ctx->pos
+                Type: identifier, Text: ctx
+                Type: ->, Text: ->
+                Type: field_identifier, Text: pos
+              Type: =, Text: =
+              Type: identifier, Text: offset
+            Type: ;, Text: ;
+          Type: comment, Text: /* Fetch inode info */
+          Type: expression_statement, Text: ret = romfs_dev ... i, ROMFH_SIZE);
+            Type: assignment_expression, Text: ret = romfs_dev ... ri, ROMFH_SIZE)
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_read( ... ri, ROMFH_SIZE)
+                Type: identifier, Text: romfs_dev_read
+                Type: argument_list, Text: (i->i_sb, offset, &ri, ROMFH_SIZE)
+                  Type: (, Text: (
+                  Type: field_expression, Text: i->i_sb
+                    Type: identifier, Text: i
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: identifier, Text: offset
+                  Type: ,, Text: ,
+                  Type: pointer_expression, Text: &ri
+                    Type: &, Text: &
+                    Type: identifier, Text: ri
+                  Type: ,, Text: ,
+                  Type: identifier, Text: ROMFH_SIZE
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) goto out;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto out;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: out
+              Type: ;, Text: ;
+          Type: expression_statement, Text: j = romfs_dev_s ... f(fsname) - 1);
+            Type: assignment_expression, Text: j = romfs_dev_s ... of(fsname) - 1)
+              Type: identifier, Text: j
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_strnl ... of(fsname) - 1)
+                Type: identifier, Text: romfs_dev_strnlen
+                Type: argument_list, Text: (i->i_sb, offse ... of(fsname) - 1)
+                  Type: (, Text: (
+                  Type: field_expression, Text: i->i_sb
+                    Type: identifier, Text: i
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: binary_expression, Text: offset + ROMFH_SIZE
+                    Type: identifier, Text: offset
+                    Type: +, Text: +
+                    Type: identifier, Text: ROMFH_SIZE
+                  Type: ,, Text: ,
+                  Type: binary_expression, Text: sizeof(fsname) - 1
+                    Type: sizeof_expression, Text: sizeof(fsname)
+                      Type: sizeof, Text: sizeof
+                      Type: parenthesized_expression, Text: (fsname)
+                        Type: (, Text: (
+                        Type: identifier, Text: fsname
+                        Type: ), Text: )
+                    Type: -, Text: -
+                    Type: number_literal, Text: 1
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (j < 0) goto out;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (j < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: j < 0
+                Type: identifier, Text: j
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto out;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: out
+              Type: ;, Text: ;
+          Type: expression_statement, Text: ret = romfs_dev ... ZE, fsname, j);
+            Type: assignment_expression, Text: ret = romfs_dev ... IZE, fsname, j)
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_read( ... IZE, fsname, j)
+                Type: identifier, Text: romfs_dev_read
+                Type: argument_list, Text: (i->i_sb, offse ... IZE, fsname, j)
+                  Type: (, Text: (
+                  Type: field_expression, Text: i->i_sb
+                    Type: identifier, Text: i
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: binary_expression, Text: offset + ROMFH_SIZE
+                    Type: identifier, Text: offset
+                    Type: +, Text: +
+                    Type: identifier, Text: ROMFH_SIZE
+                  Type: ,, Text: ,
+                  Type: identifier, Text: fsname
+                  Type: ,, Text: ,
+                  Type: identifier, Text: j
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) goto out;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto out;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: out
+              Type: ;, Text: ;
+          Type: expression_statement, Text: fsname[j] = '\0';
+            Type: assignment_expression, Text: fsname[j] = '\0'
+              Type: subscript_expression, Text: fsname[j]
+                Type: identifier, Text: fsname
+                Type: [, Text: [
+                Type: identifier, Text: j
+                Type: ], Text: ]
+              Type: =, Text: =
+              Type: char_literal, Text: '\0'
+                Type: ', Text: '
+                Type: escape_sequence, Text: \0
+                Type: ', Text: '
+            Type: ;, Text: ;
+          Type: expression_statement, Text: ino = offset;
+            Type: assignment_expression, Text: ino = offset
+              Type: identifier, Text: ino
+              Type: =, Text: =
+              Type: identifier, Text: offset
+            Type: ;, Text: ;
+          Type: expression_statement, Text: nextfh = be32_to_cpu(ri.next);
+            Type: assignment_expression, Text: nextfh = be32_to_cpu(ri.next)
+              Type: identifier, Text: nextfh
+              Type: =, Text: =
+              Type: call_expression, Text: be32_to_cpu(ri.next)
+                Type: identifier, Text: be32_to_cpu
+                Type: argument_list, Text: (ri.next)
+                  Type: (, Text: (
+                  Type: field_expression, Text: ri.next
+                    Type: identifier, Text: ri
+                    Type: ., Text: .
+                    Type: field_identifier, Text: next
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if ((nextfh & R ... o_cpu(ri.spec);
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: ((nextfh & ROMF ... ) == ROMFH_HRD)
+              Type: (, Text: (
+              Type: binary_expression, Text: (nextfh & ROMFH_TYPE) == ROMFH_HRD
+                Type: parenthesized_expression, Text: (nextfh & ROMFH_TYPE)
+                  Type: (, Text: (
+                  Type: binary_expression, Text: nextfh & ROMFH_TYPE
+                    Type: identifier, Text: nextfh
+                    Type: &, Text: &
+                    Type: identifier, Text: ROMFH_TYPE
+                  Type: ), Text: )
+                Type: ==, Text: ==
+                Type: identifier, Text: ROMFH_HRD
+              Type: ), Text: )
+            Type: expression_statement, Text: ino = be32_to_cpu(ri.spec);
+              Type: assignment_expression, Text: ino = be32_to_cpu(ri.spec)
+                Type: identifier, Text: ino
+                Type: =, Text: =
+                Type: call_expression, Text: be32_to_cpu(ri.spec)
+                  Type: identifier, Text: be32_to_cpu
+                  Type: argument_list, Text: (ri.spec)
+                    Type: (, Text: (
+                    Type: field_expression, Text: ri.spec
+                      Type: identifier, Text: ri
+                      Type: ., Text: .
+                      Type: field_identifier, Text: spec
+                    Type: ), Text: )
+              Type: ;, Text: ;
+          Type: if_statement, Text: if (!dir_emit(c ... PE])) goto out;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (!dir_emit(ctx, ... & ROMFH_TYPE]))
+              Type: (, Text: (
+              Type: unary_expression, Text: !dir_emit(ctx,  ...  & ROMFH_TYPE])
+                Type: !, Text: !
+                Type: call_expression, Text: dir_emit(ctx, f ...  & ROMFH_TYPE])
+                  Type: identifier, Text: dir_emit
+                  Type: argument_list, Text: (ctx, fsname, j ...  & ROMFH_TYPE])
+                    Type: (, Text: (
+                    Type: identifier, Text: ctx
+                    Type: ,, Text: ,
+                    Type: identifier, Text: fsname
+                    Type: ,, Text: ,
+                    Type: identifier, Text: j
+                    Type: ,, Text: ,
+                    Type: identifier, Text: ino
+                    Type: ,, Text: ,
+                    Type: subscript_expression, Text: romfs_dtype_tab ... h & ROMFH_TYPE]
+                      Type: identifier, Text: romfs_dtype_table
+                      Type: [, Text: [
+                      Type: binary_expression, Text: nextfh & ROMFH_TYPE
+                        Type: identifier, Text: nextfh
+                        Type: &, Text: &
+                        Type: identifier, Text: ROMFH_TYPE
+                      Type: ], Text: ]
+                    Type: ), Text: )
+              Type: ), Text: )
+            Type: goto_statement, Text: goto out;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: out
+              Type: ;, Text: ;
+          Type: expression_statement, Text: offset = nextfh & ROMFH_MASK;
+            Type: assignment_expression, Text: offset = nextfh & ROMFH_MASK
+              Type: identifier, Text: offset
+              Type: =, Text: =
+              Type: binary_expression, Text: nextfh & ROMFH_MASK
+                Type: identifier, Text: nextfh
+                Type: &, Text: &
+                Type: identifier, Text: ROMFH_MASK
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: labeled_statement, Text: out: return 0;
+        Type: statement_identifier, Text: out
+        Type: :, Text: :
+        Type: return_statement, Text: return 0;
+          Type: return, Text: return
+          Type: number_literal, Text: 0
+          Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * look up an ...  a directory */
+  Type: function_definition, Text: static struct d ... ERR_PTR(ret); }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: struct_specifier, Text: struct dentry
+      Type: struct, Text: struct
+      Type: type_identifier, Text: dentry
+    Type: pointer_declarator, Text: *romfs_lookup(s ... gned int flags)
+      Type: *, Text: *
+      Type: function_declarator, Text: romfs_lookup(st ... gned int flags)
+        Type: identifier, Text: romfs_lookup
+        Type: parameter_list, Text: (struct inode * ... gned int flags)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *dir
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *dir
+              Type: *, Text: *
+              Type: identifier, Text: dir
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct dentry *dentry
+            Type: struct_specifier, Text: struct dentry
+              Type: struct, Text: struct
+              Type: type_identifier, Text: dentry
+            Type: pointer_declarator, Text: *dentry
+              Type: *, Text: *
+              Type: identifier, Text: dentry
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned int flags
+            Type: sized_type_specifier, Text: unsigned int
+              Type: unsigned, Text: unsigned
+              Type: primitive_type, Text: int
+            Type: identifier, Text: flags
+          Type: ), Text: )
+    Type: compound_statement, Text: { unsigned long ... ERR_PTR(ret); }
+      Type: {, Text: {
+      Type: declaration, Text: unsigned long offset, maxoff;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: identifier, Text: offset
+        Type: ,, Text: ,
+        Type: identifier, Text: maxoff
+        Type: ;, Text: ;
+      Type: declaration, Text: struct inode *inode = NULL;
+        Type: struct_specifier, Text: struct inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: inode
+        Type: init_declarator, Text: *inode = NULL
+          Type: pointer_declarator, Text: *inode
+            Type: *, Text: *
+            Type: identifier, Text: inode
+          Type: =, Text: =
+          Type: null, Text: NULL
+            Type: NULL, Text: NULL
+        Type: ;, Text: ;
+      Type: declaration, Text: struct romfs_inode ri;
+        Type: struct_specifier, Text: struct romfs_inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_inode
+        Type: identifier, Text: ri
+        Type: ;, Text: ;
+      Type: declaration, Text: const char *name;
+        Type: type_qualifier, Text: const
+          Type: const, Text: const
+        Type: primitive_type, Text: char
+        Type: pointer_declarator, Text: *name
+          Type: *, Text: *
+          Type: identifier, Text: name
+        Type: ;, Text: ;
+      Type: comment, Text: /* got from dentry */
+      Type: declaration, Text: int len, ret;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: len
+        Type: ,, Text: ,
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: expression_statement, Text: offset = dir->i_ino & ROMFH_MASK;
+        Type: assignment_expression, Text: offset = dir->i_ino & ROMFH_MASK
+          Type: identifier, Text: offset
+          Type: =, Text: =
+          Type: binary_expression, Text: dir->i_ino & ROMFH_MASK
+            Type: field_expression, Text: dir->i_ino
+              Type: identifier, Text: dir
+              Type: ->, Text: ->
+              Type: field_identifier, Text: i_ino
+            Type: &, Text: &
+            Type: identifier, Text: ROMFH_MASK
+        Type: ;, Text: ;
+      Type: expression_statement, Text: ret = romfs_dev ... i, ROMFH_SIZE);
+        Type: assignment_expression, Text: ret = romfs_dev ... ri, ROMFH_SIZE)
+          Type: identifier, Text: ret
+          Type: =, Text: =
+          Type: call_expression, Text: romfs_dev_read( ... ri, ROMFH_SIZE)
+            Type: identifier, Text: romfs_dev_read
+            Type: argument_list, Text: (dir->i_sb, off ... ri, ROMFH_SIZE)
+              Type: (, Text: (
+              Type: field_expression, Text: dir->i_sb
+                Type: identifier, Text: dir
+                Type: ->, Text: ->
+                Type: field_identifier, Text: i_sb
+              Type: ,, Text: ,
+              Type: identifier, Text: offset
+              Type: ,, Text: ,
+              Type: pointer_expression, Text: &ri
+                Type: &, Text: &
+                Type: identifier, Text: ri
+              Type: ,, Text: ,
+              Type: identifier, Text: ROMFH_SIZE
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (ret < 0) goto error;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (ret < 0)
+          Type: (, Text: (
+          Type: binary_expression, Text: ret < 0
+            Type: identifier, Text: ret
+            Type: <, Text: <
+            Type: number_literal, Text: 0
+          Type: ), Text: )
+        Type: goto_statement, Text: goto error;
+          Type: goto, Text: goto
+          Type: statement_identifier, Text: error
+          Type: ;, Text: ;
+      Type: comment, Text: /* search all t ... special data */
+      Type: expression_statement, Text: maxoff = romfs_maxsize(dir->i_sb);
+        Type: assignment_expression, Text: maxoff = romfs_maxsize(dir->i_sb)
+          Type: identifier, Text: maxoff
+          Type: =, Text: =
+          Type: call_expression, Text: romfs_maxsize(dir->i_sb)
+            Type: identifier, Text: romfs_maxsize
+            Type: argument_list, Text: (dir->i_sb)
+              Type: (, Text: (
+              Type: field_expression, Text: dir->i_sb
+                Type: identifier, Text: dir
+                Type: ->, Text: ->
+                Type: field_identifier, Text: i_sb
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: offset = be32_t ... ) & ROMFH_MASK;
+        Type: assignment_expression, Text: offset = be32_t ... c) & ROMFH_MASK
+          Type: identifier, Text: offset
+          Type: =, Text: =
+          Type: binary_expression, Text: be32_to_cpu(ri.spec) & ROMFH_MASK
+            Type: call_expression, Text: be32_to_cpu(ri.spec)
+              Type: identifier, Text: be32_to_cpu
+              Type: argument_list, Text: (ri.spec)
+                Type: (, Text: (
+                Type: field_expression, Text: ri.spec
+                  Type: identifier, Text: ri
+                  Type: ., Text: .
+                  Type: field_identifier, Text: spec
+                Type: ), Text: )
+            Type: &, Text: &
+            Type: identifier, Text: ROMFH_MASK
+        Type: ;, Text: ;
+      Type: expression_statement, Text: name = dentry->d_name.name;
+        Type: assignment_expression, Text: name = dentry->d_name.name
+          Type: identifier, Text: name
+          Type: =, Text: =
+          Type: field_expression, Text: dentry->d_name.name
+            Type: field_expression, Text: dentry->d_name
+              Type: identifier, Text: dentry
+              Type: ->, Text: ->
+              Type: field_identifier, Text: d_name
+            Type: ., Text: .
+            Type: field_identifier, Text: name
+        Type: ;, Text: ;
+      Type: expression_statement, Text: len = dentry->d_name.len;
+        Type: assignment_expression, Text: len = dentry->d_name.len
+          Type: identifier, Text: len
+          Type: =, Text: =
+          Type: field_expression, Text: dentry->d_name.len
+            Type: field_expression, Text: dentry->d_name
+              Type: identifier, Text: dentry
+              Type: ->, Text: ->
+              Type: field_identifier, Text: d_name
+            Type: ., Text: .
+            Type: field_identifier, Text: len
+        Type: ;, Text: ;
+      Type: for_statement, Text: for (;;) { if ( ... & ROMFH_MASK; }
+        Type: for, Text: for
+        Type: (, Text: (
+        Type: ;, Text: ;
+        Type: ;, Text: ;
+        Type: ), Text: )
+        Type: compound_statement, Text: { if (!offset | ... & ROMFH_MASK; }
+          Type: {, Text: {
+          Type: if_statement, Text: if (!offset ||  ...  maxoff) break;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (!offset || offset >= maxoff)
+              Type: (, Text: (
+              Type: binary_expression, Text: !offset || offset >= maxoff
+                Type: unary_expression, Text: !offset
+                  Type: !, Text: !
+                  Type: identifier, Text: offset
+                Type: ||, Text: ||
+                Type: binary_expression, Text: offset >= maxoff
+                  Type: identifier, Text: offset
+                  Type: >=, Text: >=
+                  Type: identifier, Text: maxoff
+              Type: ), Text: )
+            Type: break_statement, Text: break;
+              Type: break, Text: break
+              Type: ;, Text: ;
+          Type: expression_statement, Text: ret = romfs_dev ... i, sizeof(ri));
+            Type: assignment_expression, Text: ret = romfs_dev ... ri, sizeof(ri))
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_read( ... ri, sizeof(ri))
+                Type: identifier, Text: romfs_dev_read
+                Type: argument_list, Text: (dir->i_sb, off ... ri, sizeof(ri))
+                  Type: (, Text: (
+                  Type: field_expression, Text: dir->i_sb
+                    Type: identifier, Text: dir
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: identifier, Text: offset
+                  Type: ,, Text: ,
+                  Type: pointer_expression, Text: &ri
+                    Type: &, Text: &
+                    Type: identifier, Text: ri
+                  Type: ,, Text: ,
+                  Type: sizeof_expression, Text: sizeof(ri)
+                    Type: sizeof, Text: sizeof
+                    Type: parenthesized_expression, Text: (ri)
+                      Type: (, Text: (
+                      Type: identifier, Text: ri
+                      Type: ), Text: )
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) goto error;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto error;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: error
+              Type: ;, Text: ;
+          Type: comment, Text: /* try to match ... ytes of name */
+          Type: expression_statement, Text: ret = romfs_dev ... ZE, name, len);
+            Type: assignment_expression, Text: ret = romfs_dev ... IZE, name, len)
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_strcm ... IZE, name, len)
+                Type: identifier, Text: romfs_dev_strcmp
+                Type: argument_list, Text: (dir->i_sb, off ... IZE, name, len)
+                  Type: (, Text: (
+                  Type: field_expression, Text: dir->i_sb
+                    Type: identifier, Text: dir
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_sb
+                  Type: ,, Text: ,
+                  Type: binary_expression, Text: offset + ROMFH_SIZE
+                    Type: identifier, Text: offset
+                    Type: +, Text: +
+                    Type: identifier, Text: ROMFH_SIZE
+                  Type: ,, Text: ,
+                  Type: identifier, Text: name
+                  Type: ,, Text: ,
+                  Type: identifier, Text: len
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) goto error;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto error;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: error
+              Type: ;, Text: ;
+          Type: if_statement, Text: if (ret == 1) { ... fset); break; }
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret == 1)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret == 1
+                Type: identifier, Text: ret
+                Type: ==, Text: ==
+                Type: number_literal, Text: 1
+              Type: ), Text: )
+            Type: compound_statement, Text: { /* Hard link  ... fset); break; }
+              Type: {, Text: {
+              Type: comment, Text: /* Hard link handling */
+              Type: if_statement, Text: if ((be32_to_cp ... ) & ROMFH_MASK;
+                Type: if, Text: if
+                Type: parenthesized_expression, Text: ((be32_to_cpu(r ... ) == ROMFH_HRD)
+                  Type: (, Text: (
+                  Type: binary_expression, Text: (be32_to_cpu(ri ... E) == ROMFH_HRD
+                    Type: parenthesized_expression, Text: (be32_to_cpu(ri.next) & ROMFH_TYPE)
+                      Type: (, Text: (
+                      Type: binary_expression, Text: be32_to_cpu(ri.next) & ROMFH_TYPE
+                        Type: call_expression, Text: be32_to_cpu(ri.next)
+                          Type: identifier, Text: be32_to_cpu
+                          Type: argument_list, Text: (ri.next)
+                            Type: (, Text: (
+                            Type: field_expression, Text: ri.next
+                              Type: identifier, Text: ri
+                              Type: ., Text: .
+                              Type: field_identifier, Text: next
+                            Type: ), Text: )
+                        Type: &, Text: &
+                        Type: identifier, Text: ROMFH_TYPE
+                      Type: ), Text: )
+                    Type: ==, Text: ==
+                    Type: identifier, Text: ROMFH_HRD
+                  Type: ), Text: )
+                Type: expression_statement, Text: offset = be32_t ... ) & ROMFH_MASK;
+                  Type: assignment_expression, Text: offset = be32_t ... c) & ROMFH_MASK
+                    Type: identifier, Text: offset
+                    Type: =, Text: =
+                    Type: binary_expression, Text: be32_to_cpu(ri.spec) & ROMFH_MASK
+                      Type: call_expression, Text: be32_to_cpu(ri.spec)
+                        Type: identifier, Text: be32_to_cpu
+                        Type: argument_list, Text: (ri.spec)
+                          Type: (, Text: (
+                          Type: field_expression, Text: ri.spec
+                            Type: identifier, Text: ri
+                            Type: ., Text: .
+                            Type: field_identifier, Text: spec
+                          Type: ), Text: )
+                      Type: &, Text: &
+                      Type: identifier, Text: ROMFH_MASK
+                  Type: ;, Text: ;
+              Type: expression_statement, Text: inode = romfs_i ... >i_sb, offset);
+                Type: assignment_expression, Text: inode = romfs_i ... ->i_sb, offset)
+                  Type: identifier, Text: inode
+                  Type: =, Text: =
+                  Type: call_expression, Text: romfs_iget(dir->i_sb, offset)
+                    Type: identifier, Text: romfs_iget
+                    Type: argument_list, Text: (dir->i_sb, offset)
+                      Type: (, Text: (
+                      Type: field_expression, Text: dir->i_sb
+                        Type: identifier, Text: dir
+                        Type: ->, Text: ->
+                        Type: field_identifier, Text: i_sb
+                      Type: ,, Text: ,
+                      Type: identifier, Text: offset
+                      Type: ), Text: )
+                Type: ;, Text: ;
+              Type: break_statement, Text: break;
+                Type: break, Text: break
+                Type: ;, Text: ;
+              Type: }, Text: }
+          Type: comment, Text: /* next entry */
+          Type: expression_statement, Text: offset = be32_t ... ) & ROMFH_MASK;
+            Type: assignment_expression, Text: offset = be32_t ... t) & ROMFH_MASK
+              Type: identifier, Text: offset
+              Type: =, Text: =
+              Type: binary_expression, Text: be32_to_cpu(ri.next) & ROMFH_MASK
+                Type: call_expression, Text: be32_to_cpu(ri.next)
+                  Type: identifier, Text: be32_to_cpu
+                  Type: argument_list, Text: (ri.next)
+                    Type: (, Text: (
+                    Type: field_expression, Text: ri.next
+                      Type: identifier, Text: ri
+                      Type: ., Text: .
+                      Type: field_identifier, Text: next
+                    Type: ), Text: )
+                Type: &, Text: &
+                Type: identifier, Text: ROMFH_MASK
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: return_statement, Text: return d_splice ... inode, dentry);
+        Type: return, Text: return
+        Type: call_expression, Text: d_splice_alias(inode, dentry)
+          Type: identifier, Text: d_splice_alias
+          Type: argument_list, Text: (inode, dentry)
+            Type: (, Text: (
+            Type: identifier, Text: inode
+            Type: ,, Text: ,
+            Type: identifier, Text: dentry
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: labeled_statement, Text: error: return ERR_PTR(ret);
+        Type: statement_identifier, Text: error
+        Type: :, Text: :
+        Type: return_statement, Text: return ERR_PTR(ret);
+          Type: return, Text: return
+          Type: call_expression, Text: ERR_PTR(ret)
+            Type: identifier, Text: ERR_PTR
+            Type: argument_list, Text: (ret)
+              Type: (, Text: (
+              Type: identifier, Text: ret
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: }, Text: }
+  Type: declaration, Text: static const st ... file_llseek, };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: struct_specifier, Text: struct file_operations
+      Type: struct, Text: struct
+      Type: type_identifier, Text: file_operations
+    Type: init_declarator, Text: romfs_dir_opera ... _file_llseek, }
+      Type: identifier, Text: romfs_dir_operations
+      Type: =, Text: =
+      Type: initializer_list, Text: { .read = gener ... _file_llseek, }
+        Type: {, Text: {
+        Type: initializer_pair, Text: .read = generic_read_dir
+          Type: field_designator, Text: .read
+            Type: ., Text: .
+            Type: field_identifier, Text: read
+          Type: =, Text: =
+          Type: identifier, Text: generic_read_dir
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .iterate_shared = romfs_readdir
+          Type: field_designator, Text: .iterate_shared
+            Type: ., Text: .
+            Type: field_identifier, Text: iterate_shared
+          Type: =, Text: =
+          Type: identifier, Text: romfs_readdir
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .llseek = generic_file_llseek
+          Type: field_designator, Text: .llseek
+            Type: ., Text: .
+            Type: field_identifier, Text: llseek
+          Type: =, Text: =
+          Type: identifier, Text: generic_file_llseek
+        Type: ,, Text: ,
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: declaration, Text: static const st ... omfs_lookup, };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: struct_specifier, Text: struct inode_operations
+      Type: struct, Text: struct
+      Type: type_identifier, Text: inode_operations
+    Type: init_declarator, Text: romfs_dir_inode ... romfs_lookup, }
+      Type: identifier, Text: romfs_dir_inode_operations
+      Type: =, Text: =
+      Type: initializer_list, Text: { .lookup = romfs_lookup, }
+        Type: {, Text: {
+        Type: initializer_pair, Text: .lookup = romfs_lookup
+          Type: field_designator, Text: .lookup
+            Type: ., Text: .
+            Type: field_identifier, Text: lookup
+          Type: =, Text: =
+          Type: identifier, Text: romfs_lookup
+        Type: ,, Text: ,
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: comment, Text: /* * get a romf ... node number) */
+  Type: function_definition, Text: static struct i ... ERR_PTR(ret); }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: struct_specifier, Text: struct inode
+      Type: struct, Text: struct
+      Type: type_identifier, Text: inode
+    Type: pointer_declarator, Text: *romfs_iget(str ... igned long pos)
+      Type: *, Text: *
+      Type: function_declarator, Text: romfs_iget(stru ... igned long pos)
+        Type: identifier, Text: romfs_iget
+        Type: parameter_list, Text: (struct super_b ... igned long pos)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned long pos
+            Type: sized_type_specifier, Text: unsigned long
+              Type: unsigned, Text: unsigned
+              Type: long, Text: long
+            Type: identifier, Text: pos
+          Type: ), Text: )
+    Type: compound_statement, Text: { struct romfs_ ... ERR_PTR(ret); }
+      Type: {, Text: {
+      Type: declaration, Text: struct romfs_inode_info *inode;
+        Type: struct_specifier, Text: struct romfs_inode_info
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_inode_info
+        Type: pointer_declarator, Text: *inode
+          Type: *, Text: *
+          Type: identifier, Text: inode
+        Type: ;, Text: ;
+      Type: declaration, Text: struct romfs_inode ri;
+        Type: struct_specifier, Text: struct romfs_inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_inode
+        Type: identifier, Text: ri
+        Type: ;, Text: ;
+      Type: declaration, Text: struct inode *i;
+        Type: struct_specifier, Text: struct inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: inode
+        Type: pointer_declarator, Text: *i
+          Type: *, Text: *
+          Type: identifier, Text: i
+        Type: ;, Text: ;
+      Type: declaration, Text: unsigned long nlen;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: identifier, Text: nlen
+        Type: ;, Text: ;
+      Type: declaration, Text: unsigned nextfh;
+        Type: sized_type_specifier, Text: unsigned
+          Type: unsigned, Text: unsigned
+        Type: identifier, Text: nextfh
+        Type: ;, Text: ;
+      Type: declaration, Text: int ret;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: declaration, Text: umode_t mode;
+        Type: type_identifier, Text: umode_t
+        Type: identifier, Text: mode
+        Type: ;, Text: ;
+      Type: comment, Text: /* we might hav ...  actual file */
+      Type: for_statement, Text: for (;;) { ret  ... & ROMFH_MASK; }
+        Type: for, Text: for
+        Type: (, Text: (
+        Type: ;, Text: ;
+        Type: ;, Text: ;
+        Type: ), Text: )
+        Type: compound_statement, Text: { ret = romfs_d ... & ROMFH_MASK; }
+          Type: {, Text: {
+          Type: expression_statement, Text: ret = romfs_dev ... i, sizeof(ri));
+            Type: assignment_expression, Text: ret = romfs_dev ... ri, sizeof(ri))
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: romfs_dev_read( ... ri, sizeof(ri))
+                Type: identifier, Text: romfs_dev_read
+                Type: argument_list, Text: (sb, pos, &ri, sizeof(ri))
+                  Type: (, Text: (
+                  Type: identifier, Text: sb
+                  Type: ,, Text: ,
+                  Type: identifier, Text: pos
+                  Type: ,, Text: ,
+                  Type: pointer_expression, Text: &ri
+                    Type: &, Text: &
+                    Type: identifier, Text: ri
+                  Type: ,, Text: ,
+                  Type: sizeof_expression, Text: sizeof(ri)
+                    Type: sizeof, Text: sizeof
+                    Type: parenthesized_expression, Text: (ri)
+                      Type: (, Text: (
+                      Type: identifier, Text: ri
+                      Type: ), Text: )
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if (ret < 0) goto error;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (ret < 0)
+              Type: (, Text: (
+              Type: binary_expression, Text: ret < 0
+                Type: identifier, Text: ret
+                Type: <, Text: <
+                Type: number_literal, Text: 0
+              Type: ), Text: )
+            Type: goto_statement, Text: goto error;
+              Type: goto, Text: goto
+              Type: statement_identifier, Text: error
+              Type: ;, Text: ;
+          Type: comment, Text: /* XXX: do romf ...  (with name) */
+          Type: expression_statement, Text: nextfh = be32_to_cpu(ri.next);
+            Type: assignment_expression, Text: nextfh = be32_to_cpu(ri.next)
+              Type: identifier, Text: nextfh
+              Type: =, Text: =
+              Type: call_expression, Text: be32_to_cpu(ri.next)
+                Type: identifier, Text: be32_to_cpu
+                Type: argument_list, Text: (ri.next)
+                  Type: (, Text: (
+                  Type: field_expression, Text: ri.next
+                    Type: identifier, Text: ri
+                    Type: ., Text: .
+                    Type: field_identifier, Text: next
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: if_statement, Text: if ((nextfh & R ... MFH_HRD) break;
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: ((nextfh & ROMF ... ) != ROMFH_HRD)
+              Type: (, Text: (
+              Type: binary_expression, Text: (nextfh & ROMFH_TYPE) != ROMFH_HRD
+                Type: parenthesized_expression, Text: (nextfh & ROMFH_TYPE)
+                  Type: (, Text: (
+                  Type: binary_expression, Text: nextfh & ROMFH_TYPE
+                    Type: identifier, Text: nextfh
+                    Type: &, Text: &
+                    Type: identifier, Text: ROMFH_TYPE
+                  Type: ), Text: )
+                Type: !=, Text: !=
+                Type: identifier, Text: ROMFH_HRD
+              Type: ), Text: )
+            Type: break_statement, Text: break;
+              Type: break, Text: break
+              Type: ;, Text: ;
+          Type: expression_statement, Text: pos = be32_to_c ... ) & ROMFH_MASK;
+            Type: assignment_expression, Text: pos = be32_to_c ... c) & ROMFH_MASK
+              Type: identifier, Text: pos
+              Type: =, Text: =
+              Type: binary_expression, Text: be32_to_cpu(ri.spec) & ROMFH_MASK
+                Type: call_expression, Text: be32_to_cpu(ri.spec)
+                  Type: identifier, Text: be32_to_cpu
+                  Type: argument_list, Text: (ri.spec)
+                    Type: (, Text: (
+                    Type: field_expression, Text: ri.spec
+                      Type: identifier, Text: ri
+                      Type: ., Text: .
+                      Type: field_identifier, Text: spec
+                    Type: ), Text: )
+                Type: &, Text: &
+                Type: identifier, Text: ROMFH_MASK
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: comment, Text: /* determine th ... the filename */
+      Type: expression_statement, Text: nlen = romfs_de ... , ROMFS_MAXFN);
+        Type: assignment_expression, Text: nlen = romfs_de ... E, ROMFS_MAXFN)
+          Type: identifier, Text: nlen
+          Type: =, Text: =
+          Type: call_expression, Text: romfs_dev_strnl ... E, ROMFS_MAXFN)
+            Type: identifier, Text: romfs_dev_strnlen
+            Type: argument_list, Text: (sb, pos + ROMFH_SIZE, ROMFS_MAXFN)
+              Type: (, Text: (
+              Type: identifier, Text: sb
+              Type: ,, Text: ,
+              Type: binary_expression, Text: pos + ROMFH_SIZE
+                Type: identifier, Text: pos
+                Type: +, Text: +
+                Type: identifier, Text: ROMFH_SIZE
+              Type: ,, Text: ,
+              Type: identifier, Text: ROMFS_MAXFN
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (IS_ERR_VALUE(nlen)) goto eio;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (IS_ERR_VALUE(nlen))
+          Type: (, Text: (
+          Type: call_expression, Text: IS_ERR_VALUE(nlen)
+            Type: identifier, Text: IS_ERR_VALUE
+            Type: argument_list, Text: (nlen)
+              Type: (, Text: (
+              Type: identifier, Text: nlen
+              Type: ), Text: )
+          Type: ), Text: )
+        Type: goto_statement, Text: goto eio;
+          Type: goto, Text: goto
+          Type: statement_identifier, Text: eio
+          Type: ;, Text: ;
+      Type: comment, Text: /* get an inode ... age position */
+      Type: expression_statement, Text: i = iget_locked(sb, pos);
+        Type: assignment_expression, Text: i = iget_locked(sb, pos)
+          Type: identifier, Text: i
+          Type: =, Text: =
+          Type: call_expression, Text: iget_locked(sb, pos)
+            Type: identifier, Text: iget_locked
+            Type: argument_list, Text: (sb, pos)
+              Type: (, Text: (
+              Type: identifier, Text: sb
+              Type: ,, Text: ,
+              Type: identifier, Text: pos
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!i) return ERR_PTR(-ENOMEM);
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!i)
+          Type: (, Text: (
+          Type: unary_expression, Text: !i
+            Type: !, Text: !
+            Type: identifier, Text: i
+          Type: ), Text: )
+        Type: return_statement, Text: return ERR_PTR(-ENOMEM);
+          Type: return, Text: return
+          Type: call_expression, Text: ERR_PTR(-ENOMEM)
+            Type: identifier, Text: ERR_PTR
+            Type: argument_list, Text: (-ENOMEM)
+              Type: (, Text: (
+              Type: unary_expression, Text: -ENOMEM
+                Type: -, Text: -
+                Type: identifier, Text: ENOMEM
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: if_statement, Text: if (!(i->i_stat ... NEW)) return i;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!(i->i_state & I_NEW))
+          Type: (, Text: (
+          Type: unary_expression, Text: !(i->i_state & I_NEW)
+            Type: !, Text: !
+            Type: parenthesized_expression, Text: (i->i_state & I_NEW)
+              Type: (, Text: (
+              Type: binary_expression, Text: i->i_state & I_NEW
+                Type: field_expression, Text: i->i_state
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_state
+                Type: &, Text: &
+                Type: identifier, Text: I_NEW
+              Type: ), Text: )
+          Type: ), Text: )
+        Type: return_statement, Text: return i;
+          Type: return, Text: return
+          Type: identifier, Text: i
+          Type: ;, Text: ;
+      Type: comment, Text: /* precalculate the data offset */
+      Type: expression_statement, Text: inode = ROMFS_I(i);
+        Type: assignment_expression, Text: inode = ROMFS_I(i)
+          Type: identifier, Text: inode
+          Type: =, Text: =
+          Type: call_expression, Text: ROMFS_I(i)
+            Type: identifier, Text: ROMFS_I
+            Type: argument_list, Text: (i)
+              Type: (, Text: (
+              Type: identifier, Text: i
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: inode->i_metasi ... ) & ROMFH_MASK;
+        Type: assignment_expression, Text: inode->i_metasi ... D) & ROMFH_MASK
+          Type: field_expression, Text: inode->i_metasize
+            Type: identifier, Text: inode
+            Type: ->, Text: ->
+            Type: field_identifier, Text: i_metasize
+          Type: =, Text: =
+          Type: binary_expression, Text: (ROMFH_SIZE + n ... D) & ROMFH_MASK
+            Type: parenthesized_expression, Text: (ROMFH_SIZE + nlen + 1 + ROMFH_PAD)
+              Type: (, Text: (
+              Type: binary_expression, Text: ROMFH_SIZE + nlen + 1 + ROMFH_PAD
+                Type: binary_expression, Text: ROMFH_SIZE + nlen + 1
+                  Type: binary_expression, Text: ROMFH_SIZE + nlen
+                    Type: identifier, Text: ROMFH_SIZE
+                    Type: +, Text: +
+                    Type: identifier, Text: nlen
+                  Type: +, Text: +
+                  Type: number_literal, Text: 1
+                Type: +, Text: +
+                Type: identifier, Text: ROMFH_PAD
+              Type: ), Text: )
+            Type: &, Text: &
+            Type: identifier, Text: ROMFH_MASK
+        Type: ;, Text: ;
+      Type: expression_statement, Text: inode->i_dataof ... de->i_metasize;
+        Type: assignment_expression, Text: inode->i_dataof ... ode->i_metasize
+          Type: field_expression, Text: inode->i_dataoffset
+            Type: identifier, Text: inode
+            Type: ->, Text: ->
+            Type: field_identifier, Text: i_dataoffset
+          Type: =, Text: =
+          Type: binary_expression, Text: pos + inode->i_metasize
+            Type: identifier, Text: pos
+            Type: +, Text: +
+            Type: field_expression, Text: inode->i_metasize
+              Type: identifier, Text: inode
+              Type: ->, Text: ->
+              Type: field_identifier, Text: i_metasize
+        Type: ;, Text: ;
+      Type: expression_statement, Text: set_nlink(i, 1);
+        Type: call_expression, Text: set_nlink(i, 1)
+          Type: identifier, Text: set_nlink
+          Type: argument_list, Text: (i, 1)
+            Type: (, Text: (
+            Type: identifier, Text: i
+            Type: ,, Text: ,
+            Type: number_literal, Text: 1
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: comment, Text: /* Hard to decide.. */
+      Type: expression_statement, Text: i->i_size = be32_to_cpu(ri.size);
+        Type: assignment_expression, Text: i->i_size = be32_to_cpu(ri.size)
+          Type: field_expression, Text: i->i_size
+            Type: identifier, Text: i
+            Type: ->, Text: ->
+            Type: field_identifier, Text: i_size
+          Type: =, Text: =
+          Type: call_expression, Text: be32_to_cpu(ri.size)
+            Type: identifier, Text: be32_to_cpu
+            Type: argument_list, Text: (ri.size)
+              Type: (, Text: (
+              Type: field_expression, Text: ri.size
+                Type: identifier, Text: ri
+                Type: ., Text: .
+                Type: field_identifier, Text: size
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: i->i_mtime = i- ... ctime(i, 0, 0);
+        Type: assignment_expression, Text: i->i_mtime = i- ... _ctime(i, 0, 0)
+          Type: field_expression, Text: i->i_mtime
+            Type: identifier, Text: i
+            Type: ->, Text: ->
+            Type: field_identifier, Text: i_mtime
+          Type: =, Text: =
+          Type: assignment_expression, Text: i->i_atime = in ... _ctime(i, 0, 0)
+            Type: field_expression, Text: i->i_atime
+              Type: identifier, Text: i
+              Type: ->, Text: ->
+              Type: field_identifier, Text: i_atime
+            Type: =, Text: =
+            Type: call_expression, Text: inode_set_ctime(i, 0, 0)
+              Type: identifier, Text: inode_set_ctime
+              Type: argument_list, Text: (i, 0, 0)
+                Type: (, Text: (
+                Type: identifier, Text: i
+                Type: ,, Text: ,
+                Type: number_literal, Text: 0
+                Type: ,, Text: ,
+                Type: number_literal, Text: 0
+                Type: ), Text: )
+        Type: ;, Text: ;
+      Type: comment, Text: /* set up mode and ops */
+      Type: expression_statement, Text: mode = romfs_mo ...  & ROMFH_TYPE];
+        Type: assignment_expression, Text: mode = romfs_mo ... h & ROMFH_TYPE]
+          Type: identifier, Text: mode
+          Type: =, Text: =
+          Type: subscript_expression, Text: romfs_modemap[nextfh & ROMFH_TYPE]
+            Type: identifier, Text: romfs_modemap
+            Type: [, Text: [
+            Type: binary_expression, Text: nextfh & ROMFH_TYPE
+              Type: identifier, Text: nextfh
+              Type: &, Text: &
+              Type: identifier, Text: ROMFH_TYPE
+            Type: ], Text: ]
+        Type: ;, Text: ;
+      Type: switch_statement, Text: switch (nextfh  ... fff)); break; }
+        Type: switch, Text: switch
+        Type: parenthesized_expression, Text: (nextfh & ROMFH_TYPE)
+          Type: (, Text: (
+          Type: binary_expression, Text: nextfh & ROMFH_TYPE
+            Type: identifier, Text: nextfh
+            Type: &, Text: &
+            Type: identifier, Text: ROMFH_TYPE
+          Type: ), Text: )
+        Type: compound_statement, Text: { case ROMFH_DI ... fff)); break; }
+          Type: {, Text: {
+          Type: case_statement, Text: case ROMFH_DIR: ... S_IXUGO; break;
+            Type: case, Text: case
+            Type: identifier, Text: ROMFH_DIR
+            Type: :, Text: :
+            Type: expression_statement, Text: i->i_size = ROMFS_I(i)->i_metasize;
+              Type: assignment_expression, Text: i->i_size = ROMFS_I(i)->i_metasize
+                Type: field_expression, Text: i->i_size
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_size
+                Type: =, Text: =
+                Type: field_expression, Text: ROMFS_I(i)->i_metasize
+                  Type: call_expression, Text: ROMFS_I(i)
+                    Type: identifier, Text: ROMFS_I
+                    Type: argument_list, Text: (i)
+                      Type: (, Text: (
+                      Type: identifier, Text: i
+                      Type: ), Text: )
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_metasize
+              Type: ;, Text: ;
+            Type: expression_statement, Text: i->i_op = &romf ... ode_operations;
+              Type: assignment_expression, Text: i->i_op = &romf ... node_operations
+                Type: field_expression, Text: i->i_op
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_op
+                Type: =, Text: =
+                Type: pointer_expression, Text: &romfs_dir_inode_operations
+                  Type: &, Text: &
+                  Type: identifier, Text: romfs_dir_inode_operations
+              Type: ;, Text: ;
+            Type: expression_statement, Text: i->i_fop = &romfs_dir_operations;
+              Type: assignment_expression, Text: i->i_fop = &romfs_dir_operations
+                Type: field_expression, Text: i->i_fop
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_fop
+                Type: =, Text: =
+                Type: pointer_expression, Text: &romfs_dir_operations
+                  Type: &, Text: &
+                  Type: identifier, Text: romfs_dir_operations
+              Type: ;, Text: ;
+            Type: if_statement, Text: if (nextfh & RO ... ode |= S_IXUGO;
+              Type: if, Text: if
+              Type: parenthesized_expression, Text: (nextfh & ROMFH_EXEC)
+                Type: (, Text: (
+                Type: binary_expression, Text: nextfh & ROMFH_EXEC
+                  Type: identifier, Text: nextfh
+                  Type: &, Text: &
+                  Type: identifier, Text: ROMFH_EXEC
+                Type: ), Text: )
+              Type: expression_statement, Text: mode |= S_IXUGO;
+                Type: assignment_expression, Text: mode |= S_IXUGO
+                  Type: identifier, Text: mode
+                  Type: |=, Text: |=
+                  Type: identifier, Text: S_IXUGO
+                Type: ;, Text: ;
+            Type: break_statement, Text: break;
+              Type: break, Text: break
+              Type: ;, Text: ;
+          Type: case_statement, Text: case ROMFH_REG: ... S_IXUGO; break;
+            Type: case, Text: case
+            Type: identifier, Text: ROMFH_REG
+            Type: :, Text: :
+            Type: expression_statement, Text: i->i_fop = &romfs_ro_fops;
+              Type: assignment_expression, Text: i->i_fop = &romfs_ro_fops
+                Type: field_expression, Text: i->i_fop
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_fop
+                Type: =, Text: =
+                Type: pointer_expression, Text: &romfs_ro_fops
+                  Type: &, Text: &
+                  Type: identifier, Text: romfs_ro_fops
+              Type: ;, Text: ;
+            Type: expression_statement, Text: i->i_data.a_ops = &romfs_aops;
+              Type: assignment_expression, Text: i->i_data.a_ops = &romfs_aops
+                Type: field_expression, Text: i->i_data.a_ops
+                  Type: field_expression, Text: i->i_data
+                    Type: identifier, Text: i
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_data
+                  Type: ., Text: .
+                  Type: field_identifier, Text: a_ops
+                Type: =, Text: =
+                Type: pointer_expression, Text: &romfs_aops
+                  Type: &, Text: &
+                  Type: identifier, Text: romfs_aops
+              Type: ;, Text: ;
+            Type: if_statement, Text: if (nextfh & RO ... ode |= S_IXUGO;
+              Type: if, Text: if
+              Type: parenthesized_expression, Text: (nextfh & ROMFH_EXEC)
+                Type: (, Text: (
+                Type: binary_expression, Text: nextfh & ROMFH_EXEC
+                  Type: identifier, Text: nextfh
+                  Type: &, Text: &
+                  Type: identifier, Text: ROMFH_EXEC
+                Type: ), Text: )
+              Type: expression_statement, Text: mode |= S_IXUGO;
+                Type: assignment_expression, Text: mode |= S_IXUGO
+                  Type: identifier, Text: mode
+                  Type: |=, Text: |=
+                  Type: identifier, Text: S_IXUGO
+                Type: ;, Text: ;
+            Type: break_statement, Text: break;
+              Type: break, Text: break
+              Type: ;, Text: ;
+          Type: case_statement, Text: case ROMFH_SYM: ... IRWXUGO; break;
+            Type: case, Text: case
+            Type: identifier, Text: ROMFH_SYM
+            Type: :, Text: :
+            Type: expression_statement, Text: i->i_op = &page ... ode_operations;
+              Type: assignment_expression, Text: i->i_op = &page ... node_operations
+                Type: field_expression, Text: i->i_op
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_op
+                Type: =, Text: =
+                Type: pointer_expression, Text: &page_symlink_inode_operations
+                  Type: &, Text: &
+                  Type: identifier, Text: page_symlink_inode_operations
+              Type: ;, Text: ;
+            Type: expression_statement, Text: inode_nohighmem(i);
+              Type: call_expression, Text: inode_nohighmem(i)
+                Type: identifier, Text: inode_nohighmem
+                Type: argument_list, Text: (i)
+                  Type: (, Text: (
+                  Type: identifier, Text: i
+                  Type: ), Text: )
+              Type: ;, Text: ;
+            Type: expression_statement, Text: i->i_data.a_ops = &romfs_aops;
+              Type: assignment_expression, Text: i->i_data.a_ops = &romfs_aops
+                Type: field_expression, Text: i->i_data.a_ops
+                  Type: field_expression, Text: i->i_data
+                    Type: identifier, Text: i
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: i_data
+                  Type: ., Text: .
+                  Type: field_identifier, Text: a_ops
+                Type: =, Text: =
+                Type: pointer_expression, Text: &romfs_aops
+                  Type: &, Text: &
+                  Type: identifier, Text: romfs_aops
+              Type: ;, Text: ;
+            Type: expression_statement, Text: mode |= S_IRWXUGO;
+              Type: assignment_expression, Text: mode |= S_IRWXUGO
+                Type: identifier, Text: mode
+                Type: |=, Text: |=
+                Type: identifier, Text: S_IRWXUGO
+              Type: ;, Text: ;
+            Type: break_statement, Text: break;
+              Type: break, Text: break
+              Type: ;, Text: ;
+          Type: case_statement, Text: default: /* dep ... xffff)); break;
+            Type: default, Text: default
+            Type: :, Text: :
+            Type: comment, Text: /* depending on ... r sock/fifos */
+            Type: expression_statement, Text: nextfh = be32_to_cpu(ri.spec);
+              Type: assignment_expression, Text: nextfh = be32_to_cpu(ri.spec)
+                Type: identifier, Text: nextfh
+                Type: =, Text: =
+                Type: call_expression, Text: be32_to_cpu(ri.spec)
+                  Type: identifier, Text: be32_to_cpu
+                  Type: argument_list, Text: (ri.spec)
+                    Type: (, Text: (
+                    Type: field_expression, Text: ri.spec
+                      Type: identifier, Text: ri
+                      Type: ., Text: .
+                      Type: field_identifier, Text: spec
+                    Type: ), Text: )
+              Type: ;, Text: ;
+            Type: expression_statement, Text: init_special_in ... tfh & 0xffff));
+              Type: call_expression, Text: init_special_in ... xtfh & 0xffff))
+                Type: identifier, Text: init_special_inode
+                Type: argument_list, Text: (i, mode, MKDEV ... xtfh & 0xffff))
+                  Type: (, Text: (
+                  Type: identifier, Text: i
+                  Type: ,, Text: ,
+                  Type: identifier, Text: mode
+                  Type: ,, Text: ,
+                  Type: call_expression, Text: MKDEV(nextfh >> ... extfh & 0xffff)
+                    Type: identifier, Text: MKDEV
+                    Type: argument_list, Text: (nextfh >> 16, nextfh & 0xffff)
+                      Type: (, Text: (
+                      Type: binary_expression, Text: nextfh >> 16
+                        Type: identifier, Text: nextfh
+                        Type: >>, Text: >>
+                        Type: number_literal, Text: 16
+                      Type: ,, Text: ,
+                      Type: binary_expression, Text: nextfh & 0xffff
+                        Type: identifier, Text: nextfh
+                        Type: &, Text: &
+                        Type: number_literal, Text: 0xffff
+                      Type: ), Text: )
+                  Type: ), Text: )
+              Type: ;, Text: ;
+            Type: break_statement, Text: break;
+              Type: break, Text: break
+              Type: ;, Text: ;
+          Type: }, Text: }
+      Type: expression_statement, Text: i->i_mode = mode;
+        Type: assignment_expression, Text: i->i_mode = mode
+          Type: field_expression, Text: i->i_mode
+            Type: identifier, Text: i
+            Type: ->, Text: ->
+            Type: field_identifier, Text: i_mode
+          Type: =, Text: =
+          Type: identifier, Text: mode
+        Type: ;, Text: ;
+      Type: expression_statement, Text: i->i_blocks = ( ... ze + 511) >> 9;
+        Type: assignment_expression, Text: i->i_blocks = ( ... ize + 511) >> 9
+          Type: field_expression, Text: i->i_blocks
+            Type: identifier, Text: i
+            Type: ->, Text: ->
+            Type: field_identifier, Text: i_blocks
+          Type: =, Text: =
+          Type: binary_expression, Text: (i->i_size + 511) >> 9
+            Type: parenthesized_expression, Text: (i->i_size + 511)
+              Type: (, Text: (
+              Type: binary_expression, Text: i->i_size + 511
+                Type: field_expression, Text: i->i_size
+                  Type: identifier, Text: i
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: i_size
+                Type: +, Text: +
+                Type: number_literal, Text: 511
+              Type: ), Text: )
+            Type: >>, Text: >>
+            Type: number_literal, Text: 9
+        Type: ;, Text: ;
+      Type: expression_statement, Text: unlock_new_inode(i);
+        Type: call_expression, Text: unlock_new_inode(i)
+          Type: identifier, Text: unlock_new_inode
+          Type: argument_list, Text: (i)
+            Type: (, Text: (
+            Type: identifier, Text: i
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: return_statement, Text: return i;
+        Type: return, Text: return
+        Type: identifier, Text: i
+        Type: ;, Text: ;
+      Type: labeled_statement, Text: eio: ret = -EIO;
+        Type: statement_identifier, Text: eio
+        Type: :, Text: :
+        Type: expression_statement, Text: ret = -EIO;
+          Type: assignment_expression, Text: ret = -EIO
+            Type: identifier, Text: ret
+            Type: =, Text: =
+            Type: unary_expression, Text: -EIO
+              Type: -, Text: -
+              Type: identifier, Text: EIO
+          Type: ;, Text: ;
+      Type: labeled_statement, Text: error: pr_err(" ... 0x%lx\n", pos);
+        Type: statement_identifier, Text: error
+        Type: :, Text: :
+        Type: expression_statement, Text: pr_err("read er ... 0x%lx\n", pos);
+          Type: call_expression, Text: pr_err("read er ...  0x%lx\n", pos)
+            Type: identifier, Text: pr_err
+            Type: argument_list, Text: ("read error fo ...  0x%lx\n", pos)
+              Type: (, Text: (
+              Type: string_literal, Text: "read error for inode 0x%lx\n"
+                Type: ", Text: "
+                Type: string_content, Text: read error for inode 0x%lx
+                Type: escape_sequence, Text: \n
+                Type: ", Text: "
+              Type: ,, Text: ,
+              Type: identifier, Text: pos
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: return_statement, Text: return ERR_PTR(ret);
+        Type: return, Text: return
+        Type: call_expression, Text: ERR_PTR(ret)
+          Type: identifier, Text: ERR_PTR
+          Type: argument_list, Text: (ret)
+            Type: (, Text: (
+            Type: identifier, Text: ret
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * allocate a new inode */
+  Type: function_definition, Text: static struct i ... inode : NULL; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: struct_specifier, Text: struct inode
+      Type: struct, Text: struct
+      Type: type_identifier, Text: inode
+    Type: pointer_declarator, Text: *romfs_alloc_in ... uper_block *sb)
+      Type: *, Text: *
+      Type: function_declarator, Text: romfs_alloc_ino ... uper_block *sb)
+        Type: identifier, Text: romfs_alloc_inode
+        Type: parameter_list, Text: (struct super_block *sb)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ), Text: )
+    Type: compound_statement, Text: { struct romfs_ ... inode : NULL; }
+      Type: {, Text: {
+      Type: declaration, Text: struct romfs_inode_info *inode;
+        Type: struct_specifier, Text: struct romfs_inode_info
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_inode_info
+        Type: pointer_declarator, Text: *inode
+          Type: *, Text: *
+          Type: identifier, Text: inode
+        Type: ;, Text: ;
+      Type: expression_statement, Text: inode = alloc_i ... p, GFP_KERNEL);
+        Type: assignment_expression, Text: inode = alloc_i ... ep, GFP_KERNEL)
+          Type: identifier, Text: inode
+          Type: =, Text: =
+          Type: call_expression, Text: alloc_inode_sb( ... ep, GFP_KERNEL)
+            Type: identifier, Text: alloc_inode_sb
+            Type: argument_list, Text: (sb, romfs_inod ... ep, GFP_KERNEL)
+              Type: (, Text: (
+              Type: identifier, Text: sb
+              Type: ,, Text: ,
+              Type: identifier, Text: romfs_inode_cachep
+              Type: ,, Text: ,
+              Type: identifier, Text: GFP_KERNEL
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: return_statement, Text: return inode ?  ... s_inode : NULL;
+        Type: return, Text: return
+        Type: conditional_expression, Text: inode ? &inode->vfs_inode : NULL
+          Type: identifier, Text: inode
+          Type: ?, Text: ?
+          Type: pointer_expression, Text: &inode->vfs_inode
+            Type: &, Text: &
+            Type: field_expression, Text: inode->vfs_inode
+              Type: identifier, Text: inode
+              Type: ->, Text: ->
+              Type: field_identifier, Text: vfs_inode
+          Type: :, Text: :
+          Type: null, Text: NULL
+            Type: NULL, Text: NULL
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * return a s ... e slab cache */
+  Type: function_definition, Text: static void rom ... FS_I(inode)); }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: void
+    Type: function_declarator, Text: romfs_free_inod ... t inode *inode)
+      Type: identifier, Text: romfs_free_inode
+      Type: parameter_list, Text: (struct inode *inode)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct inode *inode
+          Type: struct_specifier, Text: struct inode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: inode
+          Type: pointer_declarator, Text: *inode
+            Type: *, Text: *
+            Type: identifier, Text: inode
+        Type: ), Text: )
+    Type: compound_statement, Text: { kmem_cache_fr ... FS_I(inode)); }
+      Type: {, Text: {
+      Type: expression_statement, Text: kmem_cache_free ... OMFS_I(inode));
+        Type: call_expression, Text: kmem_cache_free ... ROMFS_I(inode))
+          Type: identifier, Text: kmem_cache_free
+          Type: argument_list, Text: (romfs_inode_ca ... ROMFS_I(inode))
+            Type: (, Text: (
+            Type: identifier, Text: romfs_inode_cachep
+            Type: ,, Text: ,
+            Type: call_expression, Text: ROMFS_I(inode)
+              Type: identifier, Text: ROMFS_I
+              Type: argument_list, Text: (inode)
+                Type: (, Text: (
+                Type: identifier, Text: inode
+                Type: ), Text: )
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * get filesystem statistics */
+  Type: function_definition, Text: static int romf ... d); return 0; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_statfs(st ... t kstatfs *buf)
+      Type: identifier, Text: romfs_statfs
+      Type: parameter_list, Text: (struct dentry  ... t kstatfs *buf)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct dentry *dentry
+          Type: struct_specifier, Text: struct dentry
+            Type: struct, Text: struct
+            Type: type_identifier, Text: dentry
+          Type: pointer_declarator, Text: *dentry
+            Type: *, Text: *
+            Type: identifier, Text: dentry
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: struct kstatfs *buf
+          Type: struct_specifier, Text: struct kstatfs
+            Type: struct, Text: struct
+            Type: type_identifier, Text: kstatfs
+          Type: pointer_declarator, Text: *buf
+            Type: *, Text: *
+            Type: identifier, Text: buf
+        Type: ), Text: )
+    Type: compound_statement, Text: { struct super_ ... d); return 0; }
+      Type: {, Text: {
+      Type: declaration, Text: struct super_bl ... = dentry->d_sb;
+        Type: struct_specifier, Text: struct super_block
+          Type: struct, Text: struct
+          Type: type_identifier, Text: super_block
+        Type: init_declarator, Text: *sb = dentry->d_sb
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+          Type: =, Text: =
+          Type: field_expression, Text: dentry->d_sb
+            Type: identifier, Text: dentry
+            Type: ->, Text: ->
+            Type: field_identifier, Text: d_sb
+        Type: ;, Text: ;
+      Type: declaration, Text: u64 id = 0;
+        Type: type_identifier, Text: u64
+        Type: init_declarator, Text: id = 0
+          Type: identifier, Text: id
+          Type: =, Text: =
+          Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: comment, Text: /* When calling ... TD undefined */
+      Type: if_statement, Text: if (sb->s_bdev) ... dev(sb->s_dev);
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (sb->s_bdev)
+          Type: (, Text: (
+          Type: field_expression, Text: sb->s_bdev
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_bdev
+          Type: ), Text: )
+        Type: expression_statement, Text: id = huge_encod ... _bdev->bd_dev);
+          Type: assignment_expression, Text: id = huge_encod ... s_bdev->bd_dev)
+            Type: identifier, Text: id
+            Type: =, Text: =
+            Type: call_expression, Text: huge_encode_dev(sb->s_bdev->bd_dev)
+              Type: identifier, Text: huge_encode_dev
+              Type: argument_list, Text: (sb->s_bdev->bd_dev)
+                Type: (, Text: (
+                Type: field_expression, Text: sb->s_bdev->bd_dev
+                  Type: field_expression, Text: sb->s_bdev
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_bdev
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: bd_dev
+                Type: ), Text: )
+          Type: ;, Text: ;
+        Type: else_clause, Text: else if (sb->s_ ... dev(sb->s_dev);
+          Type: else, Text: else
+          Type: if_statement, Text: if (sb->s_dev)  ... dev(sb->s_dev);
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (sb->s_dev)
+              Type: (, Text: (
+              Type: field_expression, Text: sb->s_dev
+                Type: identifier, Text: sb
+                Type: ->, Text: ->
+                Type: field_identifier, Text: s_dev
+              Type: ), Text: )
+            Type: expression_statement, Text: id = huge_encode_dev(sb->s_dev);
+              Type: assignment_expression, Text: id = huge_encode_dev(sb->s_dev)
+                Type: identifier, Text: id
+                Type: =, Text: =
+                Type: call_expression, Text: huge_encode_dev(sb->s_dev)
+                  Type: identifier, Text: huge_encode_dev
+                  Type: argument_list, Text: (sb->s_dev)
+                    Type: (, Text: (
+                    Type: field_expression, Text: sb->s_dev
+                      Type: identifier, Text: sb
+                      Type: ->, Text: ->
+                      Type: field_identifier, Text: s_dev
+                    Type: ), Text: )
+              Type: ;, Text: ;
+      Type: expression_statement, Text: buf->f_type = ROMFS_MAGIC;
+        Type: assignment_expression, Text: buf->f_type = ROMFS_MAGIC
+          Type: field_expression, Text: buf->f_type
+            Type: identifier, Text: buf
+            Type: ->, Text: ->
+            Type: field_identifier, Text: f_type
+          Type: =, Text: =
+          Type: identifier, Text: ROMFS_MAGIC
+        Type: ;, Text: ;
+      Type: expression_statement, Text: buf->f_namelen = ROMFS_MAXFN;
+        Type: assignment_expression, Text: buf->f_namelen = ROMFS_MAXFN
+          Type: field_expression, Text: buf->f_namelen
+            Type: identifier, Text: buf
+            Type: ->, Text: ->
+            Type: field_identifier, Text: f_namelen
+          Type: =, Text: =
+          Type: identifier, Text: ROMFS_MAXFN
+        Type: ;, Text: ;
+      Type: expression_statement, Text: buf->f_bsize = ROMBSIZE;
+        Type: assignment_expression, Text: buf->f_bsize = ROMBSIZE
+          Type: field_expression, Text: buf->f_bsize
+            Type: identifier, Text: buf
+            Type: ->, Text: ->
+            Type: field_identifier, Text: f_bsize
+          Type: =, Text: =
+          Type: identifier, Text: ROMBSIZE
+        Type: ;, Text: ;
+      Type: expression_statement, Text: buf->f_bfree =  ... = buf->f_ffree;
+        Type: assignment_expression, Text: buf->f_bfree =  ...  = buf->f_ffree
+          Type: field_expression, Text: buf->f_bfree
+            Type: identifier, Text: buf
+            Type: ->, Text: ->
+            Type: field_identifier, Text: f_bfree
+          Type: =, Text: =
+          Type: assignment_expression, Text: buf->f_bavail = buf->f_ffree
+            Type: field_expression, Text: buf->f_bavail
+              Type: identifier, Text: buf
+              Type: ->, Text: ->
+              Type: field_identifier, Text: f_bavail
+            Type: =, Text: =
+            Type: field_expression, Text: buf->f_ffree
+              Type: identifier, Text: buf
+              Type: ->, Text: ->
+              Type: field_identifier, Text: f_ffree
+        Type: ;, Text: ;
+      Type: expression_statement, Text: buf->f_blocks = ... ) >> ROMBSBITS;
+        Type: assignment_expression, Text: buf->f_blocks = ... 1) >> ROMBSBITS
+          Type: field_expression, Text: buf->f_blocks
+            Type: identifier, Text: buf
+            Type: ->, Text: ->
+            Type: field_identifier, Text: f_blocks
+          Type: =, Text: =
+          Type: binary_expression, Text: (romfs_maxsize( ... 1) >> ROMBSBITS
+            Type: parenthesized_expression, Text: (romfs_maxsize( ... + ROMBSIZE - 1)
+              Type: (, Text: (
+              Type: binary_expression, Text: romfs_maxsize(d ...  + ROMBSIZE - 1
+                Type: binary_expression, Text: romfs_maxsize(d ... _sb) + ROMBSIZE
+                  Type: call_expression, Text: romfs_maxsize(dentry->d_sb)
+                    Type: identifier, Text: romfs_maxsize
+                    Type: argument_list, Text: (dentry->d_sb)
+                      Type: (, Text: (
+                      Type: field_expression, Text: dentry->d_sb
+                        Type: identifier, Text: dentry
+                        Type: ->, Text: ->
+                        Type: field_identifier, Text: d_sb
+                      Type: ), Text: )
+                  Type: +, Text: +
+                  Type: identifier, Text: ROMBSIZE
+                Type: -, Text: -
+                Type: number_literal, Text: 1
+              Type: ), Text: )
+            Type: >>, Text: >>
+            Type: identifier, Text: ROMBSBITS
+        Type: ;, Text: ;
+      Type: expression_statement, Text: buf->f_fsid = u64_to_fsid(id);
+        Type: assignment_expression, Text: buf->f_fsid = u64_to_fsid(id)
+          Type: field_expression, Text: buf->f_fsid
+            Type: identifier, Text: buf
+            Type: ->, Text: ->
+            Type: field_identifier, Text: f_fsid
+          Type: =, Text: =
+          Type: call_expression, Text: u64_to_fsid(id)
+            Type: identifier, Text: u64_to_fsid
+            Type: argument_list, Text: (id)
+              Type: (, Text: (
+              Type: identifier, Text: id
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: return_statement, Text: return 0;
+        Type: return, Text: return
+        Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * remounting ... ve read-only */
+  Type: function_definition, Text: static int romf ... LY; return 0; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_reconfigu ... fs_context *fc)
+      Type: identifier, Text: romfs_reconfigure
+      Type: parameter_list, Text: (struct fs_context *fc)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct fs_context *fc
+          Type: struct_specifier, Text: struct fs_context
+            Type: struct, Text: struct
+            Type: type_identifier, Text: fs_context
+          Type: pointer_declarator, Text: *fc
+            Type: *, Text: *
+            Type: identifier, Text: fc
+        Type: ), Text: )
+    Type: compound_statement, Text: { sync_filesyst ... LY; return 0; }
+      Type: {, Text: {
+      Type: expression_statement, Text: sync_filesystem(fc->root->d_sb);
+        Type: call_expression, Text: sync_filesystem(fc->root->d_sb)
+          Type: identifier, Text: sync_filesystem
+          Type: argument_list, Text: (fc->root->d_sb)
+            Type: (, Text: (
+            Type: field_expression, Text: fc->root->d_sb
+              Type: field_expression, Text: fc->root
+                Type: identifier, Text: fc
+                Type: ->, Text: ->
+                Type: field_identifier, Text: root
+              Type: ->, Text: ->
+              Type: field_identifier, Text: d_sb
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: fc->sb_flags |= SB_RDONLY;
+        Type: assignment_expression, Text: fc->sb_flags |= SB_RDONLY
+          Type: field_expression, Text: fc->sb_flags
+            Type: identifier, Text: fc
+            Type: ->, Text: ->
+            Type: field_identifier, Text: sb_flags
+          Type: |=, Text: |=
+          Type: identifier, Text: SB_RDONLY
+        Type: ;, Text: ;
+      Type: return_statement, Text: return 0;
+        Type: return, Text: return
+        Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: declaration, Text: static const st ... omfs_statfs, };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: struct_specifier, Text: struct super_operations
+      Type: struct, Text: struct
+      Type: type_identifier, Text: super_operations
+    Type: init_declarator, Text: romfs_super_ops ... romfs_statfs, }
+      Type: identifier, Text: romfs_super_ops
+      Type: =, Text: =
+      Type: initializer_list, Text: { .alloc_inode  ... romfs_statfs, }
+        Type: {, Text: {
+        Type: initializer_pair, Text: .alloc_inode = romfs_alloc_inode
+          Type: field_designator, Text: .alloc_inode
+            Type: ., Text: .
+            Type: field_identifier, Text: alloc_inode
+          Type: =, Text: =
+          Type: identifier, Text: romfs_alloc_inode
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .free_inode = romfs_free_inode
+          Type: field_designator, Text: .free_inode
+            Type: ., Text: .
+            Type: field_identifier, Text: free_inode
+          Type: =, Text: =
+          Type: identifier, Text: romfs_free_inode
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .statfs = romfs_statfs
+          Type: field_designator, Text: .statfs
+            Type: ., Text: .
+            Type: field_identifier, Text: statfs
+          Type: =, Text: =
+          Type: identifier, Text: romfs_statfs
+        Type: ,, Text: ,
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: comment, Text: /* * checksum c ... s filesystem */
+  Type: function_definition, Text: static __u32 ro ... } return sum; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_identifier, Text: __u32
+    Type: function_declarator, Text: romfs_checksum( ... data, int size)
+      Type: identifier, Text: romfs_checksum
+      Type: parameter_list, Text: (const void *data, int size)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: const void *data
+          Type: type_qualifier, Text: const
+            Type: const, Text: const
+          Type: primitive_type, Text: void
+          Type: pointer_declarator, Text: *data
+            Type: *, Text: *
+            Type: identifier, Text: data
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: int size
+          Type: primitive_type, Text: int
+          Type: identifier, Text: size
+        Type: ), Text: )
+    Type: compound_statement, Text: { const __be32  ... } return sum; }
+      Type: {, Text: {
+      Type: declaration, Text: const __be32 *ptr = data;
+        Type: type_qualifier, Text: const
+          Type: const, Text: const
+        Type: type_identifier, Text: __be32
+        Type: init_declarator, Text: *ptr = data
+          Type: pointer_declarator, Text: *ptr
+            Type: *, Text: *
+            Type: identifier, Text: ptr
+          Type: =, Text: =
+          Type: identifier, Text: data
+        Type: ;, Text: ;
+      Type: declaration, Text: __u32 sum;
+        Type: type_identifier, Text: __u32
+        Type: identifier, Text: sum
+        Type: ;, Text: ;
+      Type: expression_statement, Text: sum = 0;
+        Type: assignment_expression, Text: sum = 0
+          Type: identifier, Text: sum
+          Type: =, Text: =
+          Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: expression_statement, Text: size >>= 2;
+        Type: assignment_expression, Text: size >>= 2
+          Type: identifier, Text: size
+          Type: >>=, Text: >>=
+          Type: number_literal, Text: 2
+        Type: ;, Text: ;
+      Type: while_statement, Text: while (size > 0 ... r++); size--; }
+        Type: while, Text: while
+        Type: parenthesized_expression, Text: (size > 0)
+          Type: (, Text: (
+          Type: binary_expression, Text: size > 0
+            Type: identifier, Text: size
+            Type: >, Text: >
+            Type: number_literal, Text: 0
+          Type: ), Text: )
+        Type: compound_statement, Text: { sum += be32_t ... r++); size--; }
+          Type: {, Text: {
+          Type: expression_statement, Text: sum += be32_to_cpu(*ptr++);
+            Type: assignment_expression, Text: sum += be32_to_cpu(*ptr++)
+              Type: identifier, Text: sum
+              Type: +=, Text: +=
+              Type: call_expression, Text: be32_to_cpu(*ptr++)
+                Type: identifier, Text: be32_to_cpu
+                Type: argument_list, Text: (*ptr++)
+                  Type: (, Text: (
+                  Type: pointer_expression, Text: *ptr++
+                    Type: *, Text: *
+                    Type: update_expression, Text: ptr++
+                      Type: identifier, Text: ptr
+                      Type: ++, Text: ++
+                  Type: ), Text: )
+            Type: ;, Text: ;
+          Type: expression_statement, Text: size--;
+            Type: update_expression, Text: size--
+              Type: identifier, Text: size
+              Type: --, Text: --
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: return_statement, Text: return sum;
+        Type: return, Text: return
+        Type: identifier, Text: sum
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * fill in the superblock */
+  Type: function_definition, Text: static int romf ... ; return ret; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_fill_supe ... fs_context *fc)
+      Type: identifier, Text: romfs_fill_super
+      Type: parameter_list, Text: (struct super_b ... fs_context *fc)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct super_block *sb
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: struct fs_context *fc
+          Type: struct_specifier, Text: struct fs_context
+            Type: struct, Text: struct
+            Type: type_identifier, Text: fs_context
+          Type: pointer_declarator, Text: *fc
+            Type: *, Text: *
+            Type: identifier, Text: fc
+        Type: ), Text: )
+    Type: compound_statement, Text: { struct romfs_ ... ; return ret; }
+      Type: {, Text: {
+      Type: declaration, Text: struct romfs_super_block *rsb;
+        Type: struct_specifier, Text: struct romfs_super_block
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_super_block
+        Type: pointer_declarator, Text: *rsb
+          Type: *, Text: *
+          Type: identifier, Text: rsb
+        Type: ;, Text: ;
+      Type: declaration, Text: struct inode *root;
+        Type: struct_specifier, Text: struct inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: inode
+        Type: pointer_declarator, Text: *root
+          Type: *, Text: *
+          Type: identifier, Text: root
+        Type: ;, Text: ;
+      Type: declaration, Text: unsigned long pos, img_size;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: identifier, Text: pos
+        Type: ,, Text: ,
+        Type: identifier, Text: img_size
+        Type: ;, Text: ;
+      Type: declaration, Text: const char *storage;
+        Type: type_qualifier, Text: const
+          Type: const, Text: const
+        Type: primitive_type, Text: char
+        Type: pointer_declarator, Text: *storage
+          Type: *, Text: *
+          Type: identifier, Text: storage
+        Type: ;, Text: ;
+      Type: declaration, Text: size_t len;
+        Type: primitive_type, Text: size_t
+        Type: identifier, Text: len
+        Type: ;, Text: ;
+      Type: declaration, Text: int ret;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: preproc_ifdef, Text: #ifdef CONFIG_B ... SIZE); } #endif
+        Type: #ifdef, Text: #ifdef
+        Type: identifier, Text: CONFIG_BLOCK
+        Type: if_statement, Text: if (!sb->s_mtd) ... ts(ROMBSIZE); }
+          Type: if, Text: if
+          Type: parenthesized_expression, Text: (!sb->s_mtd)
+            Type: (, Text: (
+            Type: unary_expression, Text: !sb->s_mtd
+              Type: !, Text: !
+              Type: field_expression, Text: sb->s_mtd
+                Type: identifier, Text: sb
+                Type: ->, Text: ->
+                Type: field_identifier, Text: s_mtd
+            Type: ), Text: )
+          Type: compound_statement, Text: { sb_set_blocksize(sb, ROMBSIZE); }
+            Type: {, Text: {
+            Type: expression_statement, Text: sb_set_blocksize(sb, ROMBSIZE);
+              Type: call_expression, Text: sb_set_blocksize(sb, ROMBSIZE)
+                Type: identifier, Text: sb_set_blocksize
+                Type: argument_list, Text: (sb, ROMBSIZE)
+                  Type: (, Text: (
+                  Type: identifier, Text: sb
+                  Type: ,, Text: ,
+                  Type: identifier, Text: ROMBSIZE
+                  Type: ), Text: )
+              Type: ;, Text: ;
+            Type: }, Text: }
+          Type: else_clause, Text: else { sb->s_bl ... ts(ROMBSIZE); }
+            Type: else, Text: else
+            Type: compound_statement, Text: { sb->s_blocksi ... ts(ROMBSIZE); }
+              Type: {, Text: {
+              Type: expression_statement, Text: sb->s_blocksize = ROMBSIZE;
+                Type: assignment_expression, Text: sb->s_blocksize = ROMBSIZE
+                  Type: field_expression, Text: sb->s_blocksize
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_blocksize
+                  Type: =, Text: =
+                  Type: identifier, Text: ROMBSIZE
+                Type: ;, Text: ;
+              Type: expression_statement, Text: sb->s_blocksize ... bits(ROMBSIZE);
+                Type: assignment_expression, Text: sb->s_blocksize ... _bits(ROMBSIZE)
+                  Type: field_expression, Text: sb->s_blocksize_bits
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_blocksize_bits
+                  Type: =, Text: =
+                  Type: call_expression, Text: blksize_bits(ROMBSIZE)
+                    Type: identifier, Text: blksize_bits
+                    Type: argument_list, Text: (ROMBSIZE)
+                      Type: (, Text: (
+                      Type: identifier, Text: ROMBSIZE
+                      Type: ), Text: )
+                Type: ;, Text: ;
+              Type: }, Text: }
+        Type: #endif, Text: #endif
+      Type: expression_statement, Text: sb->s_maxbytes = 0xFFFFFFFF;
+        Type: assignment_expression, Text: sb->s_maxbytes = 0xFFFFFFFF
+          Type: field_expression, Text: sb->s_maxbytes
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_maxbytes
+          Type: =, Text: =
+          Type: number_literal, Text: 0xFFFFFFFF
+        Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_magic = ROMFS_MAGIC;
+        Type: assignment_expression, Text: sb->s_magic = ROMFS_MAGIC
+          Type: field_expression, Text: sb->s_magic
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_magic
+          Type: =, Text: =
+          Type: identifier, Text: ROMFS_MAGIC
+        Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_flags |=  ... Y | SB_NOATIME;
+        Type: assignment_expression, Text: sb->s_flags |=  ... LY | SB_NOATIME
+          Type: field_expression, Text: sb->s_flags
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_flags
+          Type: |=, Text: |=
+          Type: binary_expression, Text: SB_RDONLY | SB_NOATIME
+            Type: identifier, Text: SB_RDONLY
+            Type: |, Text: |
+            Type: identifier, Text: SB_NOATIME
+        Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_time_min = 0;
+        Type: assignment_expression, Text: sb->s_time_min = 0
+          Type: field_expression, Text: sb->s_time_min
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_time_min
+          Type: =, Text: =
+          Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_time_max = 0;
+        Type: assignment_expression, Text: sb->s_time_max = 0
+          Type: field_expression, Text: sb->s_time_max
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_time_max
+          Type: =, Text: =
+          Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_op = &romfs_super_ops;
+        Type: assignment_expression, Text: sb->s_op = &romfs_super_ops
+          Type: field_expression, Text: sb->s_op
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_op
+          Type: =, Text: =
+          Type: pointer_expression, Text: &romfs_super_ops
+            Type: &, Text: &
+            Type: identifier, Text: romfs_super_ops
+        Type: ;, Text: ;
+      Type: preproc_ifdef, Text: #ifdef CONFIG_R ... >index); #endif
+        Type: #ifdef, Text: #ifdef
+        Type: identifier, Text: CONFIG_ROMFS_ON_MTD
+        Type: comment, Text: /* Use same dev ... block device */
+        Type: if_statement, Text: if (sb->s_mtd)  ... >s_mtd->index);
+          Type: if, Text: if
+          Type: parenthesized_expression, Text: (sb->s_mtd)
+            Type: (, Text: (
+            Type: field_expression, Text: sb->s_mtd
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_mtd
+            Type: ), Text: )
+          Type: expression_statement, Text: sb->s_dev = MKD ... >s_mtd->index);
+            Type: assignment_expression, Text: sb->s_dev = MKD ... ->s_mtd->index)
+              Type: field_expression, Text: sb->s_dev
+                Type: identifier, Text: sb
+                Type: ->, Text: ->
+                Type: field_identifier, Text: s_dev
+              Type: =, Text: =
+              Type: call_expression, Text: MKDEV(MTD_BLOCK ... ->s_mtd->index)
+                Type: identifier, Text: MKDEV
+                Type: argument_list, Text: (MTD_BLOCK_MAJOR, sb->s_mtd->index)
+                  Type: (, Text: (
+                  Type: identifier, Text: MTD_BLOCK_MAJOR
+                  Type: ,, Text: ,
+                  Type: field_expression, Text: sb->s_mtd->index
+                    Type: field_expression, Text: sb->s_mtd
+                      Type: identifier, Text: sb
+                      Type: ->, Text: ->
+                      Type: field_identifier, Text: s_mtd
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: index
+                  Type: ), Text: )
+            Type: ;, Text: ;
+        Type: #endif, Text: #endif
+      Type: comment, Text: /* read the ima ... and check it */
+      Type: expression_statement, Text: rsb = kmalloc(512, GFP_KERNEL);
+        Type: assignment_expression, Text: rsb = kmalloc(512, GFP_KERNEL)
+          Type: identifier, Text: rsb
+          Type: =, Text: =
+          Type: call_expression, Text: kmalloc(512, GFP_KERNEL)
+            Type: identifier, Text: kmalloc
+            Type: argument_list, Text: (512, GFP_KERNEL)
+              Type: (, Text: (
+              Type: number_literal, Text: 512
+              Type: ,, Text: ,
+              Type: identifier, Text: GFP_KERNEL
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!rsb) return -ENOMEM;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!rsb)
+          Type: (, Text: (
+          Type: unary_expression, Text: !rsb
+            Type: !, Text: !
+            Type: identifier, Text: rsb
+          Type: ), Text: )
+        Type: return_statement, Text: return -ENOMEM;
+          Type: return, Text: return
+          Type: unary_expression, Text: -ENOMEM
+            Type: -, Text: -
+            Type: identifier, Text: ENOMEM
+          Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_fs_info = (void *) 512;
+        Type: assignment_expression, Text: sb->s_fs_info = (void *) 512
+          Type: field_expression, Text: sb->s_fs_info
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_fs_info
+          Type: =, Text: =
+          Type: cast_expression, Text: (void *) 512
+            Type: (, Text: (
+            Type: type_descriptor, Text: void *
+              Type: primitive_type, Text: void
+              Type: abstract_pointer_declarator, Text: *
+                Type: *, Text: *
+            Type: ), Text: )
+            Type: number_literal, Text: 512
+        Type: ;, Text: ;
+      Type: expression_statement, Text: ret = romfs_dev ... , 0, rsb, 512);
+        Type: assignment_expression, Text: ret = romfs_dev ... b, 0, rsb, 512)
+          Type: identifier, Text: ret
+          Type: =, Text: =
+          Type: call_expression, Text: romfs_dev_read(sb, 0, rsb, 512)
+            Type: identifier, Text: romfs_dev_read
+            Type: argument_list, Text: (sb, 0, rsb, 512)
+              Type: (, Text: (
+              Type: identifier, Text: sb
+              Type: ,, Text: ,
+              Type: number_literal, Text: 0
+              Type: ,, Text: ,
+              Type: identifier, Text: rsb
+              Type: ,, Text: ,
+              Type: number_literal, Text: 512
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (ret < 0) goto error_rsb;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (ret < 0)
+          Type: (, Text: (
+          Type: binary_expression, Text: ret < 0
+            Type: identifier, Text: ret
+            Type: <, Text: <
+            Type: number_literal, Text: 0
+          Type: ), Text: )
+        Type: goto_statement, Text: goto error_rsb;
+          Type: goto, Text: goto
+          Type: statement_identifier, Text: error_rsb
+          Type: ;, Text: ;
+      Type: expression_statement, Text: img_size = be32_to_cpu(rsb->size);
+        Type: assignment_expression, Text: img_size = be32_to_cpu(rsb->size)
+          Type: identifier, Text: img_size
+          Type: =, Text: =
+          Type: call_expression, Text: be32_to_cpu(rsb->size)
+            Type: identifier, Text: be32_to_cpu
+            Type: argument_list, Text: (rsb->size)
+              Type: (, Text: (
+              Type: field_expression, Text: rsb->size
+                Type: identifier, Text: rsb
+                Type: ->, Text: ->
+                Type: field_identifier, Text: size
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (sb->s_mtd & ... rror_rsb_inval;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (sb->s_mtd && i ... b->s_mtd->size)
+          Type: (, Text: (
+          Type: binary_expression, Text: sb->s_mtd && im ... sb->s_mtd->size
+            Type: field_expression, Text: sb->s_mtd
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_mtd
+            Type: &&, Text: &&
+            Type: binary_expression, Text: img_size > sb->s_mtd->size
+              Type: identifier, Text: img_size
+              Type: >, Text: >
+              Type: field_expression, Text: sb->s_mtd->size
+                Type: field_expression, Text: sb->s_mtd
+                  Type: identifier, Text: sb
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: s_mtd
+                Type: ->, Text: ->
+                Type: field_identifier, Text: size
+          Type: ), Text: )
+        Type: goto_statement, Text: goto error_rsb_inval;
+          Type: goto, Text: goto
+          Type: statement_identifier, Text: error_rsb_inval
+          Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_fs_info = (void *) img_size;
+        Type: assignment_expression, Text: sb->s_fs_info = (void *) img_size
+          Type: field_expression, Text: sb->s_fs_info
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_fs_info
+          Type: =, Text: =
+          Type: cast_expression, Text: (void *) img_size
+            Type: (, Text: (
+            Type: type_descriptor, Text: void *
+              Type: primitive_type, Text: void
+              Type: abstract_pointer_declarator, Text: *
+                Type: *, Text: *
+            Type: ), Text: )
+            Type: identifier, Text: img_size
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (rsb->word0  ... or_rsb_inval; }
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (rsb->word0 !=  ... e < ROMFH_SIZE)
+          Type: (, Text: (
+          Type: binary_expression, Text: rsb->word0 != R ... ze < ROMFH_SIZE
+            Type: binary_expression, Text: rsb->word0 != R ...  != ROMSB_WORD1
+              Type: binary_expression, Text: rsb->word0 != ROMSB_WORD0
+                Type: field_expression, Text: rsb->word0
+                  Type: identifier, Text: rsb
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: word0
+                Type: !=, Text: !=
+                Type: identifier, Text: ROMSB_WORD0
+              Type: ||, Text: ||
+              Type: binary_expression, Text: rsb->word1 != ROMSB_WORD1
+                Type: field_expression, Text: rsb->word1
+                  Type: identifier, Text: rsb
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: word1
+                Type: !=, Text: !=
+                Type: identifier, Text: ROMSB_WORD1
+            Type: ||, Text: ||
+            Type: binary_expression, Text: img_size < ROMFH_SIZE
+              Type: identifier, Text: img_size
+              Type: <, Text: <
+              Type: identifier, Text: ROMFH_SIZE
+          Type: ), Text: )
+        Type: compound_statement, Text: { if (!(fc->sb_ ... or_rsb_inval; }
+          Type: {, Text: {
+          Type: if_statement, Text: if (!(fc->sb_fl ... \n", sb->s_id);
+            Type: if, Text: if
+            Type: parenthesized_expression, Text: (!(fc->sb_flags & SB_SILENT))
+              Type: (, Text: (
+              Type: unary_expression, Text: !(fc->sb_flags & SB_SILENT)
+                Type: !, Text: !
+                Type: parenthesized_expression, Text: (fc->sb_flags & SB_SILENT)
+                  Type: (, Text: (
+                  Type: binary_expression, Text: fc->sb_flags & SB_SILENT
+                    Type: field_expression, Text: fc->sb_flags
+                      Type: identifier, Text: fc
+                      Type: ->, Text: ->
+                      Type: field_identifier, Text: sb_flags
+                    Type: &, Text: &
+                    Type: identifier, Text: SB_SILENT
+                  Type: ), Text: )
+              Type: ), Text: )
+            Type: expression_statement, Text: errorf(fc, "VFS ... \n", sb->s_id);
+              Type: call_expression, Text: errorf(fc, "VFS ... .\n", sb->s_id)
+                Type: identifier, Text: errorf
+                Type: argument_list, Text: (fc, "VFS: Can' ... .\n", sb->s_id)
+                  Type: (, Text: (
+                  Type: identifier, Text: fc
+                  Type: ,, Text: ,
+                  Type: string_literal, Text: "VFS: Can't fin ... m on dev %s.\n"
+                    Type: ", Text: "
+                    Type: string_content, Text: VFS: Can't find ... stem on dev %s.
+                    Type: escape_sequence, Text: \n
+                    Type: ", Text: "
+                  Type: ,, Text: ,
+                  Type: field_expression, Text: sb->s_id
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_id
+                  Type: ), Text: )
+              Type: ;, Text: ;
+          Type: goto_statement, Text: goto error_rsb_inval;
+            Type: goto, Text: goto
+            Type: statement_identifier, Text: error_rsb_inval
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: if_statement, Text: if (romfs_check ... or_rsb_inval; }
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (romfs_checksum ... mg_size, 512)))
+          Type: (, Text: (
+          Type: call_expression, Text: romfs_checksum( ... img_size, 512))
+            Type: identifier, Text: romfs_checksum
+            Type: argument_list, Text: (rsb, min_t(size_t, img_size, 512))
+              Type: (, Text: (
+              Type: identifier, Text: rsb
+              Type: ,, Text: ,
+              Type: call_expression, Text: min_t(size_t, img_size, 512)
+                Type: identifier, Text: min_t
+                Type: argument_list, Text: (size_t, img_size, 512)
+                  Type: (, Text: (
+                  Type: identifier, Text: size_t
+                  Type: ,, Text: ,
+                  Type: identifier, Text: img_size
+                  Type: ,, Text: ,
+                  Type: number_literal, Text: 512
+                  Type: ), Text: )
+              Type: ), Text: )
+          Type: ), Text: )
+        Type: compound_statement, Text: { pr_err("bad i ... or_rsb_inval; }
+          Type: {, Text: {
+          Type: expression_statement, Text: pr_err("bad ini ... \n", sb->s_id);
+            Type: call_expression, Text: pr_err("bad ini ... .\n", sb->s_id)
+              Type: identifier, Text: pr_err
+              Type: argument_list, Text: ("bad initial c ... .\n", sb->s_id)
+                Type: (, Text: (
+                Type: string_literal, Text: "bad initial checksum on dev %s.\n"
+                  Type: ", Text: "
+                  Type: string_content, Text: bad initial checksum on dev %s.
+                  Type: escape_sequence, Text: \n
+                  Type: ", Text: "
+                Type: ,, Text: ,
+                Type: field_expression, Text: sb->s_id
+                  Type: identifier, Text: sb
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: s_id
+                Type: ), Text: )
+            Type: ;, Text: ;
+          Type: goto_statement, Text: goto error_rsb_inval;
+            Type: goto, Text: goto
+            Type: statement_identifier, Text: error_rsb_inval
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: expression_statement, Text: storage = sb->s ... e block layer";
+        Type: assignment_expression, Text: storage = sb->s ... he block layer"
+          Type: identifier, Text: storage
+          Type: =, Text: =
+          Type: conditional_expression, Text: sb->s_mtd ? "MT ... he block layer"
+            Type: field_expression, Text: sb->s_mtd
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_mtd
+            Type: ?, Text: ?
+            Type: string_literal, Text: "MTD"
+              Type: ", Text: "
+              Type: string_content, Text: MTD
+              Type: ", Text: "
+            Type: :, Text: :
+            Type: string_literal, Text: "the block layer"
+              Type: ", Text: "
+              Type: string_content, Text: the block layer
+              Type: ", Text: "
+        Type: ;, Text: ;
+      Type: expression_statement, Text: len = strnlen(r ... , ROMFS_MAXFN);
+        Type: assignment_expression, Text: len = strnlen(r ... e, ROMFS_MAXFN)
+          Type: identifier, Text: len
+          Type: =, Text: =
+          Type: call_expression, Text: strnlen(rsb->name, ROMFS_MAXFN)
+            Type: identifier, Text: strnlen
+            Type: argument_list, Text: (rsb->name, ROMFS_MAXFN)
+              Type: (, Text: (
+              Type: field_expression, Text: rsb->name
+                Type: identifier, Text: rsb
+                Type: ->, Text: ->
+                Type: field_identifier, Text: name
+              Type: ,, Text: ,
+              Type: identifier, Text: ROMFS_MAXFN
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!(fc->sb_fl ... name, storage);
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!(fc->sb_flags & SB_SILENT))
+          Type: (, Text: (
+          Type: unary_expression, Text: !(fc->sb_flags & SB_SILENT)
+            Type: !, Text: !
+            Type: parenthesized_expression, Text: (fc->sb_flags & SB_SILENT)
+              Type: (, Text: (
+              Type: binary_expression, Text: fc->sb_flags & SB_SILENT
+                Type: field_expression, Text: fc->sb_flags
+                  Type: identifier, Text: fc
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: sb_flags
+                Type: &, Text: &
+                Type: identifier, Text: SB_SILENT
+              Type: ), Text: )
+          Type: ), Text: )
+        Type: expression_statement, Text: pr_notice("Moun ... name, storage);
+          Type: call_expression, Text: pr_notice("Moun ... >name, storage)
+            Type: identifier, Text: pr_notice
+            Type: argument_list, Text: ("Mounting imag ... >name, storage)
+              Type: (, Text: (
+              Type: string_literal, Text: "Mounting image ... ' through %s\n"
+                Type: ", Text: "
+                Type: string_content, Text: Mounting image '%*.*s' through %s
+                Type: escape_sequence, Text: \n
+                Type: ", Text: "
+              Type: ,, Text: ,
+              Type: cast_expression, Text: (unsigned) len
+                Type: (, Text: (
+                Type: type_descriptor, Text: unsigned
+                  Type: sized_type_specifier, Text: unsigned
+                    Type: unsigned, Text: unsigned
+                Type: ), Text: )
+                Type: identifier, Text: len
+              Type: ,, Text: ,
+              Type: cast_expression, Text: (unsigned) len
+                Type: (, Text: (
+                Type: type_descriptor, Text: unsigned
+                  Type: sized_type_specifier, Text: unsigned
+                    Type: unsigned, Text: unsigned
+                Type: ), Text: )
+                Type: identifier, Text: len
+              Type: ,, Text: ,
+              Type: field_expression, Text: rsb->name
+                Type: identifier, Text: rsb
+                Type: ->, Text: ->
+                Type: field_identifier, Text: name
+              Type: ,, Text: ,
+              Type: identifier, Text: storage
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: expression_statement, Text: kfree(rsb);
+        Type: call_expression, Text: kfree(rsb)
+          Type: identifier, Text: kfree
+          Type: argument_list, Text: (rsb)
+            Type: (, Text: (
+            Type: identifier, Text: rsb
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: rsb = NULL;
+        Type: assignment_expression, Text: rsb = NULL
+          Type: identifier, Text: rsb
+          Type: =, Text: =
+          Type: null, Text: NULL
+            Type: NULL, Text: NULL
+        Type: ;, Text: ;
+      Type: comment, Text: /* find the root directory */
+      Type: expression_statement, Text: pos = (ROMFH_SI ... ) & ROMFH_MASK;
+        Type: assignment_expression, Text: pos = (ROMFH_SI ... D) & ROMFH_MASK
+          Type: identifier, Text: pos
+          Type: =, Text: =
+          Type: binary_expression, Text: (ROMFH_SIZE + l ... D) & ROMFH_MASK
+            Type: parenthesized_expression, Text: (ROMFH_SIZE + len + 1 + ROMFH_PAD)
+              Type: (, Text: (
+              Type: binary_expression, Text: ROMFH_SIZE + len + 1 + ROMFH_PAD
+                Type: binary_expression, Text: ROMFH_SIZE + len + 1
+                  Type: binary_expression, Text: ROMFH_SIZE + len
+                    Type: identifier, Text: ROMFH_SIZE
+                    Type: +, Text: +
+                    Type: identifier, Text: len
+                  Type: +, Text: +
+                  Type: number_literal, Text: 1
+                Type: +, Text: +
+                Type: identifier, Text: ROMFH_PAD
+              Type: ), Text: )
+            Type: &, Text: &
+            Type: identifier, Text: ROMFH_MASK
+        Type: ;, Text: ;
+      Type: expression_statement, Text: root = romfs_iget(sb, pos);
+        Type: assignment_expression, Text: root = romfs_iget(sb, pos)
+          Type: identifier, Text: root
+          Type: =, Text: =
+          Type: call_expression, Text: romfs_iget(sb, pos)
+            Type: identifier, Text: romfs_iget
+            Type: argument_list, Text: (sb, pos)
+              Type: (, Text: (
+              Type: identifier, Text: sb
+              Type: ,, Text: ,
+              Type: identifier, Text: pos
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (IS_ERR(root ...  PTR_ERR(root);
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (IS_ERR(root))
+          Type: (, Text: (
+          Type: call_expression, Text: IS_ERR(root)
+            Type: identifier, Text: IS_ERR
+            Type: argument_list, Text: (root)
+              Type: (, Text: (
+              Type: identifier, Text: root
+              Type: ), Text: )
+          Type: ), Text: )
+        Type: return_statement, Text: return PTR_ERR(root);
+          Type: return, Text: return
+          Type: call_expression, Text: PTR_ERR(root)
+            Type: identifier, Text: PTR_ERR
+            Type: argument_list, Text: (root)
+              Type: (, Text: (
+              Type: identifier, Text: root
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: expression_statement, Text: sb->s_root = d_make_root(root);
+        Type: assignment_expression, Text: sb->s_root = d_make_root(root)
+          Type: field_expression, Text: sb->s_root
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_root
+          Type: =, Text: =
+          Type: call_expression, Text: d_make_root(root)
+            Type: identifier, Text: d_make_root
+            Type: argument_list, Text: (root)
+              Type: (, Text: (
+              Type: identifier, Text: root
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!sb->s_root) return -ENOMEM;
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!sb->s_root)
+          Type: (, Text: (
+          Type: unary_expression, Text: !sb->s_root
+            Type: !, Text: !
+            Type: field_expression, Text: sb->s_root
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_root
+          Type: ), Text: )
+        Type: return_statement, Text: return -ENOMEM;
+          Type: return, Text: return
+          Type: unary_expression, Text: -ENOMEM
+            Type: -, Text: -
+            Type: identifier, Text: ENOMEM
+          Type: ;, Text: ;
+      Type: return_statement, Text: return 0;
+        Type: return, Text: return
+        Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: labeled_statement, Text: error_rsb_inval: ret = -EINVAL;
+        Type: statement_identifier, Text: error_rsb_inval
+        Type: :, Text: :
+        Type: expression_statement, Text: ret = -EINVAL;
+          Type: assignment_expression, Text: ret = -EINVAL
+            Type: identifier, Text: ret
+            Type: =, Text: =
+            Type: unary_expression, Text: -EINVAL
+              Type: -, Text: -
+              Type: identifier, Text: EINVAL
+          Type: ;, Text: ;
+      Type: labeled_statement, Text: error_rsb: kfree(rsb);
+        Type: statement_identifier, Text: error_rsb
+        Type: :, Text: :
+        Type: expression_statement, Text: kfree(rsb);
+          Type: call_expression, Text: kfree(rsb)
+            Type: identifier, Text: kfree
+            Type: argument_list, Text: (rsb)
+              Type: (, Text: (
+              Type: identifier, Text: rsb
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: return_statement, Text: return ret;
+        Type: return, Text: return
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * get a supe ... for mounting */
+  Type: function_definition, Text: static int romf ... f return ret; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_get_tree( ... fs_context *fc)
+      Type: identifier, Text: romfs_get_tree
+      Type: parameter_list, Text: (struct fs_context *fc)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct fs_context *fc
+          Type: struct_specifier, Text: struct fs_context
+            Type: struct, Text: struct
+            Type: type_identifier, Text: fs_context
+          Type: pointer_declarator, Text: *fc
+            Type: *, Text: *
+            Type: identifier, Text: fc
+        Type: ), Text: )
+    Type: compound_statement, Text: { int ret = -EI ... f return ret; }
+      Type: {, Text: {
+      Type: declaration, Text: int ret = -EINVAL;
+        Type: primitive_type, Text: int
+        Type: init_declarator, Text: ret = -EINVAL
+          Type: identifier, Text: ret
+          Type: =, Text: =
+          Type: unary_expression, Text: -EINVAL
+            Type: -, Text: -
+            Type: identifier, Text: EINVAL
+        Type: ;, Text: ;
+      Type: preproc_ifdef, Text: #ifdef CONFIG_R ... _super); #endif
+        Type: #ifdef, Text: #ifdef
+        Type: identifier, Text: CONFIG_ROMFS_ON_MTD
+        Type: expression_statement, Text: ret = get_tree_ ... fs_fill_super);
+          Type: assignment_expression, Text: ret = get_tree_ ... mfs_fill_super)
+            Type: identifier, Text: ret
+            Type: =, Text: =
+            Type: call_expression, Text: get_tree_mtd(fc, romfs_fill_super)
+              Type: identifier, Text: get_tree_mtd
+              Type: argument_list, Text: (fc, romfs_fill_super)
+                Type: (, Text: (
+                Type: identifier, Text: fc
+                Type: ,, Text: ,
+                Type: identifier, Text: romfs_fill_super
+                Type: ), Text: )
+          Type: ;, Text: ;
+        Type: #endif, Text: #endif
+      Type: preproc_ifdef, Text: #ifdef CONFIG_R ... _super); #endif
+        Type: #ifdef, Text: #ifdef
+        Type: identifier, Text: CONFIG_ROMFS_ON_BLOCK
+        Type: if_statement, Text: if (ret == -EIN ... fs_fill_super);
+          Type: if, Text: if
+          Type: parenthesized_expression, Text: (ret == -EINVAL)
+            Type: (, Text: (
+            Type: binary_expression, Text: ret == -EINVAL
+              Type: identifier, Text: ret
+              Type: ==, Text: ==
+              Type: unary_expression, Text: -EINVAL
+                Type: -, Text: -
+                Type: identifier, Text: EINVAL
+            Type: ), Text: )
+          Type: expression_statement, Text: ret = get_tree_ ... fs_fill_super);
+            Type: assignment_expression, Text: ret = get_tree_ ... mfs_fill_super)
+              Type: identifier, Text: ret
+              Type: =, Text: =
+              Type: call_expression, Text: get_tree_bdev(fc, romfs_fill_super)
+                Type: identifier, Text: get_tree_bdev
+                Type: argument_list, Text: (fc, romfs_fill_super)
+                  Type: (, Text: (
+                  Type: identifier, Text: fc
+                  Type: ,, Text: ,
+                  Type: identifier, Text: romfs_fill_super
+                  Type: ), Text: )
+            Type: ;, Text: ;
+        Type: #endif, Text: #endif
+      Type: return_statement, Text: return ret;
+        Type: return, Text: return
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: declaration, Text: static const st ... reconfigure, };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: type_qualifier, Text: const
+      Type: const, Text: const
+    Type: struct_specifier, Text: struct fs_context_operations
+      Type: struct, Text: struct
+      Type: type_identifier, Text: fs_context_operations
+    Type: init_declarator, Text: romfs_context_o ... _reconfigure, }
+      Type: identifier, Text: romfs_context_ops
+      Type: =, Text: =
+      Type: initializer_list, Text: { .get_tree = r ... _reconfigure, }
+        Type: {, Text: {
+        Type: initializer_pair, Text: .get_tree = romfs_get_tree
+          Type: field_designator, Text: .get_tree
+            Type: ., Text: .
+            Type: field_identifier, Text: get_tree
+          Type: =, Text: =
+          Type: identifier, Text: romfs_get_tree
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .reconfigure = romfs_reconfigure
+          Type: field_designator, Text: .reconfigure
+            Type: ., Text: .
+            Type: field_identifier, Text: reconfigure
+          Type: =, Text: =
+          Type: identifier, Text: romfs_reconfigure
+        Type: ,, Text: ,
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: comment, Text: /* * Set up the ... unt context. */
+  Type: function_definition, Text: static int romf ... ps; return 0; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_init_fs_c ... fs_context *fc)
+      Type: identifier, Text: romfs_init_fs_context
+      Type: parameter_list, Text: (struct fs_context *fc)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct fs_context *fc
+          Type: struct_specifier, Text: struct fs_context
+            Type: struct, Text: struct
+            Type: type_identifier, Text: fs_context
+          Type: pointer_declarator, Text: *fc
+            Type: *, Text: *
+            Type: identifier, Text: fc
+        Type: ), Text: )
+    Type: compound_statement, Text: { fc->ops = &ro ... ps; return 0; }
+      Type: {, Text: {
+      Type: expression_statement, Text: fc->ops = &romfs_context_ops;
+        Type: assignment_expression, Text: fc->ops = &romfs_context_ops
+          Type: field_expression, Text: fc->ops
+            Type: identifier, Text: fc
+            Type: ->, Text: ->
+            Type: field_identifier, Text: ops
+          Type: =, Text: =
+          Type: pointer_expression, Text: &romfs_context_ops
+            Type: &, Text: &
+            Type: identifier, Text: romfs_context_ops
+        Type: ;, Text: ;
+      Type: return_statement, Text: return 0;
+        Type: return, Text: return
+        Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * destroy a  ... riate manner */
+  Type: function_definition, Text: static void rom ... le); } #endif }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: void
+    Type: function_declarator, Text: romfs_kill_sb(s ... uper_block *sb)
+      Type: identifier, Text: romfs_kill_sb
+      Type: parameter_list, Text: (struct super_block *sb)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct super_block *sb
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+        Type: ), Text: )
+    Type: compound_statement, Text: { generic_shutd ... le); } #endif }
+      Type: {, Text: {
+      Type: expression_statement, Text: generic_shutdown_super(sb);
+        Type: call_expression, Text: generic_shutdown_super(sb)
+          Type: identifier, Text: generic_shutdown_super
+          Type: argument_list, Text: (sb)
+            Type: (, Text: (
+            Type: identifier, Text: sb
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: preproc_ifdef, Text: #ifdef CONFIG_R ...  NULL; } #endif
+        Type: #ifdef, Text: #ifdef
+        Type: identifier, Text: CONFIG_ROMFS_ON_MTD
+        Type: if_statement, Text: if (sb->s_mtd)  ... s_mtd = NULL; }
+          Type: if, Text: if
+          Type: parenthesized_expression, Text: (sb->s_mtd)
+            Type: (, Text: (
+            Type: field_expression, Text: sb->s_mtd
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_mtd
+            Type: ), Text: )
+          Type: compound_statement, Text: { put_mtd_devic ... s_mtd = NULL; }
+            Type: {, Text: {
+            Type: expression_statement, Text: put_mtd_device(sb->s_mtd);
+              Type: call_expression, Text: put_mtd_device(sb->s_mtd)
+                Type: identifier, Text: put_mtd_device
+                Type: argument_list, Text: (sb->s_mtd)
+                  Type: (, Text: (
+                  Type: field_expression, Text: sb->s_mtd
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_mtd
+                  Type: ), Text: )
+              Type: ;, Text: ;
+            Type: expression_statement, Text: sb->s_mtd = NULL;
+              Type: assignment_expression, Text: sb->s_mtd = NULL
+                Type: field_expression, Text: sb->s_mtd
+                  Type: identifier, Text: sb
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: s_mtd
+                Type: =, Text: =
+                Type: null, Text: NULL
+                  Type: NULL, Text: NULL
+              Type: ;, Text: ;
+            Type: }, Text: }
+        Type: #endif, Text: #endif
+      Type: preproc_ifdef, Text: #ifdef CONFIG_R ... ndle); } #endif
+        Type: #ifdef, Text: #ifdef
+        Type: identifier, Text: CONFIG_ROMFS_ON_BLOCK
+        Type: if_statement, Text: if (sb->s_bdev) ... bdev_handle); }
+          Type: if, Text: if
+          Type: parenthesized_expression, Text: (sb->s_bdev)
+            Type: (, Text: (
+            Type: field_expression, Text: sb->s_bdev
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_bdev
+            Type: ), Text: )
+          Type: compound_statement, Text: { sync_blockdev ... bdev_handle); }
+            Type: {, Text: {
+            Type: expression_statement, Text: sync_blockdev(sb->s_bdev);
+              Type: call_expression, Text: sync_blockdev(sb->s_bdev)
+                Type: identifier, Text: sync_blockdev
+                Type: argument_list, Text: (sb->s_bdev)
+                  Type: (, Text: (
+                  Type: field_expression, Text: sb->s_bdev
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_bdev
+                  Type: ), Text: )
+              Type: ;, Text: ;
+            Type: expression_statement, Text: bdev_release(sb->s_bdev_handle);
+              Type: call_expression, Text: bdev_release(sb->s_bdev_handle)
+                Type: identifier, Text: bdev_release
+                Type: argument_list, Text: (sb->s_bdev_handle)
+                  Type: (, Text: (
+                  Type: field_expression, Text: sb->s_bdev_handle
+                    Type: identifier, Text: sb
+                    Type: ->, Text: ->
+                    Type: field_identifier, Text: s_bdev_handle
+                  Type: ), Text: )
+              Type: ;, Text: ;
+            Type: }, Text: }
+        Type: #endif, Text: #endif
+      Type: }, Text: }
+  Type: declaration, Text: static struct f ... EQUIRES_DEV, };
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: struct_specifier, Text: struct file_system_type
+      Type: struct, Text: struct
+      Type: type_identifier, Text: file_system_type
+    Type: init_declarator, Text: romfs_fs_type = ... REQUIRES_DEV, }
+      Type: identifier, Text: romfs_fs_type
+      Type: =, Text: =
+      Type: initializer_list, Text: { .owner = THIS ... REQUIRES_DEV, }
+        Type: {, Text: {
+        Type: initializer_pair, Text: .owner = THIS_MODULE
+          Type: field_designator, Text: .owner
+            Type: ., Text: .
+            Type: field_identifier, Text: owner
+          Type: =, Text: =
+          Type: identifier, Text: THIS_MODULE
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .name = "romfs"
+          Type: field_designator, Text: .name
+            Type: ., Text: .
+            Type: field_identifier, Text: name
+          Type: =, Text: =
+          Type: string_literal, Text: "romfs"
+            Type: ", Text: "
+            Type: string_content, Text: romfs
+            Type: ", Text: "
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .init_fs_contex ... init_fs_context
+          Type: field_designator, Text: .init_fs_context
+            Type: ., Text: .
+            Type: field_identifier, Text: init_fs_context
+          Type: =, Text: =
+          Type: identifier, Text: romfs_init_fs_context
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .kill_sb = romfs_kill_sb
+          Type: field_designator, Text: .kill_sb
+            Type: ., Text: .
+            Type: field_identifier, Text: kill_sb
+          Type: =, Text: =
+          Type: identifier, Text: romfs_kill_sb
+        Type: ,, Text: ,
+        Type: initializer_pair, Text: .fs_flags = FS_REQUIRES_DEV
+          Type: field_designator, Text: .fs_flags
+            Type: ., Text: .
+            Type: field_identifier, Text: fs_flags
+          Type: =, Text: =
+          Type: identifier, Text: FS_REQUIRES_DEV
+        Type: ,, Text: ,
+        Type: }, Text: }
+    Type: ;, Text: ;
+  Type: expression_statement, Text: MODULE_ALIAS_FS("romfs");
+    Type: call_expression, Text: MODULE_ALIAS_FS("romfs")
+      Type: identifier, Text: MODULE_ALIAS_FS
+      Type: argument_list, Text: ("romfs")
+        Type: (, Text: (
+        Type: string_literal, Text: "romfs"
+          Type: ", Text: "
+          Type: string_content, Text: romfs
+          Type: ", Text: "
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: comment, Text: /* * inode storage initialiser */
+  Type: function_definition, Text: static void rom ... ->vfs_inode); }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: void
+    Type: function_declarator, Text: romfs_i_init_once(void *_inode)
+      Type: identifier, Text: romfs_i_init_once
+      Type: parameter_list, Text: (void *_inode)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: void *_inode
+          Type: primitive_type, Text: void
+          Type: pointer_declarator, Text: *_inode
+            Type: *, Text: *
+            Type: identifier, Text: _inode
+        Type: ), Text: )
+    Type: compound_statement, Text: { struct romfs_ ... ->vfs_inode); }
+      Type: {, Text: {
+      Type: declaration, Text: struct romfs_in ... inode = _inode;
+        Type: struct_specifier, Text: struct romfs_inode_info
+          Type: struct, Text: struct
+          Type: type_identifier, Text: romfs_inode_info
+        Type: init_declarator, Text: *inode = _inode
+          Type: pointer_declarator, Text: *inode
+            Type: *, Text: *
+            Type: identifier, Text: inode
+          Type: =, Text: =
+          Type: identifier, Text: _inode
+        Type: ;, Text: ;
+      Type: expression_statement, Text: inode_init_once(&inode->vfs_inode);
+        Type: call_expression, Text: inode_init_once(&inode->vfs_inode)
+          Type: identifier, Text: inode_init_once
+          Type: argument_list, Text: (&inode->vfs_inode)
+            Type: (, Text: (
+            Type: pointer_expression, Text: &inode->vfs_inode
+              Type: &, Text: &
+              Type: field_expression, Text: inode->vfs_inode
+                Type: identifier, Text: inode
+                Type: ->, Text: ->
+                Type: field_identifier, Text: vfs_inode
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * romfs module initialisation */
+  Type: function_definition, Text: static int __in ... ; return ret; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: int
+    Type: ERROR, Text: __init
+      Type: identifier, Text: __init
+    Type: function_declarator, Text: init_romfs_fs(void)
+      Type: identifier, Text: init_romfs_fs
+      Type: parameter_list, Text: (void)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: void
+          Type: primitive_type, Text: void
+        Type: ), Text: )
+    Type: compound_statement, Text: { int ret; pr_i ... ; return ret; }
+      Type: {, Text: {
+      Type: declaration, Text: int ret;
+        Type: primitive_type, Text: int
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: expression_statement, Text: pr_info("ROMFS  ...  Hat, Inc.\n");
+        Type: call_expression, Text: pr_info("ROMFS  ... d Hat, Inc.\n")
+          Type: identifier, Text: pr_info
+          Type: argument_list, Text: ("ROMFS MTD (C) ... d Hat, Inc.\n")
+            Type: (, Text: (
+            Type: string_literal, Text: "ROMFS MTD (C)  ... ed Hat, Inc.\n"
+              Type: ", Text: "
+              Type: string_content, Text: ROMFS MTD (C) 2007 Red Hat, Inc.
+              Type: escape_sequence, Text: \n
+              Type: ", Text: "
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: romfs_inode_cac ... s_i_init_once);
+        Type: assignment_expression, Text: romfs_inode_cac ... fs_i_init_once)
+          Type: identifier, Text: romfs_inode_cachep
+          Type: =, Text: =
+          Type: call_expression, Text: kmem_cache_crea ... fs_i_init_once)
+            Type: identifier, Text: kmem_cache_create
+            Type: argument_list, Text: ("romfs_i", siz ... fs_i_init_once)
+              Type: (, Text: (
+              Type: string_literal, Text: "romfs_i"
+                Type: ", Text: "
+                Type: string_content, Text: romfs_i
+                Type: ", Text: "
+              Type: ,, Text: ,
+              Type: sizeof_expression, Text: sizeof(struct romfs_inode_info)
+                Type: sizeof, Text: sizeof
+                Type: (, Text: (
+                Type: type_descriptor, Text: struct romfs_inode_info
+                  Type: struct_specifier, Text: struct romfs_inode_info
+                    Type: struct, Text: struct
+                    Type: type_identifier, Text: romfs_inode_info
+                Type: ), Text: )
+              Type: ,, Text: ,
+              Type: number_literal, Text: 0
+              Type: ,, Text: ,
+              Type: binary_expression, Text: SLAB_RECLAIM_AC ...  | SLAB_ACCOUNT
+                Type: binary_expression, Text: SLAB_RECLAIM_AC ... SLAB_MEM_SPREAD
+                  Type: identifier, Text: SLAB_RECLAIM_ACCOUNT
+                  Type: |, Text: |
+                  Type: identifier, Text: SLAB_MEM_SPREAD
+                Type: |, Text: |
+                Type: identifier, Text: SLAB_ACCOUNT
+              Type: ,, Text: ,
+              Type: identifier, Text: romfs_i_init_once
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (!romfs_inod ... turn -ENOMEM; }
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (!romfs_inode_cachep)
+          Type: (, Text: (
+          Type: unary_expression, Text: !romfs_inode_cachep
+            Type: !, Text: !
+            Type: identifier, Text: romfs_inode_cachep
+          Type: ), Text: )
+        Type: compound_statement, Text: { pr_err("Faile ... turn -ENOMEM; }
+          Type: {, Text: {
+          Type: expression_statement, Text: pr_err("Failed  ... node cache\n");
+            Type: call_expression, Text: pr_err("Failed  ... inode cache\n")
+              Type: identifier, Text: pr_err
+              Type: argument_list, Text: ("Failed to ini ... inode cache\n")
+                Type: (, Text: (
+                Type: string_literal, Text: "Failed to init ...  inode cache\n"
+                  Type: ", Text: "
+                  Type: string_content, Text: Failed to initialise inode cache
+                  Type: escape_sequence, Text: \n
+                  Type: ", Text: "
+                Type: ), Text: )
+            Type: ;, Text: ;
+          Type: return_statement, Text: return -ENOMEM;
+            Type: return, Text: return
+            Type: unary_expression, Text: -ENOMEM
+              Type: -, Text: -
+              Type: identifier, Text: ENOMEM
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: expression_statement, Text: ret = register_ ... romfs_fs_type);
+        Type: assignment_expression, Text: ret = register_ ... &romfs_fs_type)
+          Type: identifier, Text: ret
+          Type: =, Text: =
+          Type: call_expression, Text: register_filesystem(&romfs_fs_type)
+            Type: identifier, Text: register_filesystem
+            Type: argument_list, Text: (&romfs_fs_type)
+              Type: (, Text: (
+              Type: pointer_expression, Text: &romfs_fs_type
+                Type: &, Text: &
+                Type: identifier, Text: romfs_fs_type
+              Type: ), Text: )
+        Type: ;, Text: ;
+      Type: if_statement, Text: if (ret) { pr_e ... ror_register; }
+        Type: if, Text: if
+        Type: parenthesized_expression, Text: (ret)
+          Type: (, Text: (
+          Type: identifier, Text: ret
+          Type: ), Text: )
+        Type: compound_statement, Text: { pr_err("Faile ... ror_register; }
+          Type: {, Text: {
+          Type: expression_statement, Text: pr_err("Failed  ... filesystem\n");
+            Type: call_expression, Text: pr_err("Failed  ...  filesystem\n")
+              Type: identifier, Text: pr_err
+              Type: argument_list, Text: ("Failed to register filesystem\n")
+                Type: (, Text: (
+                Type: string_literal, Text: "Failed to register filesystem\n"
+                  Type: ", Text: "
+                  Type: string_content, Text: Failed to register filesystem
+                  Type: escape_sequence, Text: \n
+                  Type: ", Text: "
+                Type: ), Text: )
+            Type: ;, Text: ;
+          Type: goto_statement, Text: goto error_register;
+            Type: goto, Text: goto
+            Type: statement_identifier, Text: error_register
+            Type: ;, Text: ;
+          Type: }, Text: }
+      Type: return_statement, Text: return 0;
+        Type: return, Text: return
+        Type: number_literal, Text: 0
+        Type: ;, Text: ;
+      Type: labeled_statement, Text: error_register: ... _inode_cachep);
+        Type: statement_identifier, Text: error_register
+        Type: :, Text: :
+        Type: expression_statement, Text: kmem_cache_dest ... _inode_cachep);
+          Type: call_expression, Text: kmem_cache_dest ... s_inode_cachep)
+            Type: identifier, Text: kmem_cache_destroy
+            Type: argument_list, Text: (romfs_inode_cachep)
+              Type: (, Text: (
+              Type: identifier, Text: romfs_inode_cachep
+              Type: ), Text: )
+          Type: ;, Text: ;
+      Type: return_statement, Text: return ret;
+        Type: return, Text: return
+        Type: identifier, Text: ret
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * romfs module removal */
+  Type: function_definition, Text: static void __e ... node_cachep); }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: primitive_type, Text: void
+    Type: ERROR, Text: __exit
+      Type: identifier, Text: __exit
+    Type: function_declarator, Text: exit_romfs_fs(void)
+      Type: identifier, Text: exit_romfs_fs
+      Type: parameter_list, Text: (void)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: void
+          Type: primitive_type, Text: void
+        Type: ), Text: )
+    Type: compound_statement, Text: { unregister_fi ... node_cachep); }
+      Type: {, Text: {
+      Type: expression_statement, Text: unregister_file ... romfs_fs_type);
+        Type: call_expression, Text: unregister_file ... &romfs_fs_type)
+          Type: identifier, Text: unregister_filesystem
+          Type: argument_list, Text: (&romfs_fs_type)
+            Type: (, Text: (
+            Type: pointer_expression, Text: &romfs_fs_type
+              Type: &, Text: &
+              Type: identifier, Text: romfs_fs_type
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: comment, Text: /* * Make sure  ... stroy cache. */
+      Type: expression_statement, Text: rcu_barrier();
+        Type: call_expression, Text: rcu_barrier()
+          Type: identifier, Text: rcu_barrier
+          Type: argument_list, Text: ()
+            Type: (, Text: (
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: expression_statement, Text: kmem_cache_dest ... _inode_cachep);
+        Type: call_expression, Text: kmem_cache_dest ... s_inode_cachep)
+          Type: identifier, Text: kmem_cache_destroy
+          Type: argument_list, Text: (romfs_inode_cachep)
+            Type: (, Text: (
+            Type: identifier, Text: romfs_inode_cachep
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: expression_statement, Text: module_init(init_romfs_fs);
+    Type: call_expression, Text: module_init(init_romfs_fs)
+      Type: identifier, Text: module_init
+      Type: argument_list, Text: (init_romfs_fs)
+        Type: (, Text: (
+        Type: identifier, Text: init_romfs_fs
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: expression_statement, Text: module_exit(exit_romfs_fs);
+    Type: call_expression, Text: module_exit(exit_romfs_fs)
+      Type: identifier, Text: module_exit
+      Type: argument_list, Text: (exit_romfs_fs)
+        Type: (, Text: (
+        Type: identifier, Text: exit_romfs_fs
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: expression_statement, Text: MODULE_DESCRIPT ... apable RomFS");
+    Type: call_expression, Text: MODULE_DESCRIPT ... Capable RomFS")
+      Type: identifier, Text: MODULE_DESCRIPTION
+      Type: argument_list, Text: ("Direct-MTD Capable RomFS")
+        Type: (, Text: (
+        Type: string_literal, Text: "Direct-MTD Capable RomFS"
+          Type: ", Text: "
+          Type: string_content, Text: Direct-MTD Capable RomFS
+          Type: ", Text: "
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: expression_statement, Text: MODULE_AUTHOR("Red Hat, Inc.");
+    Type: call_expression, Text: MODULE_AUTHOR("Red Hat, Inc.")
+      Type: identifier, Text: MODULE_AUTHOR
+      Type: argument_list, Text: ("Red Hat, Inc.")
+        Type: (, Text: (
+        Type: string_literal, Text: "Red Hat, Inc."
+          Type: ", Text: "
+          Type: string_content, Text: Red Hat, Inc.
+          Type: ", Text: "
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: expression_statement, Text: MODULE_LICENSE("GPL");
+    Type: call_expression, Text: MODULE_LICENSE("GPL")
+      Type: identifier, Text: MODULE_LICENSE
+      Type: argument_list, Text: ("GPL")
+        Type: (, Text: (
+        Type: string_literal, Text: "GPL"
+          Type: ", Text: "
+          Type: string_content, Text: GPL
+          Type: ", Text: "
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: comment, Text: /* Actually dua ... t matter for */

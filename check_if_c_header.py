@@ -1,7 +1,9 @@
 from pathlib import Path
 from tree_sitter import Node, Parser, Language
 import tree_sitter_cpp as tscpp
-
+import argparse
+import logging
+    
 # Suffixes that indicate C++ source files
 CPP_SOURCE_SUFFIXES = {
     ".cpp",
@@ -23,10 +25,8 @@ CPP_ONLY_NODE_TYPES = {
     "alignas_specifier",  # C++11 alignas
     "attribute_declaration",  # [[nodiscard]] etc.
     "auto",  # auto type deduction
-    "cast_expression",  # static_cast / dynamic_cast / etc.
     "class_specifier",  # class definitions
     "concept_definition",  # C++20 concept
-    "condition_clause",  # C++ specific if/switch condition forms
     "decltype_specifier",  # decltype(x)
     "delete_expression",  # delete ptr
     "dependent_type_specifier",  # dependent types in templates
@@ -51,14 +51,13 @@ CPP_ONLY_NODE_TYPES = {
     "template_type",
     "this",  # this pointer
     "throw_specifier",  # throw() specifiers (older C++)
-    "type_qualifier",  # constexpr, consteval, constinit etc.
     "using_declaration",  # using namespace etc.
     "virtual_function_specifier",  # virtual keyword
     "virtual_specifier",  # final, etc.
 }
 
 
-def determine_if_cpp_header(file_path: Path, cpp_parser: Parser) -> bool:
+def determine_if_cpp_header(file_path: Path, cpp_parser: Parser, logger: logging.Logger) -> bool:
     """
     Determines if a .h file should be treated as a C++ header.
 
@@ -69,17 +68,27 @@ def determine_if_cpp_header(file_path: Path, cpp_parser: Parser) -> bool:
     # 1. Sibling check: same directory, any file with C++ suffix
     parent = file_path.parent
     try:
+        has_c_source = False
         for sibling in parent.iterdir():
             if sibling == file_path:
                 continue
             if sibling.is_file():
                 if sibling.suffix.lower() in CPP_SOURCE_SUFFIXES:
+                    logger.info(f"'{file_path.name}' is likely a C++ header due to sibling file: '{sibling.name}'")
                     return True
+                elif sibling.suffix.lower() == ".c":
+                    has_c_source = True
+        
+        if has_c_source:
+            # If there is no C++ source file, but is C source files, then it's a C header
+            logger.info(f"'{file_path.name}' is likely a C header due to sibling file: '{sibling.name}'")
+            return False
+
     except Exception:
         # If directory listing fails, ignore sibling heuristic
         pass
 
-    # 2. Parse with tree-sitter-cpp parser
+    # 2. Parse with tree-sitter-cpp parser, since there is no C++ or C source file
     try:
         source_bytes = file_path.read_bytes()
         # Alternatively: read text and encode utf-8
@@ -95,28 +104,40 @@ def determine_if_cpp_header(file_path: Path, cpp_parser: Parser) -> bool:
     root: Node = tree.root_node
 
     # Recursive search for any node whose type is in CPP_ONLY_NODE_TYPES
-    def has_cpp_type(node: Node) -> bool:
+    def find_cpp_node(node: Node) -> Node | None:
         if node.type in CPP_ONLY_NODE_TYPES:
-            return True
+            return node
         # Recurse into named children (faster / more relevant than all children)
         for child in node.named_children:
             # Early exit
-            if has_cpp_type(child):
-                return True
-        return False
+            found_node = find_cpp_node(child)
+            if found_node:
+                return found_node
+        return None
 
-    if has_cpp_type(root):
+    cpp_node = find_cpp_node(root)
+    if cpp_node:
+        node_text = cpp_node.text.decode('utf-8', errors='ignore').split('\n')[0]
+        logger.info(f"'{file_path.name}' is likely a C++ header due to C++-only AST node type '{cpp_node.type}' with text: '{node_text}'")
         return True
 
     # If no C++-only node types found, treat as C header
     return False
 
-def check_if_c_header(file_path: Path) -> bool:
+def check_if_c_header(file_path: Path, logger: logging.Logger = None) -> bool:
+    #return True
     CPP_LANGUAGE = Language(tscpp.language())
     parser = Parser(CPP_LANGUAGE)
-    return not determine_if_cpp_header(file_path, parser)
+    return not determine_if_cpp_header(file_path, parser, logger or logging.getLogger(__name__))
 
 if __name__ == "__main__":
+    # Configure logging
+    logging.basicConfig(
+        level=logging.INFO,
+        format='%(levelname)s: %(message)s'
+    )
+    logger = logging.getLogger(__name__)
+
     # check if has an input argument that is .h file
     import sys
 
@@ -134,5 +155,5 @@ if __name__ == "__main__":
         print(f"Error: File '{file_path}' is not a .h header file.", file=sys.stderr)
         sys.exit(1)
 
-    is_c_header = check_if_c_header(file_path)
+    is_c_header = check_if_c_header(file_path, logger)
     print("file_path is a C header" if is_c_header else "file_path is not a C header")

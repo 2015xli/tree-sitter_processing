@@ -1,0 +1,3807 @@
+Type: translation_unit, Text: /* SPDX-License ... onds()) #endif 
+  Type: comment, Text: /* SPDX-License ... ier: GPL-2.0 */
+  Type: comment, Text: /* * linux/incl ... stech.com> * */
+  Type: preproc_ifdef, Text: #ifndef _LINUX_ ... conds()) #endif
+    Type: #ifndef, Text: #ifndef
+    Type: identifier, Text: _LINUX_HFSPLUS_FS_H
+    Type: preproc_def, Text: #define _LINUX_HFSPLUS_FS_H 
+      Type: #define, Text: #define
+      Type: identifier, Text: _LINUX_HFSPLUS_FS_H
+    Type: preproc_ifdef, Text: #ifdef pr_fmt #undef pr_fmt #endif
+      Type: #ifdef, Text: #ifdef
+      Type: identifier, Text: pr_fmt
+      Type: preproc_call, Text: #undef pr_fmt 
+        Type: preproc_directive, Text: #undef
+        Type: preproc_arg, Text: pr_fmt
+      Type: #endif, Text: #endif
+    Type: preproc_function_def, Text: #define pr_fmt( ... DNAME ": " fmt 
+      Type: #define, Text: #define
+      Type: identifier, Text: pr_fmt
+      Type: preproc_params, Text: (fmt)
+        Type: (, Text: (
+        Type: identifier, Text: fmt
+        Type: ), Text: )
+      Type: preproc_arg, Text: KBUILD_MODNAME ": " fmt
+    Type: preproc_include, Text: #include <linux/fs.h> 
+      Type: #include, Text: #include
+      Type: system_lib_string, Text: <linux/fs.h>
+    Type: preproc_include, Text: #include <linux/mutex.h> 
+      Type: #include, Text: #include
+      Type: system_lib_string, Text: <linux/mutex.h>
+    Type: preproc_include, Text: #include <linux/buffer_head.h> 
+      Type: #include, Text: #include
+      Type: system_lib_string, Text: <linux/buffer_head.h>
+    Type: preproc_include, Text: #include <linux/blkdev.h> 
+      Type: #include, Text: #include
+      Type: system_lib_string, Text: <linux/blkdev.h>
+    Type: preproc_include, Text: #include "hfsplus_raw.h" 
+      Type: #include, Text: #include
+      Type: string_literal, Text: "hfsplus_raw.h"
+        Type: ", Text: "
+        Type: string_content, Text: hfsplus_raw.h
+        Type: ", Text: "
+    Type: preproc_def, Text: #define DBG_BNODE_REFS 0x00000001 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_BNODE_REFS
+      Type: preproc_arg, Text: 0x00000001
+    Type: preproc_def, Text: #define DBG_BNODE_MOD 0x00000002 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_BNODE_MOD
+      Type: preproc_arg, Text: 0x00000002
+    Type: preproc_def, Text: #define DBG_CAT_MOD 0x00000004 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_CAT_MOD
+      Type: preproc_arg, Text: 0x00000004
+    Type: preproc_def, Text: #define DBG_INODE 0x00000008 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_INODE
+      Type: preproc_arg, Text: 0x00000008
+    Type: preproc_def, Text: #define DBG_SUPER 0x00000010 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_SUPER
+      Type: preproc_arg, Text: 0x00000010
+    Type: preproc_def, Text: #define DBG_EXTENT 0x00000020 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_EXTENT
+      Type: preproc_arg, Text: 0x00000020
+    Type: preproc_def, Text: #define DBG_BITMAP 0x00000040 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_BITMAP
+      Type: preproc_arg, Text: 0x00000040
+    Type: preproc_def, Text: #define DBG_ATTR_MOD 0x00000080 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_ATTR_MOD
+      Type: preproc_arg, Text: 0x00000080
+    Type: preproc_if, Text: #if 0 #define D ... _EXTENT) #endif
+      Type: #if, Text: #if
+      Type: number_literal, Text: 0
+      Type: 
+, Text:  
+      Type: preproc_def, Text: #define DBG_MAS ... DBG_BNODE_MOD) 
+        Type: #define, Text: #define
+        Type: identifier, Text: DBG_MASK
+        Type: preproc_arg, Text: (DBG_EXTENT|DBG ... |DBG_BNODE_MOD)
+      Type: preproc_def, Text: #define DBG_MAS ... MOD|DBG_INODE) 
+        Type: #define, Text: #define
+        Type: identifier, Text: DBG_MASK
+        Type: preproc_arg, Text: (DBG_BNODE_MOD| ... _MOD|DBG_INODE)
+      Type: preproc_def, Text: #define DBG_MAS ... DE|DBG_EXTENT) 
+        Type: #define, Text: #define
+        Type: identifier, Text: DBG_MASK
+        Type: preproc_arg, Text: (DBG_CAT_MOD|DB ... ODE|DBG_EXTENT)
+      Type: #endif, Text: #endif
+    Type: preproc_def, Text: #define DBG_MASK (0) 
+      Type: #define, Text: #define
+      Type: identifier, Text: DBG_MASK
+      Type: preproc_arg, Text: (0)
+    Type: preproc_function_def, Text: #define hfs_dbg ...  \ } while (0) 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_dbg
+      Type: preproc_params, Text: (flg, fmt, ...)
+        Type: (, Text: (
+        Type: identifier, Text: flg
+        Type: ,, Text: ,
+        Type: identifier, Text: fmt
+        Type: ,, Text: ,
+        Type: ..., Text: ...
+        Type: ), Text: )
+      Type: preproc_arg, Text: do { \ if (DBG_ ... ; \ } while (0)
+    Type: preproc_function_def, Text: #define hfs_dbg ...  \ } while (0) 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_dbg_cont
+      Type: preproc_params, Text: (flg, fmt, ...)
+        Type: (, Text: (
+        Type: identifier, Text: flg
+        Type: ,, Text: ,
+        Type: identifier, Text: fmt
+        Type: ,, Text: ,
+        Type: ..., Text: ...
+        Type: ), Text: )
+      Type: preproc_arg, Text: do { \ if (DBG_ ... ; \ } while (0)
+    Type: comment, Text: /* Runtime config options */
+    Type: preproc_def, Text: #define HFSPLUS ... F /* '????' */ 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_DEF_CR_TYPE
+      Type: preproc_arg, Text: 0x3F3F3F3F 
+      Type: comment, Text: /* '????' */
+    Type: preproc_def, Text: #define HFSPLUS_TYPE_DATA 0x00 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_TYPE_DATA
+      Type: preproc_arg, Text: 0x00
+    Type: preproc_def, Text: #define HFSPLUS_TYPE_RSRC 0xFF 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_TYPE_RSRC
+      Type: preproc_arg, Text: 0xFF
+    Type: type_definition, Text: typedef int (*b ... s_btree_key *);
+      Type: typedef, Text: typedef
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: (*btree_keycmp) ... us_btree_key *)
+        Type: parenthesized_declarator, Text: (*btree_keycmp)
+          Type: (, Text: (
+          Type: pointer_declarator, Text: *btree_keycmp
+            Type: *, Text: *
+            Type: type_identifier, Text: btree_keycmp
+          Type: ), Text: )
+        Type: parameter_list, Text: (const hfsplus_ ... us_btree_key *)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const hfsplus_btree_key *
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const hfsplus_btree_key *
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: preproc_def, Text: #define NODE_HASH_SIZE 256 
+      Type: #define, Text: #define
+      Type: identifier, Text: NODE_HASH_SIZE
+      Type: preproc_arg, Text: 256
+    Type: comment, Text: /* B-tree mutex ... d subclasses */
+    Type: enum_specifier, Text: enum hfsplus_bt ... _BTREE_MUTEX, }
+      Type: enum, Text: enum
+      Type: type_identifier, Text: hfsplus_btree_mutex_classes
+      Type: enumerator_list, Text: { CATALOG_BTREE ... _BTREE_MUTEX, }
+        Type: {, Text: {
+        Type: enumerator, Text: CATALOG_BTREE_MUTEX
+          Type: identifier, Text: CATALOG_BTREE_MUTEX
+        Type: ,, Text: ,
+        Type: enumerator, Text: EXTENTS_BTREE_MUTEX
+          Type: identifier, Text: EXTENTS_BTREE_MUTEX
+        Type: ,, Text: ,
+        Type: enumerator, Text: ATTR_BTREE_MUTEX
+          Type: identifier, Text: ATTR_BTREE_MUTEX
+        Type: ,, Text: ,
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: comment, Text: /* An HFS+ BTree held in memory */
+    Type: struct_specifier, Text: struct hfs_btre ... ode_hash_cnt; }
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfs_btree
+      Type: field_declaration_list, Text: { struct super_ ... ode_hash_cnt; }
+        Type: {, Text: {
+        Type: field_declaration, Text: struct super_block *sb;
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: field_identifier, Text: sb
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct inode *inode;
+          Type: struct_specifier, Text: struct inode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: inode
+          Type: pointer_declarator, Text: *inode
+            Type: *, Text: *
+            Type: field_identifier, Text: inode
+          Type: ;, Text: ;
+        Type: field_declaration, Text: btree_keycmp keycmp;
+          Type: type_identifier, Text: btree_keycmp
+          Type: field_identifier, Text: keycmp
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 cnid;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: cnid
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 root;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: root
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 leaf_count;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: leaf_count
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 leaf_head;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: leaf_head
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 leaf_tail;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: leaf_tail
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 node_count;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: node_count
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 free_nodes;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: free_nodes
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 attributes;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: attributes
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int node_size;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: node_size
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int node_size_shift;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: node_size_shift
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int max_key_len;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: max_key_len
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int depth;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: depth
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct mutex tree_lock;
+          Type: struct_specifier, Text: struct mutex
+            Type: struct, Text: struct
+            Type: type_identifier, Text: mutex
+          Type: field_identifier, Text: tree_lock
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int pages_per_bnode;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: pages_per_bnode
+          Type: ;, Text: ;
+        Type: field_declaration, Text: spinlock_t hash_lock;
+          Type: type_identifier, Text: spinlock_t
+          Type: field_identifier, Text: hash_lock
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfs_bnod ... ODE_HASH_SIZE];
+          Type: struct_specifier, Text: struct hfs_bnode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_bnode
+          Type: pointer_declarator, Text: *node_hash[NODE_HASH_SIZE]
+            Type: *, Text: *
+            Type: array_declarator, Text: node_hash[NODE_HASH_SIZE]
+              Type: field_identifier, Text: node_hash
+              Type: [, Text: [
+              Type: identifier, Text: NODE_HASH_SIZE
+              Type: ], Text: ]
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int node_hash_cnt;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: node_hash_cnt
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: struct_specifier, Text: struct page
+      Type: struct, Text: struct
+      Type: type_identifier, Text: page
+    Type: ;, Text: ;
+    Type: comment, Text: /* An HFS+ BTree node in memory */
+    Type: struct_specifier, Text: struct hfs_bnod ... page *page[]; }
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfs_bnode
+      Type: field_declaration_list, Text: { struct hfs_bt ... page *page[]; }
+        Type: {, Text: {
+        Type: field_declaration, Text: struct hfs_btree *tree;
+          Type: struct_specifier, Text: struct hfs_btree
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_btree
+          Type: pointer_declarator, Text: *tree
+            Type: *, Text: *
+            Type: field_identifier, Text: tree
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 prev;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: prev
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 this;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: this
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 next;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: next
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 parent;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: parent
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u16 num_recs;
+          Type: type_identifier, Text: u16
+          Type: field_identifier, Text: num_recs
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u8 type;
+          Type: type_identifier, Text: u8
+          Type: field_identifier, Text: type
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u8 height;
+          Type: type_identifier, Text: u8
+          Type: field_identifier, Text: height
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfs_bnode *next_hash;
+          Type: struct_specifier, Text: struct hfs_bnode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_bnode
+          Type: pointer_declarator, Text: *next_hash
+            Type: *, Text: *
+            Type: field_identifier, Text: next_hash
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned long flags;
+          Type: sized_type_specifier, Text: unsigned long
+            Type: unsigned, Text: unsigned
+            Type: long, Text: long
+          Type: field_identifier, Text: flags
+          Type: ;, Text: ;
+        Type: field_declaration, Text: wait_queue_head_t lock_wq;
+          Type: type_identifier, Text: wait_queue_head_t
+          Type: field_identifier, Text: lock_wq
+          Type: ;, Text: ;
+        Type: field_declaration, Text: atomic_t refcnt;
+          Type: type_identifier, Text: atomic_t
+          Type: field_identifier, Text: refcnt
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int page_offset;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: page_offset
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct page *page[];
+          Type: struct_specifier, Text: struct page
+            Type: struct, Text: struct
+            Type: type_identifier, Text: page
+          Type: pointer_declarator, Text: *page[]
+            Type: *, Text: *
+            Type: array_declarator, Text: page[]
+              Type: field_identifier, Text: page
+              Type: [, Text: [
+              Type: ], Text: ]
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: preproc_def, Text: #define HFS_BNODE_LOCK 0 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFS_BNODE_LOCK
+      Type: preproc_arg, Text: 0
+    Type: preproc_def, Text: #define HFS_BNODE_ERROR 1 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFS_BNODE_ERROR
+      Type: preproc_arg, Text: 1
+    Type: preproc_def, Text: #define HFS_BNODE_NEW 2 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFS_BNODE_NEW
+      Type: preproc_arg, Text: 2
+    Type: preproc_def, Text: #define HFS_BNODE_DIRTY 3 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFS_BNODE_DIRTY
+      Type: preproc_arg, Text: 3
+    Type: preproc_def, Text: #define HFS_BNODE_DELETED 4 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFS_BNODE_DELETED
+      Type: preproc_arg, Text: 4
+    Type: comment, Text: /* * Attributes file states */
+    Type: preproc_def, Text: #define HFSPLUS_EMPTY_ATTR_TREE 0 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_EMPTY_ATTR_TREE
+      Type: preproc_arg, Text: 0
+    Type: preproc_def, Text: #define HFSPLUS ... NG_ATTR_TREE 1 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_CREATING_ATTR_TREE
+      Type: preproc_arg, Text: 1
+    Type: preproc_def, Text: #define HFSPLUS_VALID_ATTR_TREE 2 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_VALID_ATTR_TREE
+      Type: preproc_arg, Text: 2
+    Type: preproc_def, Text: #define HFSPLUS_FAILED_ATTR_TREE 3 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_FAILED_ATTR_TREE
+      Type: preproc_arg, Text: 3
+    Type: comment, Text: /* * HFS+ super ... der on disk) */
+    Type: struct_specifier, Text: struct hfsplus_vh
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfsplus_vh
+    Type: ;, Text: ;
+    Type: struct_specifier, Text: struct hfs_btree
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfs_btree
+    Type: ;, Text: ;
+    Type: struct_specifier, Text: struct hfsplus_ ... ork_queued */ }
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfsplus_sb_info
+      Type: field_declaration_list, Text: { void *s_vhdr_ ... ork_queued */ }
+        Type: {, Text: {
+        Type: field_declaration, Text: void *s_vhdr_buf;
+          Type: primitive_type, Text: void
+          Type: pointer_declarator, Text: *s_vhdr_buf
+            Type: *, Text: *
+            Type: field_identifier, Text: s_vhdr_buf
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfsplus_vh *s_vhdr;
+          Type: struct_specifier, Text: struct hfsplus_vh
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfsplus_vh
+          Type: pointer_declarator, Text: *s_vhdr
+            Type: *, Text: *
+            Type: field_identifier, Text: s_vhdr
+          Type: ;, Text: ;
+        Type: field_declaration, Text: void *s_backup_vhdr_buf;
+          Type: primitive_type, Text: void
+          Type: pointer_declarator, Text: *s_backup_vhdr_buf
+            Type: *, Text: *
+            Type: field_identifier, Text: s_backup_vhdr_buf
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfsplus_vh *s_backup_vhdr;
+          Type: struct_specifier, Text: struct hfsplus_vh
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfsplus_vh
+          Type: pointer_declarator, Text: *s_backup_vhdr
+            Type: *, Text: *
+            Type: field_identifier, Text: s_backup_vhdr
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfs_btree *ext_tree;
+          Type: struct_specifier, Text: struct hfs_btree
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_btree
+          Type: pointer_declarator, Text: *ext_tree
+            Type: *, Text: *
+            Type: field_identifier, Text: ext_tree
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfs_btree *cat_tree;
+          Type: struct_specifier, Text: struct hfs_btree
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_btree
+          Type: pointer_declarator, Text: *cat_tree
+            Type: *, Text: *
+            Type: field_identifier, Text: cat_tree
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfs_btree *attr_tree;
+          Type: struct_specifier, Text: struct hfs_btree
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_btree
+          Type: pointer_declarator, Text: *attr_tree
+            Type: *, Text: *
+            Type: field_identifier, Text: attr_tree
+          Type: ;, Text: ;
+        Type: field_declaration, Text: atomic_t attr_tree_state;
+          Type: type_identifier, Text: atomic_t
+          Type: field_identifier, Text: attr_tree_state
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct inode *alloc_file;
+          Type: struct_specifier, Text: struct inode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: inode
+          Type: pointer_declarator, Text: *alloc_file
+            Type: *, Text: *
+            Type: field_identifier, Text: alloc_file
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct inode *hidden_dir;
+          Type: struct_specifier, Text: struct inode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: inode
+          Type: pointer_declarator, Text: *hidden_dir
+            Type: *, Text: *
+            Type: field_identifier, Text: hidden_dir
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct nls_table *nls;
+          Type: struct_specifier, Text: struct nls_table
+            Type: struct, Text: struct
+            Type: type_identifier, Text: nls_table
+          Type: pointer_declarator, Text: *nls
+            Type: *, Text: *
+            Type: field_identifier, Text: nls
+          Type: ;, Text: ;
+        Type: comment, Text: /* Runtime variables */
+        Type: field_declaration, Text: u32 blockoffset;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: blockoffset
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 min_io_size;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: min_io_size
+          Type: ;, Text: ;
+        Type: field_declaration, Text: sector_t part_start;
+          Type: type_identifier, Text: sector_t
+          Type: field_identifier, Text: part_start
+          Type: ;, Text: ;
+        Type: field_declaration, Text: sector_t sect_count;
+          Type: type_identifier, Text: sector_t
+          Type: field_identifier, Text: sect_count
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int fs_shift;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: fs_shift
+          Type: ;, Text: ;
+        Type: comment, Text: /* immutable da ... olume header */
+        Type: field_declaration, Text: u32 alloc_blksz;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: alloc_blksz
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int alloc_blksz_shift;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: alloc_blksz_shift
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 total_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: total_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 data_clump_ ... c_clump_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: data_clump_blocks
+          Type: ,, Text: ,
+          Type: field_identifier, Text: rsrc_clump_blocks
+          Type: ;, Text: ;
+        Type: comment, Text: /* mutable data ...  alloc_mutex */
+        Type: field_declaration, Text: u32 free_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: free_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct mutex alloc_mutex;
+          Type: struct_specifier, Text: struct mutex
+            Type: struct, Text: struct
+            Type: type_identifier, Text: mutex
+          Type: field_identifier, Text: alloc_mutex
+          Type: ;, Text: ;
+        Type: comment, Text: /* mutable data ...  by vh_mutex */
+        Type: field_declaration, Text: u32 next_cnid;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: next_cnid
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 file_count;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: file_count
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 folder_count;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: folder_count
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct mutex vh_mutex;
+          Type: struct_specifier, Text: struct mutex
+            Type: struct, Text: struct
+            Type: type_identifier, Text: mutex
+          Type: field_identifier, Text: vh_mutex
+          Type: ;, Text: ;
+        Type: comment, Text: /* Config options */
+        Type: field_declaration, Text: u32 creator;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: creator
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 type;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: type
+          Type: ;, Text: ;
+        Type: field_declaration, Text: umode_t umask;
+          Type: type_identifier, Text: umode_t
+          Type: field_identifier, Text: umask
+          Type: ;, Text: ;
+        Type: field_declaration, Text: kuid_t uid;
+          Type: type_identifier, Text: kuid_t
+          Type: field_identifier, Text: uid
+          Type: ;, Text: ;
+        Type: field_declaration, Text: kgid_t gid;
+          Type: type_identifier, Text: kgid_t
+          Type: field_identifier, Text: gid
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int part, session;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: part
+          Type: ,, Text: ,
+          Type: field_identifier, Text: session
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned long flags;
+          Type: sized_type_specifier, Text: unsigned long
+            Type: unsigned, Text: unsigned
+            Type: long, Text: long
+          Type: field_identifier, Text: flags
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int work_queued;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: work_queued
+          Type: ;, Text: ;
+        Type: comment, Text: /* non-zero del ... rk is queued */
+        Type: field_declaration, Text: struct delayed_work sync_work;
+          Type: struct_specifier, Text: struct delayed_work
+            Type: struct, Text: struct
+            Type: type_identifier, Text: delayed_work
+          Type: field_identifier, Text: sync_work
+          Type: ;, Text: ;
+        Type: comment, Text: /* FS sync delayed work */
+        Type: field_declaration, Text: spinlock_t work_lock;
+          Type: type_identifier, Text: spinlock_t
+          Type: field_identifier, Text: work_lock
+          Type: ;, Text: ;
+        Type: comment, Text: /* protects syn ...  work_queued */
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: preproc_def, Text: #define HFSPLUS_SB_WRITEBACKUP 0 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_WRITEBACKUP
+      Type: preproc_arg, Text: 0
+    Type: preproc_def, Text: #define HFSPLUS_SB_NODECOMPOSE 1 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_NODECOMPOSE
+      Type: preproc_arg, Text: 1
+    Type: preproc_def, Text: #define HFSPLUS_SB_FORCE 2 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_FORCE
+      Type: preproc_arg, Text: 2
+    Type: preproc_def, Text: #define HFSPLUS_SB_HFSX 3 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_HFSX
+      Type: preproc_arg, Text: 3
+    Type: preproc_def, Text: #define HFSPLUS_SB_CASEFOLD 4 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_CASEFOLD
+      Type: preproc_arg, Text: 4
+    Type: preproc_def, Text: #define HFSPLUS_SB_NOBARRIER 5 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_NOBARRIER
+      Type: preproc_arg, Text: 5
+    Type: preproc_def, Text: #define HFSPLUS_SB_UID 6 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_UID
+      Type: preproc_arg, Text: 6
+    Type: preproc_def, Text: #define HFSPLUS_SB_GID 7 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_SB_GID
+      Type: preproc_arg, Text: 7
+    Type: function_definition, Text: static inline s ... b->s_fs_info; }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: struct_specifier, Text: struct hfsplus_sb_info
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfsplus_sb_info
+      Type: pointer_declarator, Text: *HFSPLUS_SB(struct super_block *sb)
+        Type: *, Text: *
+        Type: function_declarator, Text: HFSPLUS_SB(struct super_block *sb)
+          Type: identifier, Text: HFSPLUS_SB
+          Type: parameter_list, Text: (struct super_block *sb)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct super_block *sb
+              Type: struct_specifier, Text: struct super_block
+                Type: struct, Text: struct
+                Type: type_identifier, Text: super_block
+              Type: pointer_declarator, Text: *sb
+                Type: *, Text: *
+                Type: identifier, Text: sb
+            Type: ), Text: )
+      Type: compound_statement, Text: { return sb->s_fs_info; }
+        Type: {, Text: {
+        Type: return_statement, Text: return sb->s_fs_info;
+          Type: return, Text: return
+          Type: field_expression, Text: sb->s_fs_info
+            Type: identifier, Text: sb
+            Type: ->, Text: ->
+            Type: field_identifier, Text: s_fs_info
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: struct_specifier, Text: struct hfsplus_ ... de vfs_inode; }
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfsplus_inode_info
+      Type: field_declaration_list, Text: { atomic_t open ... de vfs_inode; }
+        Type: {, Text: {
+        Type: field_declaration, Text: atomic_t opencnt;
+          Type: type_identifier, Text: atomic_t
+          Type: field_identifier, Text: opencnt
+          Type: ;, Text: ;
+        Type: comment, Text: /* * Extent all ... xtents_lock. */
+        Type: field_declaration, Text: u32 first_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: first_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 clump_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: clump_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 alloc_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: alloc_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 cached_start;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: cached_start
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u32 cached_blocks;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: cached_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: hfsplus_extent_rec first_extents;
+          Type: type_identifier, Text: hfsplus_extent_rec
+          Type: field_identifier, Text: first_extents
+          Type: ;, Text: ;
+        Type: field_declaration, Text: hfsplus_extent_rec cached_extents;
+          Type: type_identifier, Text: hfsplus_extent_rec
+          Type: field_identifier, Text: cached_extents
+          Type: ;, Text: ;
+        Type: field_declaration, Text: unsigned int extent_state;
+          Type: sized_type_specifier, Text: unsigned int
+            Type: unsigned, Text: unsigned
+            Type: primitive_type, Text: int
+          Type: field_identifier, Text: extent_state
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct mutex extents_lock;
+          Type: struct_specifier, Text: struct mutex
+            Type: struct, Text: struct
+            Type: type_identifier, Text: mutex
+          Type: field_identifier, Text: extents_lock
+          Type: ;, Text: ;
+        Type: comment, Text: /* * Immutable data. */
+        Type: field_declaration, Text: struct inode *rsrc_inode;
+          Type: struct_specifier, Text: struct inode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: inode
+          Type: pointer_declarator, Text: *rsrc_inode
+            Type: *, Text: *
+            Type: field_identifier, Text: rsrc_inode
+          Type: ;, Text: ;
+        Type: field_declaration, Text: __be32 create_date;
+          Type: type_identifier, Text: __be32
+          Type: field_identifier, Text: create_date
+          Type: ;, Text: ;
+        Type: comment, Text: /* * Protected by sbi->vh_mutex. */
+        Type: field_declaration, Text: u32 linkid;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: linkid
+          Type: ;, Text: ;
+        Type: comment, Text: /* * Accessed u ... omic bitops. */
+        Type: field_declaration, Text: unsigned long flags;
+          Type: sized_type_specifier, Text: unsigned long
+            Type: unsigned, Text: unsigned
+            Type: long, Text: long
+          Type: field_identifier, Text: flags
+          Type: ;, Text: ;
+        Type: comment, Text: /* * Protected by i_mutex. */
+        Type: field_declaration, Text: sector_t fs_blocks;
+          Type: type_identifier, Text: sector_t
+          Type: field_identifier, Text: fs_blocks
+          Type: ;, Text: ;
+        Type: field_declaration, Text: u8 userflags;
+          Type: type_identifier, Text: u8
+          Type: field_identifier, Text: userflags
+          Type: ;, Text: ;
+        Type: comment, Text: /* BSD user file flags */
+        Type: field_declaration, Text: u32 subfolders;
+          Type: type_identifier, Text: u32
+          Type: field_identifier, Text: subfolders
+          Type: ;, Text: ;
+        Type: comment, Text: /* Subfolder count (HFSX only) */
+        Type: field_declaration, Text: struct list_head open_dir_list;
+          Type: struct_specifier, Text: struct list_head
+            Type: struct, Text: struct
+            Type: type_identifier, Text: list_head
+          Type: field_identifier, Text: open_dir_list
+          Type: ;, Text: ;
+        Type: field_declaration, Text: spinlock_t open_dir_lock;
+          Type: type_identifier, Text: spinlock_t
+          Type: field_identifier, Text: open_dir_lock
+          Type: ;, Text: ;
+        Type: field_declaration, Text: loff_t phys_size;
+          Type: type_identifier, Text: loff_t
+          Type: field_identifier, Text: phys_size
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct inode vfs_inode;
+          Type: struct_specifier, Text: struct inode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: inode
+          Type: field_identifier, Text: vfs_inode
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: preproc_def, Text: #define HFSPLUS_EXT_DIRTY 0x0001 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_EXT_DIRTY
+      Type: preproc_arg, Text: 0x0001
+    Type: preproc_def, Text: #define HFSPLUS_EXT_NEW 0x0002 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_EXT_NEW
+      Type: preproc_arg, Text: 0x0002
+    Type: preproc_def, Text: #define HFSPLUS ... source fork */ 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_I_RSRC
+      Type: preproc_arg, Text: 0 
+      Type: comment, Text: /* represents a resource fork */
+    Type: preproc_def, Text: #define HFSPLUS ... atalog tree */ 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_I_CAT_DIRTY
+      Type: preproc_arg, Text: 1 
+      Type: comment, Text: /* has changes  ... catalog tree */
+    Type: preproc_def, Text: #define HFSPLUS ... extent tree */ 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_I_EXT_DIRTY
+      Type: preproc_arg, Text: 2 
+      Type: comment, Text: /* has changes  ...  extent tree */
+    Type: preproc_def, Text: #define HFSPLUS ... cation file */ 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_I_ALLOC_DIRTY
+      Type: preproc_arg, Text: 3 
+      Type: comment, Text: /* has changes  ... ocation file */
+    Type: preproc_def, Text: #define HFSPLUS ... ibutes tree */ 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_I_ATTR_DIRTY
+      Type: preproc_arg, Text: 4 
+      Type: comment, Text: /* has changes  ... ributes tree */
+    Type: preproc_function_def, Text: #define HFSPLUS ... inode)->flags) 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_IS_RSRC
+      Type: preproc_params, Text: (inode)
+        Type: (, Text: (
+        Type: identifier, Text: inode
+        Type: ), Text: )
+      Type: preproc_arg, Text: test_bit(HFSPLU ... (inode)->flags)
+    Type: function_definition, Text: static inline s ... , vfs_inode); }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: struct_specifier, Text: struct hfsplus_inode_info
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfsplus_inode_info
+      Type: pointer_declarator, Text: *HFSPLUS_I(struct inode *inode)
+        Type: *, Text: *
+        Type: function_declarator, Text: HFSPLUS_I(struct inode *inode)
+          Type: identifier, Text: HFSPLUS_I
+          Type: parameter_list, Text: (struct inode *inode)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct inode *inode
+              Type: struct_specifier, Text: struct inode
+                Type: struct, Text: struct
+                Type: type_identifier, Text: inode
+              Type: pointer_declarator, Text: *inode
+                Type: *, Text: *
+                Type: identifier, Text: inode
+            Type: ), Text: )
+      Type: compound_statement, Text: { return contai ... , vfs_inode); }
+        Type: {, Text: {
+        Type: return_statement, Text: return containe ... fo, vfs_inode);
+          Type: return, Text: return
+          Type: call_expression, Text: container_of(in ... nfo, vfs_inode)
+            Type: identifier, Text: container_of
+            Type: argument_list, Text: (inode, struct  ... nfo, vfs_inode)
+              Type: (, Text: (
+              Type: identifier, Text: inode
+              Type: ,, Text: ,
+              Type: ERROR, Text: struct
+                Type: identifier, Text: struct
+              Type: identifier, Text: hfsplus_inode_info
+              Type: ,, Text: ,
+              Type: identifier, Text: vfs_inode
+              Type: ), Text: )
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: comment, Text: /* * Mark an in ... l is enough. */
+    Type: function_definition, Text: static inline v ... dirty(inode); }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_mark_in ... igned int flag)
+        Type: identifier, Text: hfsplus_mark_inode_dirty
+        Type: parameter_list, Text: (struct inode * ... igned int flag)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned int flag
+            Type: sized_type_specifier, Text: unsigned int
+              Type: unsigned, Text: unsigned
+              Type: primitive_type, Text: int
+            Type: identifier, Text: flag
+          Type: ), Text: )
+      Type: compound_statement, Text: { set_bit(flag, ... dirty(inode); }
+        Type: {, Text: {
+        Type: expression_statement, Text: set_bit(flag, & ... inode)->flags);
+          Type: call_expression, Text: set_bit(flag, & ... (inode)->flags)
+            Type: identifier, Text: set_bit
+            Type: argument_list, Text: (flag, &HFSPLUS_I(inode)->flags)
+              Type: (, Text: (
+              Type: identifier, Text: flag
+              Type: ,, Text: ,
+              Type: pointer_expression, Text: &HFSPLUS_I(inode)->flags
+                Type: &, Text: &
+                Type: field_expression, Text: HFSPLUS_I(inode)->flags
+                  Type: call_expression, Text: HFSPLUS_I(inode)
+                    Type: identifier, Text: HFSPLUS_I
+                    Type: argument_list, Text: (inode)
+                      Type: (, Text: (
+                      Type: identifier, Text: inode
+                      Type: ), Text: )
+                  Type: ->, Text: ->
+                  Type: field_identifier, Text: flags
+              Type: ), Text: )
+          Type: ;, Text: ;
+        Type: expression_statement, Text: mark_inode_dirty(inode);
+          Type: call_expression, Text: mark_inode_dirty(inode)
+            Type: identifier, Text: mark_inode_dirty
+            Type: argument_list, Text: (inode)
+              Type: (, Text: (
+              Type: identifier, Text: inode
+              Type: ), Text: )
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: struct_specifier, Text: struct hfs_find ...  entrylength; }
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfs_find_data
+      Type: field_declaration_list, Text: { /* filled by  ...  entrylength; }
+        Type: {, Text: {
+        Type: comment, Text: /* filled by caller */
+        Type: field_declaration, Text: hfsplus_btree_key *search_key;
+          Type: type_identifier, Text: hfsplus_btree_key
+          Type: pointer_declarator, Text: *search_key
+            Type: *, Text: *
+            Type: field_identifier, Text: search_key
+          Type: ;, Text: ;
+        Type: field_declaration, Text: hfsplus_btree_key *key;
+          Type: type_identifier, Text: hfsplus_btree_key
+          Type: pointer_declarator, Text: *key
+            Type: *, Text: *
+            Type: field_identifier, Text: key
+          Type: ;, Text: ;
+        Type: comment, Text: /* filled by find */
+        Type: field_declaration, Text: struct hfs_btree *tree;
+          Type: struct_specifier, Text: struct hfs_btree
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_btree
+          Type: pointer_declarator, Text: *tree
+            Type: *, Text: *
+            Type: field_identifier, Text: tree
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfs_bnode *bnode;
+          Type: struct_specifier, Text: struct hfs_bnode
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfs_bnode
+          Type: pointer_declarator, Text: *bnode
+            Type: *, Text: *
+            Type: field_identifier, Text: bnode
+          Type: ;, Text: ;
+        Type: comment, Text: /* filled by findrec */
+        Type: field_declaration, Text: int record;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: record
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int keyoffset, keylength;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: keyoffset
+          Type: ,, Text: ,
+          Type: field_identifier, Text: keylength
+          Type: ;, Text: ;
+        Type: field_declaration, Text: int entryoffset, entrylength;
+          Type: primitive_type, Text: int
+          Type: field_identifier, Text: entryoffset
+          Type: ,, Text: ,
+          Type: field_identifier, Text: entrylength
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: struct_specifier, Text: struct hfsplus_ ... _cat_key key; }
+      Type: struct, Text: struct
+      Type: type_identifier, Text: hfsplus_readdir_data
+      Type: field_declaration_list, Text: { struct list_h ... _cat_key key; }
+        Type: {, Text: {
+        Type: field_declaration, Text: struct list_head list;
+          Type: struct_specifier, Text: struct list_head
+            Type: struct, Text: struct
+            Type: type_identifier, Text: list_head
+          Type: field_identifier, Text: list
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct file *file;
+          Type: struct_specifier, Text: struct file
+            Type: struct, Text: struct
+            Type: type_identifier, Text: file
+          Type: pointer_declarator, Text: *file
+            Type: *, Text: *
+            Type: field_identifier, Text: file
+          Type: ;, Text: ;
+        Type: field_declaration, Text: struct hfsplus_cat_key key;
+          Type: struct_specifier, Text: struct hfsplus_cat_key
+            Type: struct, Text: struct
+            Type: type_identifier, Text: hfsplus_cat_key
+          Type: field_identifier, Text: key
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: ;, Text: ;
+    Type: comment, Text: /* * Find minim ...  hfsplus sb. */
+    Type: function_definition, Text: static inline u ... SECTOR_SIZE); }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: sized_type_specifier, Text: unsigned short
+        Type: unsigned, Text: unsigned
+        Type: short, Text: short
+      Type: function_declarator, Text: hfsplus_min_io_ ... uper_block *sb)
+        Type: identifier, Text: hfsplus_min_io_size
+        Type: parameter_list, Text: (struct super_block *sb)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ), Text: )
+      Type: compound_statement, Text: { return max_t( ... SECTOR_SIZE); }
+        Type: {, Text: {
+        Type: return_statement, Text: return max_t(un ... S_SECTOR_SIZE);
+          Type: return, Text: return
+          Type: call_expression, Text: max_t(unsigned  ... US_SECTOR_SIZE)
+            Type: identifier, Text: max_t
+            Type: argument_list, Text: (unsigned short ... US_SECTOR_SIZE)
+              Type: (, Text: (
+              Type: identifier, Text: unsigned
+              Type: ERROR, Text: short
+                Type: identifier, Text: short
+              Type: ,, Text: ,
+              Type: field_expression, Text: HFSPLUS_SB(sb)->min_io_size
+                Type: call_expression, Text: HFSPLUS_SB(sb)
+                  Type: identifier, Text: HFSPLUS_SB
+                  Type: argument_list, Text: (sb)
+                    Type: (, Text: (
+                    Type: identifier, Text: sb
+                    Type: ), Text: )
+                Type: ->, Text: ->
+                Type: field_identifier, Text: min_io_size
+              Type: ,, Text: ,
+              Type: identifier, Text: HFSPLUS_SECTOR_SIZE
+              Type: ), Text: )
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: preproc_def, Text: #define hfs_btr ... lus_btree_open 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_btree_open
+      Type: preproc_arg, Text: hfsplus_btree_open
+    Type: preproc_def, Text: #define hfs_btr ... us_btree_close 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_btree_close
+      Type: preproc_arg, Text: hfsplus_btree_close
+    Type: preproc_def, Text: #define hfs_btr ... us_btree_write 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_btree_write
+      Type: preproc_arg, Text: hfsplus_btree_write
+    Type: preproc_def, Text: #define hfs_bma ... s_bmap_reserve 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bmap_reserve
+      Type: preproc_arg, Text: hfsplus_bmap_reserve
+    Type: preproc_def, Text: #define hfs_bma ... lus_bmap_alloc 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bmap_alloc
+      Type: preproc_arg, Text: hfsplus_bmap_alloc
+    Type: preproc_def, Text: #define hfs_bma ... plus_bmap_free 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bmap_free
+      Type: preproc_arg, Text: hfsplus_bmap_free
+    Type: preproc_def, Text: #define hfs_bno ... lus_bnode_read 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_read
+      Type: preproc_arg, Text: hfsplus_bnode_read
+    Type: preproc_def, Text: #define hfs_bno ... bnode_read_u16 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_read_u16
+      Type: preproc_arg, Text: hfsplus_bnode_read_u16
+    Type: preproc_def, Text: #define hfs_bno ... _bnode_read_u8 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_read_u8
+      Type: preproc_arg, Text: hfsplus_bnode_read_u8
+    Type: preproc_def, Text: #define hfs_bno ... bnode_read_key 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_read_key
+      Type: preproc_arg, Text: hfsplus_bnode_read_key
+    Type: preproc_def, Text: #define hfs_bno ... us_bnode_write 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_write
+      Type: preproc_arg, Text: hfsplus_bnode_write
+    Type: preproc_def, Text: #define hfs_bno ... node_write_u16 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_write_u16
+      Type: preproc_arg, Text: hfsplus_bnode_write_u16
+    Type: preproc_def, Text: #define hfs_bno ... us_bnode_clear 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_clear
+      Type: preproc_arg, Text: hfsplus_bnode_clear
+    Type: preproc_def, Text: #define hfs_bno ... lus_bnode_copy 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_copy
+      Type: preproc_arg, Text: hfsplus_bnode_copy
+    Type: preproc_def, Text: #define hfs_bno ... lus_bnode_move 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_move
+      Type: preproc_arg, Text: hfsplus_bnode_move
+    Type: preproc_def, Text: #define hfs_bno ... lus_bnode_dump 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_dump
+      Type: preproc_arg, Text: hfsplus_bnode_dump
+    Type: preproc_def, Text: #define hfs_bno ... s_bnode_unlink 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_unlink
+      Type: preproc_arg, Text: hfsplus_bnode_unlink
+    Type: preproc_def, Text: #define hfs_bno ... bnode_findhash 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_findhash
+      Type: preproc_arg, Text: hfsplus_bnode_findhash
+    Type: preproc_def, Text: #define hfs_bno ... lus_bnode_find 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_find
+      Type: preproc_arg, Text: hfsplus_bnode_find
+    Type: preproc_def, Text: #define hfs_bno ... s_bnode_unhash 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_unhash
+      Type: preproc_arg, Text: hfsplus_bnode_unhash
+    Type: preproc_def, Text: #define hfs_bno ... lus_bnode_free 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_free
+      Type: preproc_arg, Text: hfsplus_bnode_free
+    Type: preproc_def, Text: #define hfs_bno ... s_bnode_create 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_create
+      Type: preproc_arg, Text: hfsplus_bnode_create
+    Type: preproc_def, Text: #define hfs_bno ... plus_bnode_get 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_get
+      Type: preproc_arg, Text: hfsplus_bnode_get
+    Type: preproc_def, Text: #define hfs_bno ... plus_bnode_put 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_bnode_put
+      Type: preproc_arg, Text: hfsplus_bnode_put
+    Type: preproc_def, Text: #define hfs_bre ... us_brec_lenoff 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_lenoff
+      Type: preproc_arg, Text: hfsplus_brec_lenoff
+    Type: preproc_def, Text: #define hfs_bre ... us_brec_keylen 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_keylen
+      Type: preproc_arg, Text: hfsplus_brec_keylen
+    Type: preproc_def, Text: #define hfs_bre ... us_brec_insert 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_insert
+      Type: preproc_arg, Text: hfsplus_brec_insert
+    Type: preproc_def, Text: #define hfs_bre ... us_brec_remove 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_remove
+      Type: preproc_arg, Text: hfsplus_brec_remove
+    Type: preproc_def, Text: #define hfs_fin ... plus_find_init 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_find_init
+      Type: preproc_arg, Text: hfsplus_find_init
+    Type: preproc_def, Text: #define hfs_fin ... plus_find_exit 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_find_exit
+      Type: preproc_arg, Text: hfsplus_find_exit
+    Type: preproc_def, Text: #define __hfs_b ... plus_brec_find 
+      Type: #define, Text: #define
+      Type: identifier, Text: __hfs_brec_find
+      Type: preproc_arg, Text: __hfsplus_brec_find
+    Type: preproc_def, Text: #define hfs_bre ... plus_brec_find 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_find
+      Type: preproc_arg, Text: hfsplus_brec_find
+    Type: preproc_def, Text: #define hfs_bre ... plus_brec_read 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_read
+      Type: preproc_arg, Text: hfsplus_brec_read
+    Type: preproc_def, Text: #define hfs_bre ... plus_brec_goto 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_brec_goto
+      Type: preproc_arg, Text: hfsplus_brec_goto
+    Type: preproc_def, Text: #define hfs_par ... plus_part_find 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfs_part_find
+      Type: preproc_arg, Text: hfsplus_part_find
+    Type: comment, Text: /* * hfs+-speci ... tem bootable */
+    Type: preproc_def, Text: #define HFSPLUS ... _IO('h', 0x80) 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_IOC_BLESS
+      Type: preproc_arg, Text: _IO('h', 0x80)
+    Type: type_definition, Text: typedef int (*s ...  int *, int *);
+      Type: typedef, Text: typedef
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: (*search_strate ... , int *, int *)
+        Type: parenthesized_declarator, Text: (*search_strategy_t)
+          Type: (, Text: (
+          Type: pointer_declarator, Text: *search_strategy_t
+            Type: *, Text: *
+            Type: type_identifier, Text: search_strategy_t
+          Type: ), Text: )
+        Type: parameter_list, Text: (struct hfs_bno ... , int *, int *)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *
+            Type: primitive_type, Text: int
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *
+            Type: primitive_type, Text: int
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *
+            Type: primitive_type, Text: int
+            Type: abstract_pointer_declarator, Text: *
+              Type: *, Text: *
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* * Functions  ...  other files */
+    Type: comment, Text: /* attributes.c */
+    Type: declaration, Text: int __init hfsp ... ee_cache(void);
+      Type: primitive_type, Text: int
+      Type: ERROR, Text: __init
+        Type: identifier, Text: __init
+      Type: function_declarator, Text: hfsplus_create_ ... ree_cache(void)
+        Type: identifier, Text: hfsplus_create_attr_tree_cache
+        Type: parameter_list, Text: (void)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: void
+            Type: primitive_type, Text: void
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_de ... ee_cache(void);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_destroy ... ree_cache(void)
+        Type: identifier, Text: hfsplus_destroy_attr_tree_cache
+        Type: parameter_list, Text: (void)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: void
+            Type: primitive_type, Text: void
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_att ... btree_key *k2);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_attr_bi ... _btree_key *k2)
+        Type: identifier, Text: hfsplus_attr_bin_cmp_key
+        Type: parameter_list, Text: (const hfsplus_ ... _btree_key *k2)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k1
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k1
+              Type: *, Text: *
+              Type: identifier, Text: k1
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k2
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k2
+              Type: *, Text: *
+              Type: identifier, Text: k2
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_att ... st char *name);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_attr_bu ... nst char *name)
+        Type: identifier, Text: hfsplus_attr_build_key
+        Type: parameter_list, Text: (struct super_b ... nst char *name)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: hfsplus_btree_key *key
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *key
+              Type: *, Text: *
+              Type: identifier, Text: key
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *name
+              Type: *, Text: *
+              Type: identifier, Text: name
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: hfsplus_attr_en ... tr_entry(void);
+      Type: type_identifier, Text: hfsplus_attr_entry
+      Type: pointer_declarator, Text: *hfsplus_alloc_attr_entry(void)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfsplus_alloc_attr_entry(void)
+          Type: identifier, Text: hfsplus_alloc_attr_entry
+          Type: parameter_list, Text: (void)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: void
+              Type: primitive_type, Text: void
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_de ... _entry *entry);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_destroy ... r_entry *entry)
+        Type: identifier, Text: hfsplus_destroy_attr_entry
+        Type: parameter_list, Text: (hfsplus_attr_entry *entry)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: hfsplus_attr_entry *entry
+            Type: type_identifier, Text: hfsplus_attr_entry
+            Type: pointer_declarator, Text: *entry
+              Type: *, Text: *
+              Type: identifier, Text: entry
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fin ... find_data *fd);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_find_at ... _find_data *fd)
+        Type: identifier, Text: hfsplus_find_attr
+        Type: parameter_list, Text: (struct super_b ... _find_data *fd)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *name
+              Type: *, Text: *
+              Type: identifier, Text: name
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_att ... st char *name);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_attr_ex ... nst char *name)
+        Type: identifier, Text: hfsplus_attr_exists
+        Type: parameter_list, Text: (struct inode * ... nst char *name)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *name
+              Type: *, Text: *
+              Type: identifier, Text: name
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_cre ... , size_t size);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_create_ ... e, size_t size)
+        Type: identifier, Text: hfsplus_create_attr
+        Type: parameter_list, Text: (struct inode * ... e, size_t size)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *name
+              Type: *, Text: *
+              Type: identifier, Text: name
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const void *value
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *value
+              Type: *, Text: *
+              Type: identifier, Text: value
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: size_t size
+            Type: primitive_type, Text: size_t
+            Type: identifier, Text: size
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_del ... st char *name);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_delete_ ... nst char *name)
+        Type: identifier, Text: hfsplus_delete_attr
+        Type: parameter_list, Text: (struct inode * ... nst char *name)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *name
+              Type: *, Text: *
+              Type: identifier, Text: name
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_del ... dir, u32 cnid);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_delete_ ... *dir, u32 cnid)
+        Type: identifier, Text: hfsplus_delete_all_attrs
+        Type: parameter_list, Text: (struct inode *dir, u32 cnid)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *dir
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *dir
+              Type: *, Text: *
+              Type: identifier, Text: dir
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* bitmap.c */
+    Type: declaration, Text: int hfsplus_blo ... set, u32 *max);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_block_a ... fset, u32 *max)
+        Type: identifier, Text: hfsplus_block_allocate
+        Type: parameter_list, Text: (struct super_b ... fset, u32 *max)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 size
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: size
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 offset
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: offset
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 *max
+            Type: type_identifier, Text: u32
+            Type: pointer_declarator, Text: *max
+              Type: *, Text: *
+              Type: identifier, Text: max
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_blo ... et, u32 count);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_block_f ... set, u32 count)
+        Type: identifier, Text: hfsplus_block_free
+        Type: parameter_list, Text: (struct super_b ... set, u32 count)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 offset
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: offset
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 count
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: count
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* btree.c */
+    Type: declaration, Text: u32 hfsplus_cal ... , int file_id);
+      Type: type_identifier, Text: u32
+      Type: function_declarator, Text: hfsplus_calc_bt ... s, int file_id)
+        Type: identifier, Text: hfsplus_calc_btree_clump_size
+        Type: parameter_list, Text: (u32 block_size ... s, int file_id)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: u32 block_size
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: block_size
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 node_size
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: node_size
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u64 sectors
+            Type: type_identifier, Text: u64
+            Type: identifier, Text: sectors
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int file_id
+            Type: primitive_type, Text: int
+            Type: identifier, Text: file_id
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: struct hfs_btre ... k *sb, u32 id);
+      Type: struct_specifier, Text: struct hfs_btree
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfs_btree
+      Type: pointer_declarator, Text: *hfs_btree_open ... ck *sb, u32 id)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfs_btree_open( ... ck *sb, u32 id)
+          Type: identifier, Text: hfs_btree_open
+          Type: parameter_list, Text: (struct super_block *sb, u32 id)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct super_block *sb
+              Type: struct_specifier, Text: struct super_block
+                Type: struct, Text: struct
+                Type: type_identifier, Text: super_block
+              Type: pointer_declarator, Text: *sb
+                Type: *, Text: *
+                Type: identifier, Text: sb
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: u32 id
+              Type: type_identifier, Text: u32
+              Type: identifier, Text: id
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_btree_ ... s_btree *tree);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_btree_close ... fs_btree *tree)
+        Type: identifier, Text: hfs_btree_close
+        Type: parameter_list, Text: (struct hfs_btree *tree)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_btree *tree
+            Type: struct_specifier, Text: struct hfs_btree
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_btree
+            Type: pointer_declarator, Text: *tree
+              Type: *, Text: *
+              Type: identifier, Text: tree
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_btree_w ... s_btree *tree);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_btree_write ... fs_btree *tree)
+        Type: identifier, Text: hfs_btree_write
+        Type: parameter_list, Text: (struct hfs_btree *tree)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_btree *tree
+            Type: struct_specifier, Text: struct hfs_btree
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_btree
+            Type: pointer_declarator, Text: *tree
+              Type: *, Text: *
+              Type: identifier, Text: tree
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_bmap_re ... nt rsvd_nodes);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_bmap_reserv ... int rsvd_nodes)
+        Type: identifier, Text: hfs_bmap_reserve
+        Type: parameter_list, Text: (struct hfs_btr ... int rsvd_nodes)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_btree *tree
+            Type: struct_specifier, Text: struct hfs_btree
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_btree
+            Type: pointer_declarator, Text: *tree
+              Type: *, Text: *
+              Type: identifier, Text: tree
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int rsvd_nodes
+            Type: primitive_type, Text: int
+            Type: identifier, Text: rsvd_nodes
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: struct hfs_bnod ... s_btree *tree);
+      Type: struct_specifier, Text: struct hfs_bnode
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfs_bnode
+      Type: pointer_declarator, Text: *hfs_bmap_alloc ... fs_btree *tree)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfs_bmap_alloc( ... fs_btree *tree)
+          Type: identifier, Text: hfs_bmap_alloc
+          Type: parameter_list, Text: (struct hfs_btree *tree)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct hfs_btree *tree
+              Type: struct_specifier, Text: struct hfs_btree
+                Type: struct, Text: struct
+                Type: type_identifier, Text: hfs_btree
+              Type: pointer_declarator, Text: *tree
+                Type: *, Text: *
+                Type: identifier, Text: tree
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bmap_f ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bmap_free(s ... fs_bnode *node)
+        Type: identifier, Text: hfs_bmap_free
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* bnode.c */
+    Type: declaration, Text: void hfs_bnode_ ...  off, int len);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_read( ... t off, int len)
+        Type: identifier, Text: hfs_bnode_read
+        Type: parameter_list, Text: (struct hfs_bno ... t off, int len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void *buf
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *buf
+              Type: *, Text: *
+              Type: identifier, Text: buf
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: u16 hfs_bnode_r ... node, int off);
+      Type: type_identifier, Text: u16
+      Type: function_declarator, Text: hfs_bnode_read_ ... *node, int off)
+        Type: identifier, Text: hfs_bnode_read_u16
+        Type: parameter_list, Text: (struct hfs_bnode *node, int off)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: u8 hfs_bnode_re ... node, int off);
+      Type: type_identifier, Text: u8
+      Type: function_declarator, Text: hfs_bnode_read_ ... *node, int off)
+        Type: identifier, Text: hfs_bnode_read_u8
+        Type: parameter_list, Text: (struct hfs_bnode *node, int off)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... *key, int off);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_read_ ...  *key, int off)
+        Type: identifier, Text: hfs_bnode_read_key
+        Type: parameter_list, Text: (struct hfs_bno ...  *key, int off)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void *key
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *key
+              Type: *, Text: *
+              Type: identifier, Text: key
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ...  off, int len);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_write ... t off, int len)
+        Type: identifier, Text: hfs_bnode_write
+        Type: parameter_list, Text: (struct hfs_bno ... t off, int len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void *buf
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *buf
+              Type: *, Text: *
+              Type: identifier, Text: buf
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... off, u16 data);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_write ...  off, u16 data)
+        Type: identifier, Text: hfs_bnode_write_u16
+        Type: parameter_list, Text: (struct hfs_bno ...  off, u16 data)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u16 data
+            Type: type_identifier, Text: u16
+            Type: identifier, Text: data
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ...  off, int len);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_clear ... t off, int len)
+        Type: identifier, Text: hfs_bnode_clear
+        Type: parameter_list, Text: (struct hfs_bno ... t off, int len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int off
+            Type: primitive_type, Text: int
+            Type: identifier, Text: off
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ...  src, int len);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_copy( ... t src, int len)
+        Type: identifier, Text: hfs_bnode_copy
+        Type: parameter_list, Text: (struct hfs_bno ... t src, int len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *dst_node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *dst_node
+              Type: *, Text: *
+              Type: identifier, Text: dst_node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int dst
+            Type: primitive_type, Text: int
+            Type: identifier, Text: dst
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_bnode *src_node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *src_node
+              Type: *, Text: *
+              Type: identifier, Text: src_node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int src
+            Type: primitive_type, Text: int
+            Type: identifier, Text: src
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ...  src, int len);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_move( ... t src, int len)
+        Type: identifier, Text: hfs_bnode_move
+        Type: parameter_list, Text: (struct hfs_bno ... t src, int len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int dst
+            Type: primitive_type, Text: int
+            Type: identifier, Text: dst
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int src
+            Type: primitive_type, Text: int
+            Type: identifier, Text: src
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_dump( ... fs_bnode *node)
+        Type: identifier, Text: hfs_bnode_dump
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_unlin ... fs_bnode *node)
+        Type: identifier, Text: hfs_bnode_unlink
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: struct hfs_bnod ... ree, u32 cnid);
+      Type: struct_specifier, Text: struct hfs_bnode
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfs_bnode
+      Type: pointer_declarator, Text: *hfs_bnode_find ... tree, u32 cnid)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfs_bnode_findh ... tree, u32 cnid)
+          Type: identifier, Text: hfs_bnode_findhash
+          Type: parameter_list, Text: (struct hfs_btree *tree, u32 cnid)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct hfs_btree *tree
+              Type: struct_specifier, Text: struct hfs_btree
+                Type: struct, Text: struct
+                Type: type_identifier, Text: hfs_btree
+              Type: pointer_declarator, Text: *tree
+                Type: *, Text: *
+                Type: identifier, Text: tree
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: u32 cnid
+              Type: type_identifier, Text: u32
+              Type: identifier, Text: cnid
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_unhas ... fs_bnode *node)
+        Type: identifier, Text: hfs_bnode_unhash
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: struct hfs_bnod ... tree, u32 num);
+      Type: struct_specifier, Text: struct hfs_bnode
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfs_bnode
+      Type: pointer_declarator, Text: *hfs_bnode_find ... *tree, u32 num)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfs_bnode_find( ... *tree, u32 num)
+          Type: identifier, Text: hfs_bnode_find
+          Type: parameter_list, Text: (struct hfs_btree *tree, u32 num)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct hfs_btree *tree
+              Type: struct_specifier, Text: struct hfs_btree
+                Type: struct, Text: struct
+                Type: type_identifier, Text: hfs_btree
+              Type: pointer_declarator, Text: *tree
+                Type: *, Text: *
+                Type: identifier, Text: tree
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: u32 num
+              Type: type_identifier, Text: u32
+              Type: identifier, Text: num
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_free( ... fs_bnode *node)
+        Type: identifier, Text: hfs_bnode_free
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: struct hfs_bnod ... tree, u32 num);
+      Type: struct_specifier, Text: struct hfs_bnode
+        Type: struct, Text: struct
+        Type: type_identifier, Text: hfs_bnode
+      Type: pointer_declarator, Text: *hfs_bnode_crea ... *tree, u32 num)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfs_bnode_creat ... *tree, u32 num)
+          Type: identifier, Text: hfs_bnode_create
+          Type: parameter_list, Text: (struct hfs_btree *tree, u32 num)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct hfs_btree *tree
+              Type: struct_specifier, Text: struct hfs_btree
+                Type: struct, Text: struct
+                Type: type_identifier, Text: hfs_btree
+              Type: pointer_declarator, Text: *tree
+                Type: *, Text: *
+                Type: identifier, Text: tree
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: u32 num
+              Type: type_identifier, Text: u32
+              Type: identifier, Text: num
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_get(s ... fs_bnode *node)
+        Type: identifier, Text: hfs_bnode_get
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_bnode_ ... s_bnode *node);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_bnode_put(s ... fs_bnode *node)
+        Type: identifier, Text: hfs_bnode_put
+        Type: parameter_list, Text: (struct hfs_bnode *node)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: bool hfs_bnode_ ... s_btree *tree);
+      Type: primitive_type, Text: bool
+      Type: function_declarator, Text: hfs_bnode_need_ ... fs_btree *tree)
+        Type: identifier, Text: hfs_bnode_need_zeroout
+        Type: parameter_list, Text: (struct hfs_btree *tree)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_btree *tree
+            Type: struct_specifier, Text: struct hfs_btree
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_btree
+            Type: pointer_declarator, Text: *tree
+              Type: *, Text: *
+              Type: identifier, Text: tree
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* brec.c */
+    Type: declaration, Text: u16 hfs_brec_le ... rec, u16 *off);
+      Type: type_identifier, Text: u16
+      Type: function_declarator, Text: hfs_brec_lenoff ...  rec, u16 *off)
+        Type: identifier, Text: hfs_brec_lenoff
+        Type: parameter_list, Text: (struct hfs_bno ...  rec, u16 *off)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u16 rec
+            Type: type_identifier, Text: u16
+            Type: identifier, Text: rec
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u16 *off
+            Type: type_identifier, Text: u16
+            Type: pointer_declarator, Text: *off
+              Type: *, Text: *
+              Type: identifier, Text: off
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: u16 hfs_brec_ke ... node, u16 rec);
+      Type: type_identifier, Text: u16
+      Type: function_declarator, Text: hfs_brec_keylen ... *node, u16 rec)
+        Type: identifier, Text: hfs_brec_keylen
+        Type: parameter_list, Text: (struct hfs_bnode *node, u16 rec)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *node
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *node
+              Type: *, Text: *
+              Type: identifier, Text: node
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u16 rec
+            Type: type_identifier, Text: u16
+            Type: identifier, Text: rec
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_brec_in ... int entry_len);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_brec_insert ...  int entry_len)
+        Type: identifier, Text: hfs_brec_insert
+        Type: parameter_list, Text: (struct hfs_fin ...  int entry_len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void *entry
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *entry
+              Type: *, Text: *
+              Type: identifier, Text: entry
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int entry_len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: entry_len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_brec_re ... find_data *fd);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_brec_remove ... _find_data *fd)
+        Type: identifier, Text: hfs_brec_remove
+        Type: parameter_list, Text: (struct hfs_find_data *fd)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* bfind.c */
+    Type: declaration, Text: int hfs_find_in ... find_data *fd);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_find_init(s ... _find_data *fd)
+        Type: identifier, Text: hfs_find_init
+        Type: parameter_list, Text: (struct hfs_btr ... _find_data *fd)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_btree *tree
+            Type: struct_specifier, Text: struct hfs_btree
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_btree
+            Type: pointer_declarator, Text: *tree
+              Type: *, Text: *
+              Type: identifier, Text: tree
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfs_find_e ... find_data *fd);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfs_find_exit(s ... _find_data *fd)
+        Type: identifier, Text: hfs_find_exit
+        Type: parameter_list, Text: (struct hfs_find_data *fd)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_find_1s ...  int *cur_rec);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_find_1st_re ... , int *cur_rec)
+        Type: identifier, Text: hfs_find_1st_rec_by_cnid
+        Type: parameter_list, Text: (struct hfs_bno ... , int *cur_rec)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *bnode
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *bnode
+              Type: *, Text: *
+              Type: identifier, Text: bnode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *begin
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *begin
+              Type: *, Text: *
+              Type: identifier, Text: begin
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *end
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *end
+              Type: *, Text: *
+              Type: identifier, Text: end
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *cur_rec
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *cur_rec
+              Type: *, Text: *
+              Type: identifier, Text: cur_rec
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_find_re ...  int *cur_rec);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_find_rec_by ... , int *cur_rec)
+        Type: identifier, Text: hfs_find_rec_by_key
+        Type: parameter_list, Text: (struct hfs_bno ... , int *cur_rec)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *bnode
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *bnode
+              Type: *, Text: *
+              Type: identifier, Text: bnode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *begin
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *begin
+              Type: *, Text: *
+              Type: identifier, Text: begin
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *end
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *end
+              Type: *, Text: *
+              Type: identifier, Text: end
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *cur_rec
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *cur_rec
+              Type: *, Text: *
+              Type: identifier, Text: cur_rec
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int __hfs_brec_ ... y_t rec_found);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: __hfs_brec_find ... gy_t rec_found)
+        Type: identifier, Text: __hfs_brec_find
+        Type: parameter_list, Text: (struct hfs_bno ... gy_t rec_found)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_bnode *bnode
+            Type: struct_specifier, Text: struct hfs_bnode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_bnode
+            Type: pointer_declarator, Text: *bnode
+              Type: *, Text: *
+              Type: identifier, Text: bnode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: search_strategy_t rec_found
+            Type: type_identifier, Text: search_strategy_t
+            Type: identifier, Text: rec_found
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_brec_fi ... o_key_compare);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_brec_find(s ... do_key_compare)
+        Type: identifier, Text: hfs_brec_find
+        Type: parameter_list, Text: (struct hfs_fin ... do_key_compare)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: search_strategy_t do_key_compare
+            Type: type_identifier, Text: search_strategy_t
+            Type: identifier, Text: do_key_compare
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_brec_re ... , int rec_len);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_brec_read(s ... c, int rec_len)
+        Type: identifier, Text: hfs_brec_read
+        Type: parameter_list, Text: (struct hfs_fin ... c, int rec_len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void *rec
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *rec
+              Type: *, Text: *
+              Type: identifier, Text: rec
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int rec_len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: rec_len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfs_brec_go ...  *fd, int cnt);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_brec_goto(s ... a *fd, int cnt)
+        Type: identifier, Text: hfs_brec_goto
+        Type: parameter_list, Text: (struct hfs_find_data *fd, int cnt)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int cnt
+            Type: primitive_type, Text: int
+            Type: identifier, Text: cnt
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* catalog.c */
+    Type: declaration, Text: int hfsplus_cat ... btree_key *k2);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_cat_cas ... _btree_key *k2)
+        Type: identifier, Text: hfsplus_cat_case_cmp_key
+        Type: parameter_list, Text: (const hfsplus_ ... _btree_key *k2)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k1
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k1
+              Type: *, Text: *
+              Type: identifier, Text: k1
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k2
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k2
+              Type: *, Text: *
+              Type: identifier, Text: k2
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_cat ... btree_key *k2);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_cat_bin ... _btree_key *k2)
+        Type: identifier, Text: hfsplus_cat_bin_cmp_key
+        Type: parameter_list, Text: (const hfsplus_ ... _btree_key *k2)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k1
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k1
+              Type: *, Text: *
+              Type: identifier, Text: k1
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k2
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k2
+              Type: *, Text: *
+              Type: identifier, Text: k2
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_cat ... uct qstr *str);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_cat_bui ... ruct qstr *str)
+        Type: identifier, Text: hfsplus_cat_build_key
+        Type: parameter_list, Text: (struct super_b ... ruct qstr *str)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: hfsplus_btree_key *key
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *key
+              Type: *, Text: *
+              Type: identifier, Text: key
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 parent
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: parent
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct qstr *str
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *str
+              Type: *, Text: *
+              Type: identifier, Text: str
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_ca ... y, u32 parent);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_cat_bui ... ey, u32 parent)
+        Type: identifier, Text: hfsplus_cat_build_key_with_cnid
+        Type: parameter_list, Text: (struct super_b ... ey, u32 parent)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: hfsplus_btree_key *key
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *key
+              Type: *, Text: *
+              Type: identifier, Text: key
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 parent
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: parent
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_ca ... s_perm *perms);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_cat_set ... us_perm *perms)
+        Type: identifier, Text: hfsplus_cat_set_perms
+        Type: parameter_list, Text: (struct inode * ... us_perm *perms)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfsplus_perm *perms
+            Type: struct_specifier, Text: struct hfsplus_perm
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_perm
+            Type: pointer_declarator, Text: *perms
+              Type: *, Text: *
+              Type: identifier, Text: perms
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fin ... find_data *fd);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_find_ca ... _find_data *fd)
+        Type: identifier, Text: hfsplus_find_cat
+        Type: parameter_list, Text: (struct super_b ... _find_data *fd)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_cre ...  inode *inode);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_create_ ... t inode *inode)
+        Type: identifier, Text: hfsplus_create_cat
+        Type: parameter_list, Text: (u32 cnid, stru ... t inode *inode)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct inode *dir
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *dir
+              Type: *, Text: *
+              Type: identifier, Text: dir
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct qstr *str
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *str
+              Type: *, Text: *
+              Type: identifier, Text: str
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_del ... uct qstr *str);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_delete_ ... ruct qstr *str)
+        Type: identifier, Text: hfsplus_delete_cat
+        Type: parameter_list, Text: (u32 cnid, stru ... ruct qstr *str)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct inode *dir
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *dir
+              Type: *, Text: *
+              Type: identifier, Text: dir
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct qstr *str
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *str
+              Type: *, Text: *
+              Type: identifier, Text: str
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_ren ... str *dst_name);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_rename_ ... qstr *dst_name)
+        Type: identifier, Text: hfsplus_rename_cat
+        Type: parameter_list, Text: (u32 cnid, stru ... qstr *dst_name)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct inode *src_dir
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *src_dir
+              Type: *, Text: *
+              Type: identifier, Text: src_dir
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct qstr *src_name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *src_name
+              Type: *, Text: *
+              Type: identifier, Text: src_name
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct inode *dst_dir
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *dst_dir
+              Type: *, Text: *
+              Type: identifier, Text: dst_dir
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct qstr *dst_name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *dst_name
+              Type: *, Text: *
+              Type: identifier, Text: dst_name
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* dir.c */
+    Type: declaration, Text: extern const st ... ode_operations;
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_qualifier, Text: const
+        Type: const, Text: const
+      Type: struct_specifier, Text: struct inode_operations
+        Type: struct, Text: struct
+        Type: type_identifier, Text: inode_operations
+      Type: identifier, Text: hfsplus_dir_inode_operations
+      Type: ;, Text: ;
+    Type: declaration, Text: extern const st ... dir_operations;
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_qualifier, Text: const
+        Type: const, Text: const
+      Type: struct_specifier, Text: struct file_operations
+        Type: struct, Text: struct
+        Type: type_identifier, Text: file_operations
+      Type: identifier, Text: hfsplus_dir_operations
+      Type: ;, Text: ;
+    Type: comment, Text: /* extents.c */
+    Type: declaration, Text: int hfsplus_ext ... btree_key *k2);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_ext_cmp ... _btree_key *k2)
+        Type: identifier, Text: hfsplus_ext_cmp_key
+        Type: parameter_list, Text: (const hfsplus_ ... _btree_key *k2)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k1
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k1
+              Type: *, Text: *
+              Type: identifier, Text: k1
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const hfsplus_btree_key *k2
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: type_identifier, Text: hfsplus_btree_key
+            Type: pointer_declarator, Text: *k2
+              Type: *, Text: *
+              Type: identifier, Text: k2
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_ext ...  inode *inode);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_ext_wri ... t inode *inode)
+        Type: identifier, Text: hfsplus_ext_write_extent
+        Type: parameter_list, Text: (struct inode *inode)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_get ... t, int create);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_get_blo ... lt, int create)
+        Type: identifier, Text: hfsplus_get_block
+        Type: parameter_list, Text: (struct inode * ... lt, int create)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: sector_t iblock
+            Type: type_identifier, Text: sector_t
+            Type: identifier, Text: iblock
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct buffer_head *bh_result
+            Type: struct_specifier, Text: struct buffer_head
+              Type: struct, Text: struct
+              Type: type_identifier, Text: buffer_head
+            Type: pointer_declarator, Text: *bh_result
+              Type: *, Text: *
+              Type: identifier, Text: bh_result
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int create
+            Type: primitive_type, Text: int
+            Type: identifier, Text: create
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fre ... ork, int type);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_free_fo ... fork, int type)
+        Type: identifier, Text: hfsplus_free_fork
+        Type: parameter_list, Text: (struct super_b ... fork, int type)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 cnid
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: cnid
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfsplus_fork_raw *fork
+            Type: struct_specifier, Text: struct hfsplus_fork_raw
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_fork_raw
+            Type: pointer_declarator, Text: *fork
+              Type: *, Text: *
+              Type: identifier, Text: fork
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int type
+            Type: primitive_type, Text: int
+            Type: identifier, Text: type
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fil ...  bool zeroout);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_file_ex ... , bool zeroout)
+        Type: identifier, Text: hfsplus_file_extend
+        Type: parameter_list, Text: (struct inode *inode, bool zeroout)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: bool zeroout
+            Type: primitive_type, Text: bool
+            Type: identifier, Text: zeroout
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_fi ...  inode *inode);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_file_tr ... t inode *inode)
+        Type: identifier, Text: hfsplus_file_truncate
+        Type: parameter_list, Text: (struct inode *inode)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* inode.c */
+    Type: declaration, Text: extern const st ... s hfsplus_aops;
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_qualifier, Text: const
+        Type: const, Text: const
+      Type: struct_specifier, Text: struct address_space_operations
+        Type: struct, Text: struct
+        Type: type_identifier, Text: address_space_operations
+      Type: identifier, Text: hfsplus_aops
+      Type: ;, Text: ;
+    Type: declaration, Text: extern const st ... lus_btree_aops;
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_qualifier, Text: const
+        Type: const, Text: const
+      Type: struct_specifier, Text: struct address_space_operations
+        Type: struct, Text: struct
+        Type: type_identifier, Text: address_space_operations
+      Type: identifier, Text: hfsplus_btree_aops
+      Type: ;, Text: ;
+    Type: declaration, Text: extern const st ... try_operations;
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_qualifier, Text: const
+        Type: const, Text: const
+      Type: struct_specifier, Text: struct dentry_operations
+        Type: struct, Text: struct
+        Type: type_identifier, Text: dentry_operations
+      Type: identifier, Text: hfsplus_dentry_operations
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_wri ... void **fsdata);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_write_b ...  void **fsdata)
+        Type: identifier, Text: hfsplus_write_begin
+        Type: parameter_list, Text: (struct file *f ...  void **fsdata)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct file *file
+            Type: struct_specifier, Text: struct file
+              Type: struct, Text: struct
+              Type: type_identifier, Text: file
+            Type: pointer_declarator, Text: *file
+              Type: *, Text: *
+              Type: identifier, Text: file
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct address_space *mapping
+            Type: struct_specifier, Text: struct address_space
+              Type: struct, Text: struct
+              Type: type_identifier, Text: address_space
+            Type: pointer_declarator, Text: *mapping
+              Type: *, Text: *
+              Type: identifier, Text: mapping
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: loff_t pos
+            Type: type_identifier, Text: loff_t
+            Type: identifier, Text: pos
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned len
+            Type: sized_type_specifier, Text: unsigned
+              Type: unsigned, Text: unsigned
+            Type: identifier, Text: len
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct page **pagep
+            Type: struct_specifier, Text: struct page
+              Type: struct, Text: struct
+              Type: type_identifier, Text: page
+            Type: pointer_declarator, Text: **pagep
+              Type: *, Text: *
+              Type: pointer_declarator, Text: *pagep
+                Type: *, Text: *
+                Type: identifier, Text: pagep
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void **fsdata
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: **fsdata
+              Type: *, Text: *
+              Type: pointer_declarator, Text: *fsdata
+                Type: *, Text: *
+                Type: identifier, Text: fsdata
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: struct inode *h ...  umode_t mode);
+      Type: struct_specifier, Text: struct inode
+        Type: struct, Text: struct
+        Type: type_identifier, Text: inode
+      Type: pointer_declarator, Text: *hfsplus_new_in ... , umode_t mode)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfsplus_new_ino ... , umode_t mode)
+          Type: identifier, Text: hfsplus_new_inode
+          Type: parameter_list, Text: (struct super_b ... , umode_t mode)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct super_block *sb
+              Type: struct_specifier, Text: struct super_block
+                Type: struct, Text: struct
+                Type: type_identifier, Text: super_block
+              Type: pointer_declarator, Text: *sb
+                Type: *, Text: *
+                Type: identifier, Text: sb
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: struct inode *dir
+              Type: struct_specifier, Text: struct inode
+                Type: struct, Text: struct
+                Type: type_identifier, Text: inode
+              Type: pointer_declarator, Text: *dir
+                Type: *, Text: *
+                Type: identifier, Text: dir
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: umode_t mode
+              Type: type_identifier, Text: umode_t
+              Type: identifier, Text: mode
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_de ...  inode *inode);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_delete_ ... t inode *inode)
+        Type: identifier, Text: hfsplus_delete_inode
+        Type: parameter_list, Text: (struct inode *inode)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_in ... ork_raw *fork);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_inode_r ... fork_raw *fork)
+        Type: identifier, Text: hfsplus_inode_read_fork
+        Type: parameter_list, Text: (struct inode * ... fork_raw *fork)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfsplus_fork_raw *fork
+            Type: struct_specifier, Text: struct hfsplus_fork_raw
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_fork_raw
+            Type: pointer_declarator, Text: *fork
+              Type: *, Text: *
+              Type: identifier, Text: fork
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_in ... ork_raw *fork);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_inode_w ... fork_raw *fork)
+        Type: identifier, Text: hfsplus_inode_write_fork
+        Type: parameter_list, Text: (struct inode * ... fork_raw *fork)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfsplus_fork_raw *fork
+            Type: struct_specifier, Text: struct hfsplus_fork_raw
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_fork_raw
+            Type: pointer_declarator, Text: *fork
+              Type: *, Text: *
+              Type: identifier, Text: fork
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_cat ... find_data *fd);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_cat_rea ... _find_data *fd)
+        Type: identifier, Text: hfsplus_cat_read_inode
+        Type: parameter_list, Text: (struct inode * ... _find_data *fd)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfs_find_data *fd
+            Type: struct_specifier, Text: struct hfs_find_data
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_find_data
+            Type: pointer_declarator, Text: *fd
+              Type: *, Text: *
+              Type: identifier, Text: fd
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_cat ...  inode *inode);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_cat_wri ... t inode *inode)
+        Type: identifier, Text: hfsplus_cat_write_inode
+        Type: parameter_list, Text: (struct inode *inode)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_get ... t query_flags);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_getattr ... nt query_flags)
+        Type: identifier, Text: hfsplus_getattr
+        Type: parameter_list, Text: (struct mnt_idm ... nt query_flags)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct mnt_idmap *idmap
+            Type: struct_specifier, Text: struct mnt_idmap
+              Type: struct, Text: struct
+              Type: type_identifier, Text: mnt_idmap
+            Type: pointer_declarator, Text: *idmap
+              Type: *, Text: *
+              Type: identifier, Text: idmap
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct path *path
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct path
+              Type: struct, Text: struct
+              Type: type_identifier, Text: path
+            Type: pointer_declarator, Text: *path
+              Type: *, Text: *
+              Type: identifier, Text: path
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct kstat *stat
+            Type: struct_specifier, Text: struct kstat
+              Type: struct, Text: struct
+              Type: type_identifier, Text: kstat
+            Type: pointer_declarator, Text: *stat
+              Type: *, Text: *
+              Type: identifier, Text: stat
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: u32 request_mask
+            Type: type_identifier, Text: u32
+            Type: identifier, Text: request_mask
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned int query_flags
+            Type: sized_type_specifier, Text: unsigned int
+              Type: unsigned, Text: unsigned
+              Type: primitive_type, Text: int
+            Type: identifier, Text: query_flags
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fil ...  int datasync);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_file_fs ... , int datasync)
+        Type: identifier, Text: hfsplus_file_fsync
+        Type: parameter_list, Text: (struct file *f ... , int datasync)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct file *file
+            Type: struct_specifier, Text: struct file
+              Type: struct, Text: struct
+              Type: type_identifier, Text: file
+            Type: pointer_declarator, Text: *file
+              Type: *, Text: *
+              Type: identifier, Text: file
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: loff_t start
+            Type: type_identifier, Text: loff_t
+            Type: identifier, Text: start
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: loff_t end
+            Type: type_identifier, Text: loff_t
+            Type: identifier, Text: end
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int datasync
+            Type: primitive_type, Text: int
+            Type: identifier, Text: datasync
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fil ...  fileattr *fa);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_fileatt ... t fileattr *fa)
+        Type: identifier, Text: hfsplus_fileattr_get
+        Type: parameter_list, Text: (struct dentry  ... t fileattr *fa)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct dentry *dentry
+            Type: struct_specifier, Text: struct dentry
+              Type: struct, Text: struct
+              Type: type_identifier, Text: dentry
+            Type: pointer_declarator, Text: *dentry
+              Type: *, Text: *
+              Type: identifier, Text: dentry
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct fileattr *fa
+            Type: struct_specifier, Text: struct fileattr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: fileattr
+            Type: pointer_declarator, Text: *fa
+              Type: *, Text: *
+              Type: identifier, Text: fa
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_fil ...  fileattr *fa);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_fileatt ... t fileattr *fa)
+        Type: identifier, Text: hfsplus_fileattr_set
+        Type: parameter_list, Text: (struct mnt_idm ... t fileattr *fa)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct mnt_idmap *idmap
+            Type: struct_specifier, Text: struct mnt_idmap
+              Type: struct, Text: struct
+              Type: type_identifier, Text: mnt_idmap
+            Type: pointer_declarator, Text: *idmap
+              Type: *, Text: *
+              Type: identifier, Text: idmap
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct dentry *dentry
+            Type: struct_specifier, Text: struct dentry
+              Type: struct, Text: struct
+              Type: type_identifier, Text: dentry
+            Type: pointer_declarator, Text: *dentry
+              Type: *, Text: *
+              Type: identifier, Text: dentry
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct fileattr *fa
+            Type: struct_specifier, Text: struct fileattr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: fileattr
+            Type: pointer_declarator, Text: *fa
+              Type: *, Text: *
+              Type: identifier, Text: fa
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* ioctl.c */
+    Type: declaration, Text: long hfsplus_io ... gned long arg);
+      Type: sized_type_specifier, Text: long
+        Type: long, Text: long
+      Type: function_declarator, Text: hfsplus_ioctl(s ... igned long arg)
+        Type: identifier, Text: hfsplus_ioctl
+        Type: parameter_list, Text: (struct file *f ... igned long arg)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct file *filp
+            Type: struct_specifier, Text: struct file
+              Type: struct, Text: struct
+              Type: type_identifier, Text: file
+            Type: pointer_declarator, Text: *filp
+              Type: *, Text: *
+              Type: identifier, Text: filp
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned int cmd
+            Type: sized_type_specifier, Text: unsigned int
+              Type: unsigned, Text: unsigned
+              Type: primitive_type, Text: int
+            Type: identifier, Text: cmd
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned long arg
+            Type: sized_type_specifier, Text: unsigned long
+              Type: unsigned, Text: unsigned
+              Type: long, Text: long
+            Type: identifier, Text: arg
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* options.c */
+    Type: declaration, Text: void hfsplus_fi ... sb_info *opts);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_fill_de ... _sb_info *opts)
+        Type: identifier, Text: hfsplus_fill_defaults
+        Type: parameter_list, Text: (struct hfsplus_sb_info *opts)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfsplus_sb_info *opts
+            Type: struct_specifier, Text: struct hfsplus_sb_info
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_sb_info
+            Type: pointer_declarator, Text: *opts
+              Type: *, Text: *
+              Type: identifier, Text: opts
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_par ... t, int *force);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_parse_o ... ut, int *force)
+        Type: identifier, Text: hfsplus_parse_options_remount
+        Type: parameter_list, Text: (char *input, int *force)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: char *input
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *input
+              Type: *, Text: *
+              Type: identifier, Text: input
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *force
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *force
+              Type: *, Text: *
+              Type: identifier, Text: force
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_par ... _sb_info *sbi);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_parse_o ... s_sb_info *sbi)
+        Type: identifier, Text: hfsplus_parse_options
+        Type: parameter_list, Text: (char *input, s ... s_sb_info *sbi)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: char *input
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *input
+              Type: *, Text: *
+              Type: identifier, Text: input
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfsplus_sb_info *sbi
+            Type: struct_specifier, Text: struct hfsplus_sb_info
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_sb_info
+            Type: pointer_declarator, Text: *sbi
+              Type: *, Text: *
+              Type: identifier, Text: sbi
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_sho ...  dentry *root);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_show_op ... t dentry *root)
+        Type: identifier, Text: hfsplus_show_options
+        Type: parameter_list, Text: (struct seq_fil ... t dentry *root)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct seq_file *seq
+            Type: struct_specifier, Text: struct seq_file
+              Type: struct, Text: struct
+              Type: type_identifier, Text: seq_file
+            Type: pointer_declarator, Text: *seq
+              Type: *, Text: *
+              Type: identifier, Text: seq
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct dentry *root
+            Type: struct_specifier, Text: struct dentry
+              Type: struct, Text: struct
+              Type: type_identifier, Text: dentry
+            Type: pointer_declarator, Text: *root
+              Type: *, Text: *
+              Type: identifier, Text: root
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* part_tbl.c */
+    Type: declaration, Text: int hfs_part_fi ... _t *part_size);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfs_part_find(s ... r_t *part_size)
+        Type: identifier, Text: hfs_part_find
+        Type: parameter_list, Text: (struct super_b ... r_t *part_size)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: sector_t *part_start
+            Type: type_identifier, Text: sector_t
+            Type: pointer_declarator, Text: *part_start
+              Type: *, Text: *
+              Type: identifier, Text: part_start
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: sector_t *part_size
+            Type: type_identifier, Text: sector_t
+            Type: pointer_declarator, Text: *part_size
+              Type: *, Text: *
+              Type: identifier, Text: part_size
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* super.c */
+    Type: declaration, Text: struct inode *h ... gned long ino);
+      Type: struct_specifier, Text: struct inode
+        Type: struct, Text: struct
+        Type: type_identifier, Text: inode
+      Type: pointer_declarator, Text: *hfsplus_iget(s ... igned long ino)
+        Type: *, Text: *
+        Type: function_declarator, Text: hfsplus_iget(st ... igned long ino)
+          Type: identifier, Text: hfsplus_iget
+          Type: parameter_list, Text: (struct super_b ... igned long ino)
+            Type: (, Text: (
+            Type: parameter_declaration, Text: struct super_block *sb
+              Type: struct_specifier, Text: struct super_block
+                Type: struct, Text: struct
+                Type: type_identifier, Text: super_block
+              Type: pointer_declarator, Text: *sb
+                Type: *, Text: *
+                Type: identifier, Text: sb
+            Type: ,, Text: ,
+            Type: parameter_declaration, Text: unsigned long ino
+              Type: sized_type_specifier, Text: unsigned long
+                Type: unsigned, Text: unsigned
+                Type: long, Text: long
+              Type: identifier, Text: ino
+            Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: void hfsplus_ma ... per_block *sb);
+      Type: primitive_type, Text: void
+      Type: function_declarator, Text: hfsplus_mark_md ... uper_block *sb)
+        Type: identifier, Text: hfsplus_mark_mdb_dirty
+        Type: parameter_list, Text: (struct super_block *sb)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* tables.c */
+    Type: declaration, Text: extern u16 hfsp ... e_fold_table[];
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_identifier, Text: u16
+      Type: array_declarator, Text: hfsplus_case_fold_table[]
+        Type: identifier, Text: hfsplus_case_fold_table
+        Type: [, Text: [
+        Type: ], Text: ]
+      Type: ;, Text: ;
+    Type: declaration, Text: extern u16 hfsp ... ompose_table[];
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_identifier, Text: u16
+      Type: array_declarator, Text: hfsplus_decompose_table[]
+        Type: identifier, Text: hfsplus_decompose_table
+        Type: [, Text: [
+        Type: ], Text: ]
+      Type: ;, Text: ;
+    Type: declaration, Text: extern u16 hfsplus_compose_table[];
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_identifier, Text: u16
+      Type: array_declarator, Text: hfsplus_compose_table[]
+        Type: identifier, Text: hfsplus_compose_table
+        Type: [, Text: [
+        Type: ], Text: ]
+      Type: ;, Text: ;
+    Type: comment, Text: /* unicode.c */
+    Type: declaration, Text: int hfsplus_str ... us_unistr *s2);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_strcase ... lus_unistr *s2)
+        Type: identifier, Text: hfsplus_strcasecmp
+        Type: parameter_list, Text: (const struct h ... lus_unistr *s2)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const struct hfsplus_unistr *s1
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct hfsplus_unistr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_unistr
+            Type: pointer_declarator, Text: *s1
+              Type: *, Text: *
+              Type: identifier, Text: s1
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct hfsplus_unistr *s2
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct hfsplus_unistr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_unistr
+            Type: pointer_declarator, Text: *s2
+              Type: *, Text: *
+              Type: identifier, Text: s2
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_str ... us_unistr *s2);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_strcmp( ... lus_unistr *s2)
+        Type: identifier, Text: hfsplus_strcmp
+        Type: parameter_list, Text: (const struct h ... lus_unistr *s2)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const struct hfsplus_unistr *s1
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct hfsplus_unistr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_unistr
+            Type: pointer_declarator, Text: *s1
+              Type: *, Text: *
+              Type: identifier, Text: s1
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct hfsplus_unistr *s2
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct hfsplus_unistr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_unistr
+            Type: pointer_declarator, Text: *s2
+              Type: *, Text: *
+              Type: identifier, Text: s2
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_uni ... r, int *len_p);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_uni2asc ... tr, int *len_p)
+        Type: identifier, Text: hfsplus_uni2asc
+        Type: parameter_list, Text: (struct super_b ... tr, int *len_p)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct hfsplus_unistr *ustr
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct hfsplus_unistr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_unistr
+            Type: pointer_declarator, Text: *ustr
+              Type: *, Text: *
+              Type: identifier, Text: ustr
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: char *astr
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *astr
+              Type: *, Text: *
+              Type: identifier, Text: astr
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int *len_p
+            Type: primitive_type, Text: int
+            Type: pointer_declarator, Text: *len_p
+              Type: *, Text: *
+              Type: identifier, Text: len_p
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_asc ... astr, int len);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_asc2uni ... *astr, int len)
+        Type: identifier, Text: hfsplus_asc2uni
+        Type: parameter_list, Text: (struct super_b ... *astr, int len)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct hfsplus_unistr *ustr
+            Type: struct_specifier, Text: struct hfsplus_unistr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfsplus_unistr
+            Type: pointer_declarator, Text: *ustr
+              Type: *, Text: *
+              Type: identifier, Text: ustr
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int max_unistr_len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: max_unistr_len
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *astr
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *astr
+              Type: *, Text: *
+              Type: identifier, Text: astr
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: int len
+            Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_has ... uct qstr *str);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_hash_de ... ruct qstr *str)
+        Type: identifier, Text: hfsplus_hash_dentry
+        Type: parameter_list, Text: (const struct d ... ruct qstr *str)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const struct dentry *dentry
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct dentry
+              Type: struct, Text: struct
+              Type: type_identifier, Text: dentry
+            Type: pointer_declarator, Text: *dentry
+              Type: *, Text: *
+              Type: identifier, Text: dentry
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: struct qstr *str
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *str
+              Type: *, Text: *
+              Type: identifier, Text: str
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_com ... ct qstr *name);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_compare ... uct qstr *name)
+        Type: identifier, Text: hfsplus_compare_dentry
+        Type: parameter_list, Text: (const struct d ... uct qstr *name)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: const struct dentry *dentry
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct dentry
+              Type: struct, Text: struct
+              Type: type_identifier, Text: dentry
+            Type: pointer_declarator, Text: *dentry
+              Type: *, Text: *
+              Type: identifier, Text: dentry
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: unsigned int len
+            Type: sized_type_specifier, Text: unsigned int
+              Type: unsigned, Text: unsigned
+              Type: primitive_type, Text: int
+            Type: identifier, Text: len
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const char *str
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: primitive_type, Text: char
+            Type: pointer_declarator, Text: *str
+              Type: *, Text: *
+              Type: identifier, Text: str
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: const struct qstr *name
+            Type: type_qualifier, Text: const
+              Type: const, Text: const
+            Type: struct_specifier, Text: struct qstr
+              Type: struct, Text: struct
+              Type: type_identifier, Text: qstr
+            Type: pointer_declarator, Text: *name
+              Type: *, Text: *
+              Type: identifier, Text: name
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* wrapper.c */
+    Type: declaration, Text: int hfsplus_sub ... blk_opf_t opf);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_submit_ ...  blk_opf_t opf)
+        Type: identifier, Text: hfsplus_submit_bio
+        Type: parameter_list, Text: (struct super_b ...  blk_opf_t opf)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: sector_t sector
+            Type: type_identifier, Text: sector_t
+            Type: identifier, Text: sector
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void *buf
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: *buf
+              Type: *, Text: *
+              Type: identifier, Text: buf
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: void **data
+            Type: primitive_type, Text: void
+            Type: pointer_declarator, Text: **data
+              Type: *, Text: *
+              Type: pointer_declarator, Text: *data
+                Type: *, Text: *
+                Type: identifier, Text: data
+          Type: ,, Text: ,
+          Type: parameter_declaration, Text: blk_opf_t opf
+            Type: type_identifier, Text: blk_opf_t
+            Type: identifier, Text: opf
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: declaration, Text: int hfsplus_rea ... per_block *sb);
+      Type: primitive_type, Text: int
+      Type: function_declarator, Text: hfsplus_read_wr ... uper_block *sb)
+        Type: identifier, Text: hfsplus_read_wrapper
+        Type: parameter_list, Text: (struct super_block *sb)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct super_block *sb
+            Type: struct_specifier, Text: struct super_block
+              Type: struct, Text: struct
+              Type: type_identifier, Text: super_block
+            Type: pointer_declarator, Text: *sb
+              Type: *, Text: *
+              Type: identifier, Text: sb
+          Type: ), Text: )
+      Type: ;, Text: ;
+    Type: comment, Text: /* * time helpe ... 40 and 2106. */
+    Type: preproc_def, Text: #define HFSPLUS ... ET 2082844800U 
+      Type: #define, Text: #define
+      Type: identifier, Text: HFSPLUS_UTC_OFFSET
+      Type: preproc_arg, Text: 2082844800U
+    Type: function_definition, Text: static inline t ... ); return ut; }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: type_identifier, Text: time64_t
+      Type: function_declarator, Text: __hfsp_mt2ut(__be32 mt)
+        Type: identifier, Text: __hfsp_mt2ut
+        Type: parameter_list, Text: (__be32 mt)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: __be32 mt
+            Type: type_identifier, Text: __be32
+            Type: identifier, Text: mt
+          Type: ), Text: )
+      Type: compound_statement, Text: { time64_t ut = ... ); return ut; }
+        Type: {, Text: {
+        Type: declaration, Text: time64_t ut = ( ... US_UTC_OFFSET);
+          Type: type_identifier, Text: time64_t
+          Type: init_declarator, Text: ut = (u32)(be32 ... LUS_UTC_OFFSET)
+            Type: identifier, Text: ut
+            Type: =, Text: =
+            Type: call_expression, Text: (u32)(be32_to_c ... LUS_UTC_OFFSET)
+              Type: parenthesized_expression, Text: (u32)
+                Type: (, Text: (
+                Type: identifier, Text: u32
+                Type: ), Text: )
+              Type: argument_list, Text: (be32_to_cpu(mt ... LUS_UTC_OFFSET)
+                Type: (, Text: (
+                Type: binary_expression, Text: be32_to_cpu(mt) ... PLUS_UTC_OFFSET
+                  Type: call_expression, Text: be32_to_cpu(mt)
+                    Type: identifier, Text: be32_to_cpu
+                    Type: argument_list, Text: (mt)
+                      Type: (, Text: (
+                      Type: identifier, Text: mt
+                      Type: ), Text: )
+                  Type: -, Text: -
+                  Type: identifier, Text: HFSPLUS_UTC_OFFSET
+                Type: ), Text: )
+          Type: ;, Text: ;
+        Type: return_statement, Text: return ut;
+          Type: return, Text: return
+          Type: identifier, Text: ut
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: function_definition, Text: static inline _ ... _UTC_OFFSET); }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: type_identifier, Text: __be32
+      Type: function_declarator, Text: __hfsp_ut2mt(time64_t ut)
+        Type: identifier, Text: __hfsp_ut2mt
+        Type: parameter_list, Text: (time64_t ut)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: time64_t ut
+            Type: type_identifier, Text: time64_t
+            Type: identifier, Text: ut
+          Type: ), Text: )
+      Type: compound_statement, Text: { return cpu_to ... _UTC_OFFSET); }
+        Type: {, Text: {
+        Type: return_statement, Text: return cpu_to_b ... US_UTC_OFFSET);
+          Type: return, Text: return
+          Type: call_expression, Text: cpu_to_be32(low ... LUS_UTC_OFFSET)
+            Type: identifier, Text: cpu_to_be32
+            Type: argument_list, Text: (lower_32_bits( ... LUS_UTC_OFFSET)
+              Type: (, Text: (
+              Type: binary_expression, Text: lower_32_bits(u ... PLUS_UTC_OFFSET
+                Type: call_expression, Text: lower_32_bits(ut)
+                  Type: identifier, Text: lower_32_bits
+                  Type: argument_list, Text: (ut)
+                    Type: (, Text: (
+                    Type: identifier, Text: ut
+                    Type: ), Text: )
+                Type: +, Text: +
+                Type: identifier, Text: HFSPLUS_UTC_OFFSET
+              Type: ), Text: )
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: function_definition, Text: static inline e ... return class; }
+      Type: storage_class_specifier, Text: static
+        Type: static, Text: static
+      Type: storage_class_specifier, Text: inline
+        Type: inline, Text: inline
+      Type: enum_specifier, Text: enum hfsplus_btree_mutex_classes
+        Type: enum, Text: enum
+        Type: type_identifier, Text: hfsplus_btree_mutex_classes
+      Type: function_declarator, Text: hfsplus_btree_l ... fs_btree *tree)
+        Type: identifier, Text: hfsplus_btree_lock_class
+        Type: parameter_list, Text: (struct hfs_btree *tree)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct hfs_btree *tree
+            Type: struct_specifier, Text: struct hfs_btree
+              Type: struct, Text: struct
+              Type: type_identifier, Text: hfs_btree
+            Type: pointer_declarator, Text: *tree
+              Type: *, Text: *
+              Type: identifier, Text: tree
+          Type: ), Text: )
+      Type: compound_statement, Text: { enum hfsplus_ ... return class; }
+        Type: {, Text: {
+        Type: declaration, Text: enum hfsplus_bt ... _classes class;
+          Type: enum_specifier, Text: enum hfsplus_btree_mutex_classes
+            Type: enum, Text: enum
+            Type: type_identifier, Text: hfsplus_btree_mutex_classes
+          Type: identifier, Text: class
+          Type: ;, Text: ;
+        Type: switch_statement, Text: switch (tree->c ... fault: BUG(); }
+          Type: switch, Text: switch
+          Type: parenthesized_expression, Text: (tree->cnid)
+            Type: (, Text: (
+            Type: field_expression, Text: tree->cnid
+              Type: identifier, Text: tree
+              Type: ->, Text: ->
+              Type: field_identifier, Text: cnid
+            Type: ), Text: )
+          Type: compound_statement, Text: { case HFSPLUS_ ... fault: BUG(); }
+            Type: {, Text: {
+            Type: case_statement, Text: case HFSPLUS_CA ... E_MUTEX; break;
+              Type: case, Text: case
+              Type: identifier, Text: HFSPLUS_CAT_CNID
+              Type: :, Text: :
+              Type: expression_statement, Text: class = CATALOG_BTREE_MUTEX;
+                Type: assignment_expression, Text: class = CATALOG_BTREE_MUTEX
+                  Type: identifier, Text: class
+                  Type: =, Text: =
+                  Type: identifier, Text: CATALOG_BTREE_MUTEX
+                Type: ;, Text: ;
+              Type: break_statement, Text: break;
+                Type: break, Text: break
+                Type: ;, Text: ;
+            Type: case_statement, Text: case HFSPLUS_EX ... E_MUTEX; break;
+              Type: case, Text: case
+              Type: identifier, Text: HFSPLUS_EXT_CNID
+              Type: :, Text: :
+              Type: expression_statement, Text: class = EXTENTS_BTREE_MUTEX;
+                Type: assignment_expression, Text: class = EXTENTS_BTREE_MUTEX
+                  Type: identifier, Text: class
+                  Type: =, Text: =
+                  Type: identifier, Text: EXTENTS_BTREE_MUTEX
+                Type: ;, Text: ;
+              Type: break_statement, Text: break;
+                Type: break, Text: break
+                Type: ;, Text: ;
+            Type: case_statement, Text: case HFSPLUS_AT ... E_MUTEX; break;
+              Type: case, Text: case
+              Type: identifier, Text: HFSPLUS_ATTR_CNID
+              Type: :, Text: :
+              Type: expression_statement, Text: class = ATTR_BTREE_MUTEX;
+                Type: assignment_expression, Text: class = ATTR_BTREE_MUTEX
+                  Type: identifier, Text: class
+                  Type: =, Text: =
+                  Type: identifier, Text: ATTR_BTREE_MUTEX
+                Type: ;, Text: ;
+              Type: break_statement, Text: break;
+                Type: break, Text: break
+                Type: ;, Text: ;
+            Type: case_statement, Text: default: BUG();
+              Type: default, Text: default
+              Type: :, Text: :
+              Type: expression_statement, Text: BUG();
+                Type: call_expression, Text: BUG()
+                  Type: identifier, Text: BUG
+                  Type: argument_list, Text: ()
+                    Type: (, Text: (
+                    Type: ), Text: )
+                Type: ;, Text: ;
+            Type: }, Text: }
+        Type: return_statement, Text: return class;
+          Type: return, Text: return
+          Type: identifier, Text: class
+          Type: ;, Text: ;
+        Type: }, Text: }
+    Type: comment, Text: /* compatibility */
+    Type: preproc_function_def, Text: #define hfsp_mt ... fsp_mt2ut(t) } 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfsp_mt2ut
+      Type: preproc_params, Text: (t)
+        Type: (, Text: (
+        Type: identifier, Text: t
+        Type: ), Text: )
+      Type: preproc_arg, Text: (struct timespe ... hfsp_mt2ut(t) }
+    Type: preproc_function_def, Text: #define hfsp_ut ... mt((t).tv_sec) 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfsp_ut2mt
+      Type: preproc_params, Text: (t)
+        Type: (, Text: (
+        Type: identifier, Text: t
+        Type: ), Text: )
+      Type: preproc_arg, Text: __hfsp_ut2mt((t).tv_sec)
+    Type: preproc_function_def, Text: #define hfsp_no ... eal_seconds()) 
+      Type: #define, Text: #define
+      Type: identifier, Text: hfsp_now2mt
+      Type: preproc_params, Text: ()
+        Type: (, Text: (
+        Type: ), Text: )
+      Type: preproc_arg, Text: __hfsp_ut2mt(kt ... real_seconds())
+    Type: #endif, Text: #endif

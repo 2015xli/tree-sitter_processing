@@ -77,6 +77,34 @@ It uses two main heuristics:
 
 If either of these checks is positive, the file is considered a C++ header.
 
+**Note**: A bug in tree-setter-cpp
+When it meets the following code snippet, it parses the "class" as class_specifier, a C++-only node type.
+That means, if this header file has no sibling .c or .cpp-like files, our heuristics will treat it as C++ header file.
+Hopefully the case never happens in my projects.
+
+```
+static inline enum hfsplus_btree_mutex_classes
+hfsplus_btree_lock_class(struct hfs_btree *tree)
+{
+        enum hfsplus_btree_mutex_classes class;
+
+        switch (tree->cnid) {
+        case HFSPLUS_CAT_CNID:
+                class = CATALOG_BTREE_MUTEX;
+                break;
+        case HFSPLUS_EXT_CNID:
+                class = EXTENTS_BTREE_MUTEX;
+                break;
+        case HFSPLUS_ATTR_CNID:
+                class = ATTR_BTREE_MUTEX;
+                break;
+        default:
+                BUG();
+        }
+        return class;
+}
+``` 
+
 ### Usage
 
 ```sh

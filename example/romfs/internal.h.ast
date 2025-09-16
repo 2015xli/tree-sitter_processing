@@ -1,0 +1,245 @@
+Type: translation_unit, Text: /* SPDX-License ...  size_t size); 
+  Type: comment, Text: /* SPDX-License ... 2.0-or-later */
+  Type: comment, Text: /* RomFS intern ... @redhat.com) */
+  Type: preproc_include, Text: #include <linux/romfs_fs.h> 
+    Type: #include, Text: #include
+    Type: system_lib_string, Text: <linux/romfs_fs.h>
+  Type: struct_specifier, Text: struct romfs_in ... tart of fs */ }
+    Type: struct, Text: struct
+    Type: type_identifier, Text: romfs_inode_info
+    Type: field_declaration_list, Text: { struct inode  ... tart of fs */ }
+      Type: {, Text: {
+      Type: field_declaration, Text: struct inode vfs_inode;
+        Type: struct_specifier, Text: struct inode
+          Type: struct, Text: struct
+          Type: type_identifier, Text: inode
+        Type: field_identifier, Text: vfs_inode
+        Type: ;, Text: ;
+      Type: field_declaration, Text: unsigned long i_metasize;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: field_identifier, Text: i_metasize
+        Type: ;, Text: ;
+      Type: comment, Text: /* size of non-data area */
+      Type: field_declaration, Text: unsigned long i_dataoffset;
+        Type: sized_type_specifier, Text: unsigned long
+          Type: unsigned, Text: unsigned
+          Type: long, Text: long
+        Type: field_identifier, Text: i_dataoffset
+        Type: ;, Text: ;
+      Type: comment, Text: /* from the start of fs */
+      Type: }, Text: }
+  Type: ;, Text: ;
+  Type: function_definition, Text: static inline s ... b->s_fs_info; }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: storage_class_specifier, Text: inline
+      Type: inline, Text: inline
+    Type: primitive_type, Text: size_t
+    Type: function_declarator, Text: romfs_maxsize(s ... uper_block *sb)
+      Type: identifier, Text: romfs_maxsize
+      Type: parameter_list, Text: (struct super_block *sb)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct super_block *sb
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+        Type: ), Text: )
+    Type: compound_statement, Text: { return (size_ ... b->s_fs_info; }
+      Type: {, Text: {
+      Type: return_statement, Text: return (size_t) ...  sb->s_fs_info;
+        Type: return, Text: return
+        Type: cast_expression, Text: (size_t) (unsig ... ) sb->s_fs_info
+          Type: (, Text: (
+          Type: type_descriptor, Text: size_t
+            Type: primitive_type, Text: size_t
+          Type: ), Text: )
+          Type: cast_expression, Text: (unsigned long) sb->s_fs_info
+            Type: (, Text: (
+            Type: type_descriptor, Text: unsigned long
+              Type: sized_type_specifier, Text: unsigned long
+                Type: unsigned, Text: unsigned
+                Type: long, Text: long
+            Type: ), Text: )
+            Type: field_expression, Text: sb->s_fs_info
+              Type: identifier, Text: sb
+              Type: ->, Text: ->
+              Type: field_identifier, Text: s_fs_info
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: function_definition, Text: static inline s ... , vfs_inode); }
+    Type: storage_class_specifier, Text: static
+      Type: static, Text: static
+    Type: storage_class_specifier, Text: inline
+      Type: inline, Text: inline
+    Type: struct_specifier, Text: struct romfs_inode_info
+      Type: struct, Text: struct
+      Type: type_identifier, Text: romfs_inode_info
+    Type: pointer_declarator, Text: *ROMFS_I(struct inode *inode)
+      Type: *, Text: *
+      Type: function_declarator, Text: ROMFS_I(struct inode *inode)
+        Type: identifier, Text: ROMFS_I
+        Type: parameter_list, Text: (struct inode *inode)
+          Type: (, Text: (
+          Type: parameter_declaration, Text: struct inode *inode
+            Type: struct_specifier, Text: struct inode
+              Type: struct, Text: struct
+              Type: type_identifier, Text: inode
+            Type: pointer_declarator, Text: *inode
+              Type: *, Text: *
+              Type: identifier, Text: inode
+          Type: ), Text: )
+    Type: compound_statement, Text: { return contai ... , vfs_inode); }
+      Type: {, Text: {
+      Type: return_statement, Text: return containe ... fo, vfs_inode);
+        Type: return, Text: return
+        Type: call_expression, Text: container_of(in ... nfo, vfs_inode)
+          Type: identifier, Text: container_of
+          Type: argument_list, Text: (inode, struct  ... nfo, vfs_inode)
+            Type: (, Text: (
+            Type: identifier, Text: inode
+            Type: ,, Text: ,
+            Type: ERROR, Text: struct
+              Type: identifier, Text: struct
+            Type: identifier, Text: romfs_inode_info
+            Type: ,, Text: ,
+            Type: identifier, Text: vfs_inode
+            Type: ), Text: )
+        Type: ;, Text: ;
+      Type: }, Text: }
+  Type: comment, Text: /* * mmap-nommu.c */
+  Type: preproc_if, Text: #if !defined(CO ... _ro_fops #endif
+    Type: #if, Text: #if
+    Type: binary_expression, Text: !defined(CONFIG ... G_ROMFS_ON_MTD)
+      Type: unary_expression, Text: !defined(CONFIG_MMU)
+        Type: !, Text: !
+        Type: preproc_defined, Text: defined(CONFIG_MMU)
+          Type: defined, Text: defined
+          Type: (, Text: (
+          Type: identifier, Text: CONFIG_MMU
+          Type: ), Text: )
+      Type: &&, Text: &&
+      Type: preproc_defined, Text: defined(CONFIG_ROMFS_ON_MTD)
+        Type: defined, Text: defined
+        Type: (, Text: (
+        Type: identifier, Text: CONFIG_ROMFS_ON_MTD
+        Type: ), Text: )
+    Type: 
+, Text:  
+    Type: declaration, Text: extern const st ...  romfs_ro_fops;
+      Type: storage_class_specifier, Text: extern
+        Type: extern, Text: extern
+      Type: type_qualifier, Text: const
+        Type: const, Text: const
+      Type: struct_specifier, Text: struct file_operations
+        Type: struct, Text: struct
+        Type: type_identifier, Text: file_operations
+      Type: identifier, Text: romfs_ro_fops
+      Type: ;, Text: ;
+    Type: preproc_else, Text: #else #define r ... eneric_ro_fops 
+      Type: #else, Text: #else
+      Type: preproc_def, Text: #define romfs_r ... eneric_ro_fops 
+        Type: #define, Text: #define
+        Type: identifier, Text: romfs_ro_fops
+        Type: preproc_arg, Text: generic_ro_fops
+    Type: #endif, Text: #endif
+  Type: comment, Text: /* * storage.c */
+  Type: declaration, Text: extern int romf ... size_t buflen);
+    Type: storage_class_specifier, Text: extern
+      Type: extern, Text: extern
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_dev_read( ...  size_t buflen)
+      Type: identifier, Text: romfs_dev_read
+      Type: parameter_list, Text: (struct super_b ...  size_t buflen)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct super_block *sb
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: unsigned long pos
+          Type: sized_type_specifier, Text: unsigned long
+            Type: unsigned, Text: unsigned
+            Type: long, Text: long
+          Type: identifier, Text: pos
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: void *buf
+          Type: primitive_type, Text: void
+          Type: pointer_declarator, Text: *buf
+            Type: *, Text: *
+            Type: identifier, Text: buf
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: size_t buflen
+          Type: primitive_type, Text: size_t
+          Type: identifier, Text: buflen
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: declaration, Text: extern ssize_t  ... size_t maxlen);
+    Type: storage_class_specifier, Text: extern
+      Type: extern, Text: extern
+    Type: primitive_type, Text: ssize_t
+    Type: function_declarator, Text: romfs_dev_strnl ...  size_t maxlen)
+      Type: identifier, Text: romfs_dev_strnlen
+      Type: parameter_list, Text: (struct super_b ...  size_t maxlen)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct super_block *sb
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: unsigned long pos
+          Type: sized_type_specifier, Text: unsigned long
+            Type: unsigned, Text: unsigned
+            Type: long, Text: long
+          Type: identifier, Text: pos
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: size_t maxlen
+          Type: primitive_type, Text: size_t
+          Type: identifier, Text: maxlen
+        Type: ), Text: )
+    Type: ;, Text: ;
+  Type: declaration, Text: extern int romf ... , size_t size);
+    Type: storage_class_specifier, Text: extern
+      Type: extern, Text: extern
+    Type: primitive_type, Text: int
+    Type: function_declarator, Text: romfs_dev_strcm ... r, size_t size)
+      Type: identifier, Text: romfs_dev_strcmp
+      Type: parameter_list, Text: (struct super_b ... r, size_t size)
+        Type: (, Text: (
+        Type: parameter_declaration, Text: struct super_block *sb
+          Type: struct_specifier, Text: struct super_block
+            Type: struct, Text: struct
+            Type: type_identifier, Text: super_block
+          Type: pointer_declarator, Text: *sb
+            Type: *, Text: *
+            Type: identifier, Text: sb
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: unsigned long pos
+          Type: sized_type_specifier, Text: unsigned long
+            Type: unsigned, Text: unsigned
+            Type: long, Text: long
+          Type: identifier, Text: pos
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: const char *str
+          Type: type_qualifier, Text: const
+            Type: const, Text: const
+          Type: primitive_type, Text: char
+          Type: pointer_declarator, Text: *str
+            Type: *, Text: *
+            Type: identifier, Text: str
+        Type: ,, Text: ,
+        Type: parameter_declaration, Text: size_t size
+          Type: primitive_type, Text: size_t
+          Type: identifier, Text: size
+        Type: ), Text: )
+    Type: ;, Text: ;
